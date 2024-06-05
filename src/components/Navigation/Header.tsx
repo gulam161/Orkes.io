@@ -63,11 +63,11 @@ const Header: React.FC<HeaderProps> = () => {
         </section>
       </header>
       {
-        <MobileMenu
-          isMobileOpen={isMobileOpen}
-          navdata={navItems}
-          handleMobileMenuClose={handleMobileMenuClose}
-        />
+        // <MobileMenu
+        //   isMobileOpen={isMobileOpen}
+        //   navdata={navItems}
+        //   handleMobileMenuClose={handleMobileMenuClose}
+        // />
       }
     </nav>
   );
