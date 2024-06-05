@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Banner from "../assets/hero-banner.png";
 import Play_Button from "../assets/Play_Button.svg";
 import Conductor_Logo from "../assets/Logo/Conductor Logo.png";
+import ConductorPlatform from "./ConductorPlatform";
 
 type HeroSectionProps = {};
 
@@ -47,14 +48,16 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
       </div>
       {/* Conductor Logo platform */}
       <div className="flex_between_center">
-        <div className=" flex-1 h-0.5 bg-custom-gradient"></div>
-        <div className="flex_between_center gap-1 mx-2 font-light text-gray-500">
+        {/* bg-custom-gradient */}
+        <div className="flex-1 h-[1px] custom"></div>
+        <div className="flex_between_center gap-1 mx-2 font-light text-gray-600">
           <span> The enterprise grade </span>
           <img src={Conductor_Logo} alt="Conductor_Logo" width={122} />
           <span> platform </span>
         </div>
-        <div className="flex-1 h-0.5 bg-red-200"></div>
+        <div className="flex-1 h-[1px] custom_2"></div>
       </div>
+      <ConductorPlatform />
     </div>
   );
 };

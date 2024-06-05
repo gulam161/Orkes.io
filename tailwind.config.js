@@ -5,8 +5,7 @@ export default {
     extend: {
       colors: {},
       backgroundColor: {
-        "custom-gradient":
-          "linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(215,220,221,1) 100%)",
+        "custom-gradient": "linear-gradient(270deg, #d7dcdd, white)",
       },
     },
   },

@@ -15,3 +15,39 @@
 .button {
   @apply w-40 text-center py-2 rounded-full border-2 delay-100 transition-all hover:shadow-lg hover:mb-1;
 }
+.custom {
+  background: linear-gradient(270deg, #d7dcdd, white);
+}
+
+.custom_2 {
+  background: linear-gradient(270deg, white, #d7dcdd);
+}
+
+/* .custom_3 {
+  background: rgb(255, 255, 255);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(241, 241, 241, 1) 58%,
+    rgba(241, 241, 241, 1) 58%
+  );
+} */
+
+.filter {
+  filter: grayscale(100%);
+}
+
+.marquee_left {
+  transform: translateX(100%);
+  /* Animate to the left */
+  animation: scroll-left 40s linear infinite;
+}
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
