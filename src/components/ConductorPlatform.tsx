@@ -16,19 +16,19 @@ import redfin_logo from "../assets/Logo/redfin-logo.png";
 import spi_logo from "../assets/Logo/spi_logo.png";
 
 const logos = [
-  { src: foxtel_logo, alt: "foxtel_logo" },
-  { src: American_Express, alt: "American_Express" },
-  { src: Coupang_logo, alt: "Coupang_logo" },
-  { src: GE_Healthcare, alt: "GE_Healthcare" },
-  { src: JP_Morgan_Chase, alt: "JP_Morgan_Chase" },
-  { src: LinkedIn_Logo, alt: "LinkedIn_Logo" },
   { src: Payoneer_logo, alt: "Payoneer_logo" },
-  { src: Swiggy_logo, alt: "Swiggy_logo" },
+  { src: foxtel_logo, alt: "foxtel_logo" },
   { src: Tesla_Logo, alt: "Tesla_Logo" },
-  { src: UWM_Logo, alt: "UWM_Logo" },
-  { src: Vmware, alt: "Vmware" },
   { src: florida_blue_logo, alt: "florida_blue_logo" },
   { src: normalyze_Black, alt: "normalyze_Black" },
+  { src: Vmware, alt: "Vmware" },
+  { src: UWM_Logo, alt: "UWM_Logo" },
+  { src: American_Express, alt: "American_Express" },
+  { src: GE_Healthcare, alt: "GE_Healthcare" },
+  { src: Coupang_logo, alt: "Coupang_logo" },
+  { src: Swiggy_logo, alt: "Swiggy_logo" },
+  { src: JP_Morgan_Chase, alt: "JP_Morgan_Chase" },
+  { src: LinkedIn_Logo, alt: "LinkedIn_Logo" },
   { src: redfin_logo, alt: "redfin_logo" },
   { src: spi_logo, alt: "spi_logo" },
 ];
@@ -38,13 +38,13 @@ type ConductorPlatformProps = {};
 const ConductorPlatform: React.FC<ConductorPlatformProps> = () => {
   return (
     <section className="flex_between_center w-full h-44 relative overflow-hidden">
-      <div className="border border-red-500 w-auto flex items-center justify-around gap-8 marquee_left">
+      <div className=" w-auto flex items-center justify-around gap-8 marquee_left">
         {logos.map((logo, index) => (
           <img
             key={index}
             src={logo.src}
             alt={logo.alt}
-            width={150}
+            width={140}
             className="filter"
           />
         ))}
