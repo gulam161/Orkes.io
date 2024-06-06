@@ -4,6 +4,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .grid_shaddow {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+  .over:hover .over_1 {
+    margin-left: 2px;
+    transition: all;
+    animation-delay: 10ms;
+  }
+}
+
 * {
   @apply m-0 p-0 box-border font-[Lexend,sans-serif,Poppins];
 }
@@ -13,7 +25,7 @@
 }
 
 .button {
-  @apply w-40 text-center py-2 rounded-full border-2 delay-100 transition-all hover:shadow-lg hover:mb-1;
+  @apply w-40 text-center py-2 rounded-full border-2 delay-100 transition-all hover:grid_shaddow;
 }
 .custom {
   background: linear-gradient(270deg, #d7dcdd, white);
@@ -52,6 +64,6 @@
   }
 }
 
-.grid_shaddow {
+/* .grid_shaddow {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
+} */
