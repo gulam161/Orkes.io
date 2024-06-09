@@ -35,16 +35,6 @@
   background: linear-gradient(270deg, white, #d7dcdd);
 }
 
-/* .custom_3 {
-  background: rgb(255, 255, 255);
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(241, 241, 241, 1) 58%,
-    rgba(241, 241, 241, 1) 58%
-  );
-} */
-
 .filter {
   filter: grayscale(100%);
 }

@@ -50,11 +50,11 @@ type Grid_SectionProps = {};
 
 const Grid_Section: React.FC<Grid_SectionProps> = () => {
   return (
-    <section className="bg-clip-content py-5 relative  text-gray-600">
+    <section className="bg-clip-content py-5 relative z-40  text-gray-600">
       <img
         src={bg_Grid}
         alt="Background grid image"
-        className="absolute w-screen mb-[-39px] top-auto bottom-[0%] left-[0%] right-[0%]"
+        className="absolute mb-[10px] z-10 top-auto bottom-0 left-0 right-0"
       />
       <div className="grid grid-cols-3 p-20 gap-10">
         {data.map(
@@ -91,7 +91,6 @@ const Grid_Section: React.FC<Grid_SectionProps> = () => {
                   className="text-[#189ed3] flex gap-3 items-center mt-4 over"
                 >
                   {link_text}
-                  {/* hover:ml-2 transition-all duration-500 */}
                   <span className="flex items-center mt-1  over_1">
                     <span className="h-0.5 w-10 bg-[#13afe4]"></span>
                     <span className="border-t-[1.5px] border-r-[1.5px] border-[#189ed3] w-3 h-3 ml-[-13px] rotate-45"></span>
