@@ -6,6 +6,7 @@ import Grid_Section from "./Grid_Section";
 import Standard_Section from "./Standard_Section";
 import Distributed from "./Distributed";
 import Empower_Securely from "./Empower_Securely";
+import Debug from "./Debug";
 
 type HomeProps = {};
 
@@ -20,6 +21,7 @@ const Home: React.FC<HomeProps> = () => {
         <Standard_Section />
         <Distributed />
         <Empower_Securely />
+        <Debug />
       </div>
     </>
   );

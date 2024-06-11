@@ -1,4 +1,5 @@
 import React from "react";
+import MorningTool from "../assets/Monitoring-Tools.png";
 
 type DebugProps = {};
 
@@ -6,23 +7,39 @@ const Debug: React.FC<DebugProps> = () => {
   return (
     <section className="grid grid-cols-2 border border-gray-200 text-gray-700 rounded-xl shadow-md my-32">
       <div className="p-8 bg-gray-100 rounded-l-xl shadow-lg">
-        <h4 className="text-[#189ed3] text-base mb-1">10X YOUR VELOCITY</h4>
+        <h4 className="text-[#2daa86] text-sm mb-1">OBSERVE AND OPTIMIZE</h4>
         <h1 className="text-4xl font-medium mb-4">
-          Supercharge coding, scaling and observing distributed systems
+          Scale to the billions, debug in minutes, observe everything
         </h1>
-        <p className="font-light tracking-wide mb-10">
-          Orkes Conductor is the fastest way to build and modernize all your
-          applications. Model your business logic as intuitively as you would in
-          a whiteboard, code the components in the language and framework of
-          your choice, run them at scale with no additional setups and observe
-          across your distributed landscape - with enterprise grade security and
-          manageability baked-in.
-        </p>
+        <ul style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
+          <li className="font-light tracking-wide mb-2">
+            Handle that hockey-stick growth or rapid usage peaks with no action
+            from your side
+          </li>
+          <li className="font-light tracking-wide mb-2">
+            Run a few workflows, a few billion or anything in between - Orkes
+            Conductor just scales
+          </li>
+          <li className="font-light tracking-wide mb-2">
+            Zoom in instantly on hard to find issues across millions of
+            distributed executions
+          </li>
+          <li className="font-light tracking-wide mb-2">
+            Identify pressure points and establish SLAs in your distributed
+            application landscape with in-depth metrics
+          </li>
+        </ul>
       </div>
-      <div className="p-8">
-        {/* <div className="border w-4/5 mx-auto grid grid-cols-2 rounded-full"></div> */}
+      <div
+        className="bg-cover bg-center rounded-r-xl"
+        style={{
+          backgroundImage: `url(${MorningTool})`,
+          //   height: "100vh",
+          //   width: "100vw",
+        }}
+      >
         <div className="mt-8 text-center">
-          <img src="" alt="" className="mx-auto" />
+          {/* <img src={Morning_tool} alt="" className="mx-auto" /> */}
         </div>
       </div>
     </section>

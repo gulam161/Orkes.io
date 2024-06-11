@@ -1,5 +1,4 @@
 import React from "react";
-
 import Coding_Artwork from "../assets/Coding-Artwork.png";
 import visual_modeling_Yellow from "../../public/Image/visual_modeling_Yellow.svg";
 import Secure_Collaboration from "../../public/Image/Secure Collaboration.svg";
