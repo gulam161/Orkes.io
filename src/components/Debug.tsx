@@ -6,7 +6,7 @@ type DebugProps = {};
 const Debug: React.FC<DebugProps> = () => {
   return (
     <section className="grid grid-cols-2 border border-gray-200 text-gray-700 rounded-xl shadow-md my-32">
-      <div className="p-8 bg-gray-100 rounded-l-xl shadow-lg">
+      <div className="p-8  bg-gray-100 rounded-l-xl shadow-lg">
         <h4 className="text-[#2daa86] text-sm mb-1">OBSERVE AND OPTIMIZE</h4>
         <h1 className="text-4xl font-medium mb-4">
           Scale to the billions, debug in minutes, observe everything
@@ -34,13 +34,11 @@ const Debug: React.FC<DebugProps> = () => {
         className="bg-cover bg-center rounded-r-xl"
         style={{
           backgroundImage: `url(${MorningTool})`,
-          //   height: "100vh",
-          //   width: "100vw",
         }}
       >
-        <div className="mt-8 text-center">
-          {/* <img src={Morning_tool} alt="" className="mx-auto" /> */}
-        </div>
+        {/* <div className="mt-8 text-center">
+          <img src={MorningTool} alt="" className="mx-auto" />
+        </div> */}
       </div>
     </section>
   );

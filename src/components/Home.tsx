@@ -7,6 +7,9 @@ import Standard_Section from "./Standard_Section";
 import Distributed from "./Distributed";
 import Empower_Securely from "./Empower_Securely";
 import Debug from "./Debug";
+import Cloud_Deployment from "./Cloud_Deployment";
+import Orkes_Community from "./Orkes_Community";
+import Conductor_Clusters from "./Conductor_Clusters";
 
 type HomeProps = {};
 
@@ -22,6 +25,9 @@ const Home: React.FC<HomeProps> = () => {
         <Distributed />
         <Empower_Securely />
         <Debug />
+        <Cloud_Deployment />
+        <Orkes_Community />
+        <Conductor_Clusters />
       </div>
     </>
   );

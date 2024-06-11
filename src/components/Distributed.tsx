@@ -3,6 +3,21 @@ import { Link } from "react-router-dom";
 import Before_Diagram from "../assets/Before_Diagram.png";
 import After_Diagram from "../assets/After_Diagram.png";
 
+// const data = [
+//   {
+//     label: "10X YOUR VELOCITY",
+//     heading: "Supercharge coding, scaling and observing distributed systems",
+//     discription:
+//       "Orkes Conductor is the fastest way to build and modernize all your applications. Model your business logic as intuitively as you would in a whiteboard, code the components in the language and framework of your choice, run them at scale with no additional setups and observe across your distributed landscape - with enterprise grade security and manageability baked-in.",
+//     link: "",
+//     text: "Get Started",
+//     button1: "Before",
+//     button2: "After",
+//     image1: "Before_Diagram",
+//     image2: "After_Diagram",
+//   },
+// ];
+
 const Distributed: React.FC = () => {
   const [active, setActive] = useState(true);
 
