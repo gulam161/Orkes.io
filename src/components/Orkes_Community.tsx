@@ -40,7 +40,7 @@ const Orkes_Community: React.FC<Orkes_CommunityProps> = () => {
           <Link
             key={index}
             to={item.link}
-            className="border border-gray-300 rounded-xl flex items-center flex-col gap-4 text-center p-7 shadow-xl"
+            className="border border-gray-300 rounded-xl flex items-center flex-col gap-4 text-center p-7 shadow-md"
           >
             <img src={item.icon} alt={`${item.text} Icon`} width={50} />
             <p className="font-light">{item.text}</p>

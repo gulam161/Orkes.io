@@ -10,6 +10,7 @@ import Debug from "./Debug";
 import Cloud_Deployment from "./Cloud_Deployment";
 import Orkes_Community from "./Orkes_Community";
 import Conductor_Clusters from "./Conductor_Clusters";
+import Footer from "./Footer";
 
 type HomeProps = {};
 
@@ -28,6 +29,7 @@ const Home: React.FC<HomeProps> = () => {
         <Cloud_Deployment />
         <Orkes_Community />
         <Conductor_Clusters />
+        <Footer />
       </div>
     </>
   );

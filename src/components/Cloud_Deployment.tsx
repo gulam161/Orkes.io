@@ -18,7 +18,7 @@ const Cloud_Deployment: React.FC<Cloud_DeploymentProps> = () => {
                 active === (idx === 0)
                   ? "bg-purple-900 text-white"
                   : "bg-white text-black"
-              } rounded-${idx === 0 ? "l" : "r"}-full`}
+              } rounded-${idx === idx ? "l" : "r"}-full`}
               onClick={() => setActive(idx === 0)}
             >
               {label}
