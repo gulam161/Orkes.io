@@ -51,8 +51,8 @@ const Empower_Securely: React.FC<Empower_SecurelyProps> = () => {
       </div>
       <div className="p-8">
         {data.map(({ src, alt, title, items }) => (
-          <div className="flex pt-8" key={alt}>
-            <div>
+          <div className="flex py-4 gap-6 border-b" key={alt}>
+            <div className="w-28">
               <img src={src} alt={alt} />
             </div>
             <div>

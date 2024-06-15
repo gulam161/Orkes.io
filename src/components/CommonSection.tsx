@@ -70,6 +70,9 @@ const CommonSection: React.FC<CommonSectionProps> = ({
                   ? "bg-purple-900 text-white"
                   : "bg-white text-black"
               } rounded-${idx === 0 ? "l" : "r"}-full`}
+              //  ${
+              //       idx === 0 ? "rounded-l-full" : idx === buttons.length - 1 ? "rounded-r-full" : ""
+              //     }
               onClick={() => setActive(idx)}
             >
               {label}
