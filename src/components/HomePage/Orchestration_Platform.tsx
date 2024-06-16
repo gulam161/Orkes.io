@@ -1,7 +1,7 @@
 import React from "react";
-import Durable_Execution from "../assets/Durable_Execution.svg";
-import Modernize_Applications from "../assets/Modernize_Applications.svg";
-import Accelerate_Development from "../assets/Accelerate_Development.svg";
+import Durable_Execution from "../../assets/Durable_Execution.svg";
+import Modernize_Applications from "../../assets/Modernize_Applications.svg";
+import Accelerate_Development from "../../assets/Accelerate_Development.svg";
 
 const data = [
   {

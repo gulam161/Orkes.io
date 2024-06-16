@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Banner from "../assets/hero-banner.png";
-import Play_Button from "../assets/Play_Button.svg";
-import Conductor_Logo from "../assets/Logo/Conductor Logo.png";
+import Banner from "../../assets/hero-banner.png";
+import Play_Button from "../../assets/Play_Button.svg";
+import Conductor_Logo from "../../assets/Logo/Conductor Logo.png";
 import ConductorPlatform from "./ConductorPlatform";
 
 type HeroSectionProps = {};

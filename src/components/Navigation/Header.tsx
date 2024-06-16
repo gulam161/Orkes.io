@@ -12,6 +12,7 @@ const navItems = [
   { id: 2, to: "", text: "Use Cases" },
   { id: 3, to: "", text: "Developers" },
   { id: 4, to: "", text: "Customers" },
+  { id: 5, to: "", text: "Pricing" },
 ];
 
 const Header: React.FC<HeaderProps> = () => {
@@ -21,7 +22,7 @@ const Header: React.FC<HeaderProps> = () => {
   return (
     <nav className="w-full h-24 flex items-center sticky top-0 z-50 bg-white shadow-md shadow-gray-300">
       <header className="w-4/5 mx-auto flex_between_center">
-        <div className=" w-1/2 flex_between_center font-light">
+        <div className=" w-[60%] flex_between_center font-light">
           <Link to="home">
             <img
               src={logo}
@@ -30,15 +31,15 @@ const Header: React.FC<HeaderProps> = () => {
               className="relative cursor-pointer z-50 "
             />
           </Link>
-          <div className="w-[70%] flex_between_center ">
+          <div className="w-[75%] flex_between_center ">
             {navItems.map(({ id, text }) => (
-              <Link key={id} to="">
+              <Link key={id} to="" className="hover:underline">
                 {text}
               </Link>
             ))}
           </div>
         </div>
-        <div className="flex_between_center gap-4 capitalize text-sm">
+        <div className="w-[30%] flex_between_center gap-4 capitalize text-sm">
           <Link to="" className="button border-[#13afe4]">
             Try Free
           </Link>
@@ -50,7 +51,7 @@ const Header: React.FC<HeaderProps> = () => {
           </Link>
         </div>
 
-        <section
+        {/* <section
           // md:block sm:block
           className="hidden cursor-pointer"
           onClick={() => toggleMobileOpen(!isMobileOpen)}
@@ -60,7 +61,7 @@ const Header: React.FC<HeaderProps> = () => {
           ) : (
             <IoMdMenu className="text-lg relative z-50" />
           )}
-        </section>
+        </section> */}
       </header>
       {
         // <MobileMenu

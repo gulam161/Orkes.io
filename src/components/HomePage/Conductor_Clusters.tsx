@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Orkes_Cloud_Artwork from "../assets/Orkes-Cloud_Artwork.png";
-import Playground_Illustration from "../assets/Playground-Illustration.png";
+import Orkes_Cloud_Artwork from "../../assets/Orkes-Cloud_Artwork.png";
+import Playground_Illustration from "../../assets/Playground-Illustration.png";
 
 type Conductor_ClustersProps = {};
 

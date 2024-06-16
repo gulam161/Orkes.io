@@ -1,7 +1,7 @@
 import React from "react";
 import CommonSection from "./CommonSection";
-import Before_Diagram from "../assets/Before_Diagram.png";
-import After_Diagram from "../assets/After_Diagram.png";
+import Before_Diagram from "../../assets/Before_Diagram.png";
+import After_Diagram from "../../assets/After_Diagram.png";
 
 const Distributed: React.FC = () => {
   return (

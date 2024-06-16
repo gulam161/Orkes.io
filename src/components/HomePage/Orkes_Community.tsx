@@ -1,7 +1,7 @@
 import React from "react";
-import Slack_Icon from "../assets/Logo/Slack Icon.svg";
-import Git_Icon from "../assets/Logo/Github_Logo.svg";
-import Calender_Icon from "../assets/Logo/Event_Calender_Icon.svg";
+import Slack_Icon from "../../assets/Logo/Slack Icon.svg";
+import Git_Icon from "../../assets/Logo/Github_Logo.svg";
+import Calender_Icon from "../../assets/Logo/Event_Calender_Icon.svg";
 import { Link } from "react-router-dom";
 
 const Comunities = [

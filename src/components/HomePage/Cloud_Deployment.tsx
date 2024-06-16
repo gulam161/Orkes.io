@@ -1,7 +1,7 @@
 import React from "react";
 import CommonSection from "./CommonSection";
-import Orkes_Cloud_Hosted from "../assets/Orkes-Cloud-Artwork_Orkes_Hosted.png";
-import Orkes_Cloud_Hosted_v3 from "../assets/Orkes-Cloud-Artwork_Orkes-Hosted_v3.png";
+import Orkes_Cloud_Hosted from "../../assets/Orkes-Cloud-Artwork_Orkes_Hosted.png";
+import Orkes_Cloud_Hosted_v3 from "../../assets/Orkes-Cloud-Artwork_Orkes-Hosted_v3.png";
 
 const Cloud_Deployment: React.FC = () => {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import MorningTool from "../assets/Monitoring-Tools.png";
+import MorningTool from "../../assets/Monitoring-Tools.png";
 
 type DebugProps = {};
 

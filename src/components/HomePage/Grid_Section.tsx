@@ -1,9 +1,9 @@
 import React from "react";
-import bg_Grid from "../assets/bg-Grid.png";
+import bg_Grid from "../../assets/bg-Grid.png";
 import { Link } from "react-router-dom";
-import foxtel_logo from "../assets/Logo/foxtel-logo.svg";
-import UWM_Logo from "../assets/Logo/UWM_Logo.png";
-import Collective_Logo from "../assets/Logo/collective-logo.png";
+import foxtel_logo from "../../assets/Logo/foxtel-logo.svg";
+import UWM_Logo from "../../assets/Logo/UWM_Logo.png";
+import Collective_Logo from "../../assets/Logo/collective-logo.png";
 const data = [
   {
     id: 1,
