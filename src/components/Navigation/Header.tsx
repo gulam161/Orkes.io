@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/Logo/orkes-logo.svg";
+import Plateform from "../Plateform/layout";
+import UseCases from "../UseCases";
+import Developers from "../Developers";
 import { IoMdClose, IoMdMenu } from "react-icons/io";
 
 import MobileMenu from "./MobileMenu";
@@ -17,13 +20,16 @@ const navItems = [
 
 const Header: React.FC<HeaderProps> = () => {
   const [isMobileOpen, toggleMobileOpen] = useState<boolean>(false);
-  // const [activePath, setActivePath] = useState("");
+  const [activePath, setActivePath] = useState("");
+
+  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+
   const handleMobileMenuClose = () => toggleMobileOpen(false);
   return (
     <nav className="w-full h-24 flex items-center sticky top-0 z-50 bg-white shadow-md shadow-gray-300">
       <header className="w-4/5 mx-auto flex_between_center">
         <div className=" w-[60%] flex_between_center font-light">
-          <Link to="home">
+          <Link to="/">
             <img
               src={logo}
               alt="logo"
@@ -31,11 +37,25 @@ const Header: React.FC<HeaderProps> = () => {
               className="relative cursor-pointer z-50 "
             />
           </Link>
-          <div className="w-[75%] flex_between_center ">
+          <div className="w-[75%] flex_between_center">
             {navItems.map(({ id, text }) => (
-              <Link key={id} to="" className="hover:underline">
-                {text}
-              </Link>
+              <div
+                key={id}
+                onMouseOver={() => setHoveredItem(text)}
+                onMouseOut={() => setHoveredItem(null)}
+                // className="relative"
+              >
+                <Link to="" className="hover:underline">
+                  {text}
+                </Link>
+                {hoveredItem === text && (
+                  <div className="absolute top-auto bottom-[25px]  w-[40%] bg-white shadow-lg z-50">
+                    {text === "Platform" && <Plateform />}
+                    {text === "Use Cases" && <UseCases />}
+                    {text === "Developers" && <Developers />}
+                  </div>
+                )}
+              </div>
             ))}
           </div>
         </div>
