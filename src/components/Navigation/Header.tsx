@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/Logo/orkes-logo.svg";
 import Plateform from "../Plateform/layout";
-import UseCases from "../UseCases";
+import UseCases from "../Usecases/layout";
 import Developers from "../Developers";
 import { IoMdClose, IoMdMenu } from "react-icons/io";
 
@@ -49,7 +49,7 @@ const Header: React.FC<HeaderProps> = () => {
                   {text}
                 </Link>
                 {hoveredItem === text && (
-                  <div className="absolute top-auto bottom-[25px]  w-[40%] bg-white shadow-lg z-50">
+                  <div className="absolute top-auto bottom-[25px] w-full bg-white shadow-lg z-50">
                     {text === "Platform" && <Plateform />}
                     {text === "Use Cases" && <UseCases />}
                     {text === "Developers" && <Developers />}

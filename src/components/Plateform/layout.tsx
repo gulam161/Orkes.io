@@ -38,7 +38,7 @@ const Layout: React.FC<LayoutProps> = () => {
     <>
       <div className="bg-[#8057ff] w-5 h-5 ml-6 absolute top-0 transform origin-center rotate-45"></div>
 
-      <div className="w-auto h-auto p-5 flex flex-col bg-gray-50 text-gray-500 border-t-[3px] border-[#8057ff] rounded-b-xl shadow-md absolute">
+      <div className="w-[40%] h-auto p-5 flex flex-col bg-gray-50 text-gray-500 border-t-[3px] border-[#8057ff] rounded-b-xl shadow-md absolute">
         {layoutItems.map(({ id, text, to, imgSrc, label }) => (
           <Link
             to={to}
@@ -47,7 +47,7 @@ const Layout: React.FC<LayoutProps> = () => {
           >
             <img src={imgSrc} alt={`${imgSrc}-icon`} width={25} />
             <div className="">
-              <h2 className="font-normal text-gray-700 mb-1">{text}</h2>
+              <h2 className="font-light text-gray-700 mb-1">{text}</h2>
               <p className="text-sm">{label}</p>
             </div>
           </Link>
