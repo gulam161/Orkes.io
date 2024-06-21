@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/Logo/orkes-logo.svg";
 import Plateform from "../Plateform/layout";
 import UseCases from "../Usecases/layout";
-import Developers from "../Developers";
+import Developers from "../developer/layout";
 import { IoMdClose, IoMdMenu } from "react-icons/io";
 
 import MobileMenu from "./MobileMenu";

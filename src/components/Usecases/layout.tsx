@@ -47,6 +47,9 @@ const Layout: React.FC<LayoutProps> = () => {
       <div className="bg-[#8057ff] w-5 h-5 ml-6 absolute top-0 transform origin-center rotate-45"></div>
 
       <div className="w-auto h-auto p-5 flex flex-col bg-gray-50 text-gray-500 border-t-[3px] border-[#8057ff] rounded-b-xl shadow-md absolute">
+        <h2 className="uppercase font-medium text-sm text-black/70">
+          Use Cases
+        </h2>
         {layoutItems.map(({ id, text, to, imgSrc, label }) => (
           <Link
             to={to}
