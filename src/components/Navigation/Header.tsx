@@ -28,7 +28,7 @@ const Header: React.FC<HeaderProps> = () => {
   return (
     <nav className="w-full h-24 flex items-center sticky top-0 z-50 bg-white shadow-md shadow-gray-300">
       <header className="w-4/5 mx-auto flex_between_center">
-        <div className=" w-[60%] flex_between_center font-light">
+        <div className=" w-[60%] flex items-center gap-7 font-light">
           <Link to="/">
             <img
               src={logo}
@@ -37,7 +37,7 @@ const Header: React.FC<HeaderProps> = () => {
               className="relative cursor-pointer z-50 "
             />
           </Link>
-          <div className="w-[75%] flex_between_center">
+          <div className="w-2/3 flex_between_center">
             {navItems.map(({ id, text }) => (
               <div
                 key={id}
@@ -45,7 +45,7 @@ const Header: React.FC<HeaderProps> = () => {
                 onMouseOut={() => setHoveredItem(null)}
                 // className="relative"
               >
-                <Link to="" className="hover:underline">
+                <Link to="" className="text-[15px] hover:underline">
                   {text}
                 </Link>
                 {hoveredItem === text && (
@@ -60,8 +60,8 @@ const Header: React.FC<HeaderProps> = () => {
           </div>
         </div>
         <div className="w-[30%] flex_between_center gap-4 capitalize text-sm">
-          <Link to="" className="button border-[#13afe4]">
-            Try Free
+          <Link to="" className="button border-[#13afe4] text-gray-600">
+            Get Started
           </Link>
           <Link
             to=""

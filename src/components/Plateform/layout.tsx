@@ -39,11 +39,13 @@ const Layout: React.FC<LayoutProps> = () => {
       <div className="bg-[#8057ff] w-5 h-5 ml-6 absolute top-0 transform origin-center rotate-45"></div>
 
       <div className="w-[40%] h-auto p-5 flex flex-col bg-gray-50 text-gray-500 border-t-[3px] border-[#8057ff] rounded-b-xl shadow-md absolute">
-        {layoutItems.map(({ id, text, to, imgSrc, label }) => (
+        {layoutItems.map(({ id, text, to, imgSrc, label }, index) => (
           <Link
             to={to}
             key={id}
-            className="flex items-start gap-2 border-b border-gray-300 py-4"
+            className={`flex items-start gap-2 ${
+              index === 2 ? "border-none" : "border-b border-gray-300"
+            } py-4`}
           >
             <img src={imgSrc} alt={`${imgSrc}-icon`} width={25} />
             <div className="">

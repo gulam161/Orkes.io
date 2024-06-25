@@ -50,11 +50,13 @@ const Layout: React.FC<LayoutProps> = () => {
         <h2 className="uppercase font-medium text-sm text-black/70">
           Use Cases
         </h2>
-        {layoutItems.map(({ id, text, to, imgSrc, label }) => (
+        {layoutItems.map(({ id, text, to, imgSrc, label }, index) => (
           <Link
             to={to}
             key={id}
-            className="flex items-start gap-2 border-b border-gray-300 py-4"
+            className={`flex items-start gap-2 ${
+              index === 3 ? "border-none" : "border-b border-gray-300"
+            } py-4`}
           >
             <img src={imgSrc} alt={`${imgSrc}-icon`} width={25} />
             <div className="">

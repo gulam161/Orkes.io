@@ -50,15 +50,17 @@ const Layout = () => (
     <div className="bg-[#8057ff] w-5 h-5 ml-6 absolute top-0 transform origin-center rotate-45"></div>
     <div className="w-auto h-auto p-5 flex gap-8 bg-gray-50 text-gray-500 border-t-[3px] border-[#8057ff] rounded-b-xl shadow-md absolute">
       {layoutItems.map(({ category, items }) => (
-        <div key={category}>
-          <h1 className="uppercase font-medium text-sm text-black/70 py-2 mb-1">
+        <div key={category} className="w-36 pt-3">
+          <h1 className="uppercase font-medium text-sm text-black/70 mb-3">
             {category}
           </h1>
-          {items.map(({ id, to, text, imgSrc, Icon }) => (
+          {items.map(({ id, to, text, imgSrc, Icon }, index) => (
             <Link
               to={to}
               key={id}
-              className="flex items-start gap-2 border-b border-gray-300 py-3 w-36"
+              className={`flex items-start gap-2  ${
+                index === 2 ? "border-none" : "border-b border-gray-300"
+              } p-3`}
             >
               {Icon ? (
                 <Icon size={22} />
@@ -70,10 +72,9 @@ const Layout = () => (
           ))}
         </div>
       ))}
-      <div className="bg-gray-200 w-[1px]"></div>
-      <div>
-        <h1 className="py-2 mb-1">Free Playground</h1>
-        <Link to="" className="button border-[#ed5668] px-8 mt-5 inline-block">
+      <div className="pl-6 pt-3 border-l border-gray-300">
+        <h1 className="mb-1">Free Playground</h1>
+        <Link to="" className="button border-[#ed5668] px-8 mt-3 inline-block">
           Sign Up
         </Link>
       </div>

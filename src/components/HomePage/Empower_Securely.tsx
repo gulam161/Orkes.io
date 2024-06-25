@@ -50,11 +50,14 @@ const Empower_Securely: React.FC<Empower_SecurelyProps> = () => {
         <img src={Coding_Artwork} alt="Coding_Artwork" className="mx-auto" />
       </div>
       <div className="p-8">
-        {data.map(({ src, alt, title, items }) => (
-          <div className="flex py-4 gap-6 border-b" key={alt}>
-            <div className="w-28">
-              <img src={src} alt={alt} />
-            </div>
+        {data.map(({ src, alt, title, items }, index) => (
+          <div
+            className={`flex py-4 gap-6 items-start ${
+              index === 2 ? "border-none" : "border-b border-gray-300"
+            }`}
+            key={alt}
+          >
+            <img src={src} alt={alt} width={70} />
             <div>
               <h1 className="text-xl font-medium mb-2">{title}</h1>
               <ul style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
