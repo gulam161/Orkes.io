@@ -20,14 +20,14 @@ const navItems = [
 
 const Header: React.FC<HeaderProps> = () => {
   const [isMobileOpen, toggleMobileOpen] = useState<boolean>(false);
-  const [activePath, setActivePath] = useState("");
+  // const [activePath, setActivePath] = useState("");
 
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
 
   const handleMobileMenuClose = () => toggleMobileOpen(false);
   return (
     <nav className="w-full h-24 flex items-center sticky top-0 z-50 bg-white shadow-md shadow-gray-300">
-      <header className="w-4/5 mx-auto flex_between_center">
+      <header className="w-4/5 max-xl:w-11/12 mx-auto flex_between_center">
         <div className=" w-[60%] flex items-center gap-7 font-light">
           <Link to="/">
             <img
@@ -37,13 +37,12 @@ const Header: React.FC<HeaderProps> = () => {
               className="relative cursor-pointer z-50 "
             />
           </Link>
-          <div className="w-2/3 flex_between_center">
+          <div className="w-2/3 flex_between_center max-lg:hidden">
             {navItems.map(({ id, text }) => (
               <div
                 key={id}
                 onMouseOver={() => setHoveredItem(text)}
                 onMouseOut={() => setHoveredItem(null)}
-                // className="relative"
               >
                 <Link to="" className="text-[15px] hover:underline">
                   {text}
@@ -71,9 +70,8 @@ const Header: React.FC<HeaderProps> = () => {
           </Link>
         </div>
 
-        {/* <section
-          // md:block sm:block
-          className="hidden cursor-pointer"
+        <section
+          className="hidden cursor-pointer max-lg:block"
           onClick={() => toggleMobileOpen(!isMobileOpen)}
         >
           {isMobileOpen ? (
@@ -81,15 +79,15 @@ const Header: React.FC<HeaderProps> = () => {
           ) : (
             <IoMdMenu className="text-lg relative z-50" />
           )}
-        </section> */}
+        </section>
       </header>
-      {
-        // <MobileMenu
-        //   isMobileOpen={isMobileOpen}
-        //   navdata={navItems}
-        //   handleMobileMenuClose={handleMobileMenuClose}
-        // />
-      }
+      {isMobileOpen && (
+        <MobileMenu
+          isMobileOpen={isMobileOpen}
+          navdata={navItems}
+          handleMobileMenuClose={handleMobileMenuClose}
+        />
+      )}
     </nav>
   );
 };

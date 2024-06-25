@@ -18,7 +18,7 @@ const Home: React.FC<HomeProps> = () => {
   return (
     <>
       <Header />
-      <div className="w-4/5 mx-auto flex_items_between">
+      <div className="w-4/5 mx-auto flex_items_between max-xl:w-11/12">
         <HeroSection />
         <Orchestration_Platform />
         <Grid_Section />

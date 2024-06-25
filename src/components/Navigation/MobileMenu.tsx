@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { IoIosArrowDown } from "react-icons/io";
 
 interface Navdata {
   id: number;
@@ -9,32 +10,34 @@ interface Navdata {
 
 type MobileMenuProps = {
   navdata: Navdata[];
-  handleMobileMenuClose: () => void;
   isMobileOpen: boolean;
+  handleMobileMenuClose: () => void;
 };
 
 const MobileMenu: React.FC<MobileMenuProps> = ({
   navdata,
-  handleMobileMenuClose,
   isMobileOpen,
+  handleMobileMenuClose,
 }) => {
   return (
-    <nav className="h-screen w-full  fixed top-0 z-10">
-      <div
-        // md:w-1/2 md:right-0 flex flex-col justify-center md:items-center sm:items-center md:gap-y-5 sm:gap-y-9 md:font-semibold sm:font-semibold md:text-lg sm:text-xl
-        className="absolute bottom-0 w-full lg:block"
-      >
-        {navdata.map(({ id, text }) => (
-          <div
-            key={id}
-            onClick={handleMobileMenuClose}
-            className="cursor-pointer"
-            // className="w-full py-2  m-1 bg-slate-400 text-center "
-          >
-            {text}
-          </div>
-        ))}
-      </div>
+    <nav
+      className={`h-auto w-full fixed top-24 flex flex-col justify-between bg-white shadow-md   ${
+        isMobileOpen
+          ? "transition-all translate-x-0 translate-y-0 ease-in duration-300 delay-300"
+          : ""
+      }`}
+    >
+      {navdata.map(({ id, text, to }) => (
+        <Link
+          key={id}
+          to={to}
+          onClick={handleMobileMenuClose}
+          className="cursor-pointer flex justify-between p-5 border-b font-light"
+        >
+          {text}
+          <IoIosArrowDown />
+        </Link>
+      ))}
     </nav>
   );
 };
