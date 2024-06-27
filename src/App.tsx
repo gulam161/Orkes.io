@@ -1,7 +1,7 @@
 import React from "react";
 import Home from "./components/Home";
 import { Routes, Route } from "react-router-dom";
-import Plateform from "./components/Plateform/plateform/Plateform";
+import Plateform from "./components/Plateform/platform/Plateform";
 import Cloud from "./components/Plateform/cloud/Cloud";
 import Conductor_OSS from "./components/Plateform/conductor/Conductor_OSS";
 import Microservices from "./components/Usecases/microservices/Microservices";

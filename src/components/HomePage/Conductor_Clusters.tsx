@@ -7,8 +7,8 @@ type Conductor_ClustersProps = {};
 
 const Conductor_Clusters: React.FC<Conductor_ClustersProps> = () => {
   return (
-    <section className="flex border border-gray-200 p-8 text-gray-700 rounded-xl shadow-md my-20">
-      <div className="w-1/2 flex_between_center flex-col gap-6 px-10 text-center">
+    <section className="flex border border-gray-200 p-8 text-gray-700 rounded-xl shadow-md my-20 max-lg:flex-col">
+      <div className="w-1/2 flex_between_center flex-col gap-6 px-10 text-center border-r max-lg:w-full max-lg:border-b max-lg:border-r-0 max-lg:pb-8 max-lg:mb-8">
         <img
           src={Playground_Illustration}
           alt="Playground_Illustration"
@@ -26,8 +26,8 @@ const Conductor_Clusters: React.FC<Conductor_ClustersProps> = () => {
           </Link>
         </div>
       </div>
-      <div className="bg-gray-200 w-[1px]"></div>
-      <div className="w-1/2 flex_between_center flex-col gap-6 px-10 text-center">
+      {/* <div className="bg-gray-200 w-[1px]"></div> */}
+      <div className="w-1/2 flex_between_center flex-col gap-6 px-10 text-center max-lg:w-full">
         <img src={Orkes_Cloud_Artwork} alt="Orkes_Cloud_Artwork" width={300} />
         <p className="text-xl font-light">
           Orkes Cloud provides fully managed & enterprise-ready Conductor

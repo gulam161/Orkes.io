@@ -56,7 +56,7 @@ const Grid_Section: React.FC<Grid_SectionProps> = () => {
         alt="Background grid image"
         className="absolute mb-[10px] z-10 top-auto bottom-0 left-0 right-0"
       />
-      <div className="grid grid-cols-3 p-20 gap-10">
+      <div className="grid grid-cols-3 p-20 gap-10 max-lg:grid-cols-1 max-sm:p-8">
         {data.map(
           ({
             id,
@@ -71,9 +71,9 @@ const Grid_Section: React.FC<Grid_SectionProps> = () => {
           }) => (
             <div
               key={id}
-              className="border border-gray-300 px-4 py-4 rounded-xl flex flex-col gap-8 hover:shadow-xl"
+              className="border border-gray-300 px-4 py-4 rounded-xl  flex flex-col gap-8 hover:shadow-xl max-lg:rounded-lg"
             >
-              <p className="w-full mt-4 font-light tracking-wide leading-8 border-b border-gray-400 h-64">
+              <p className="w-full h-64 mt-4 font-light tracking-wide leading-8 border-b border-gray-400 max-lg:h-40 max-sm:h-64">
                 {content}
               </p>
 

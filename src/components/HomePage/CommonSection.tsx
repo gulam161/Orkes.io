@@ -30,14 +30,14 @@ const CommonSection: React.FC<CommonSectionProps> = ({
     <section
       className={`flex ${
         isReverse && "flex-row-reverse"
-      } border border-gray-200 text-gray-700 rounded-xl shadow-md my-32`}
+      } border border-gray-200 text-gray-700 rounded-xl shadow-md my-32 max-lg:flex-col`}
     >
       <div
         className={`p-9 w-1/2 ${
           listItems
-            ? "bg-gray-100 rounded-r-xl shadow-lg"
-            : "bg-gray-100 rounded-l-xl shadow-lg"
-        }`}
+            ? "bg-gray-100 rounded-r-xl shadow-lg max-lg:rounded-t-xl max-lg:rounded-b-none"
+            : "bg-gray-100 rounded-l-xl shadow-lg max-lg:rounded-t-xl max-lg:rounded-b-none"
+        } max-lg:w-full`}
       >
         <h4 className="text-[#189ed3] text-sm mb-1">{subheading}</h4>
         <h1 className="text-4xl font-medium mb-4">{heading}</h1>
@@ -60,7 +60,7 @@ const CommonSection: React.FC<CommonSectionProps> = ({
           </ul>
         )}
       </div>
-      <div className="p-9 w-1/2">
+      <div className="p-9 w-1/2 max-lg:w-full">
         <div className="border w-4/5 mx-auto grid grid-cols-2 rounded-full">
           {buttons.map((label, idx) => (
             <button

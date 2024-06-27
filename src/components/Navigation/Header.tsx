@@ -44,7 +44,7 @@ const Header: React.FC<HeaderProps> = () => {
                 onMouseOver={() => setHoveredItem(text)}
                 onMouseOut={() => setHoveredItem(null)}
               >
-                <Link to="" className="text-[15px] hover:underline">
+                <Link to="#" className="text-[15px] hover:underline">
                   {text}
                 </Link>
                 {hoveredItem === text && (
@@ -86,6 +86,10 @@ const Header: React.FC<HeaderProps> = () => {
           isMobileOpen={isMobileOpen}
           navdata={navItems}
           handleMobileMenuClose={handleMobileMenuClose}
+          hoveredItem={hoveredItem}
+          Plateform={Plateform}
+          UseCases={UseCases}
+          Developers={Developers}
         />
       )}
     </nav>

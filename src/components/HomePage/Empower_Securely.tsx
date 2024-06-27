@@ -40,7 +40,7 @@ const data = [
 
 const Empower_Securely: React.FC<Empower_SecurelyProps> = () => {
   return (
-    <section className="grid grid-cols-2 border border-gray-200 bg-gray-50 text-gray-700 rounded-xl shadow-md my-32">
+    <section className="grid grid-cols-2 border border-gray-200 bg-gray-50 text-gray-700 rounded-xl shadow-md my-32 max-lg:grid-cols-1">
       <div className="p-8">
         <h4 className="text-red-400 text-sm mb-1">EMPOWER SECURELY</h4>
         <h1 className="text-4xl font-medium mb-4">

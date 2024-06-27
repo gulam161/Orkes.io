@@ -9,9 +9,9 @@ type HeroSectionProps = {};
 
 const HeroSection: React.FC<HeroSectionProps> = () => {
   return (
-    <div className="">
-      <div className="grid grid-cols-2 justify-between items-center py-2">
-        <div className="flex flex-col gap-y-4">
+    <>
+      <div className="grid grid-cols-2 justify-between items-center py-8 max-lg:grid-cols-1">
+        <div className="flex flex-col gap-y-4 max-lg:px-16 max-sm:px-10">
           <h1 className="font-medium text-4xl pt-2 text-gray-700">
             Developers Get More Done with Orkes
           </h1>
@@ -58,7 +58,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
         <div className="flex-1 h-[1px] custom_2"></div>
       </div>
       <ConductorPlatform />
-    </div>
+    </>
   );
 };
 export default HeroSection;

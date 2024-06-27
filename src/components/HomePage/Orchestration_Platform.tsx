@@ -34,17 +34,17 @@ type Orchestration_PlatformProps = {};
 
 const Orchestration_Platform: React.FC<Orchestration_PlatformProps> = () => {
   return (
-    <section className="p-10 my-5 text-center text-gray-700 bg-gray-50 border border-gray-300 rounded-xl shadow-lg">
+    <section className="p-10 my-5 text-center text-gray-700 bg-gray-50 border border-gray-300 rounded-xl shadow-lg max-sm:px-8 ">
       <h1 className="text-4xl font-semibold">
         The Modern Workflow Orchestration Platform
       </h1>
-      <p className="text-xl font-light px-20 mt-3 mb-10">
+      <p className="text-xl font-light px-20 mt-3 mb-10 max-lg:px-8 max-md:px-4 ">
         Seamlessly build and run complex workflows, applications, and
         integrations without the hassle of building infrastructure - all on
         Orkes
       </p>
 
-      <div className="grid grid-cols-3 gap-6">
+      <div className="grid grid-cols-3 gap-6 max-md:grid-cols-1">
         {data.map(({ id, img_Src, alt, heading, label }) => {
           return (
             <div

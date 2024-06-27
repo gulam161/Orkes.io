@@ -8,9 +8,9 @@ import {
   FaFacebookF,
   FaInstagram,
   FaTiktok,
-} from "react-Icons/fa";
-import { FaXTwitter } from "react-Icons/fa6";
-import { TbBrandGithubFilled } from "react-Icons/tb";
+} from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { TbBrandGithubFilled } from "react-icons/tb";
 
 const aboutSections = [
   {
@@ -78,7 +78,7 @@ const socialMediaIcons = [
 const Footer: React.FC = () => {
   return (
     <section className="text-gray-600">
-      <div className="flex gap-8">
+      <div className="flex gap-8 max-lg:grid max-lg:grid-cols-4 max-md:grid-cols-3">
         <div>
           <img src={OrkesLogo} alt="Orkes Logo" width={120} />
         </div>
@@ -100,8 +100,8 @@ const Footer: React.FC = () => {
       </div>
 
       <div className="h-[1px] my-5 background_image_color"></div>
-      <div className="flex justify-between">
-        <div className="flex gap-5 mb-4">
+      <div className="flex justify-between max-lg:flex-col max-sm:items-center">
+        <div className="flex gap-5 mb-4 flex-wrap">
           {socialMediaIcons.map(({ link, Icon }, index) => (
             <Link
               key={index}
