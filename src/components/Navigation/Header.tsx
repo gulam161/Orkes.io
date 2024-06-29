@@ -58,7 +58,8 @@ const Header: React.FC<HeaderProps> = () => {
             ))}
           </div>
         </div>
-        <div className="w-[30%] flex_between_center gap-4 capitalize text-sm">
+        <div className="w-[30%] flex_between_center gap-4 capitalize text-sm max-lg:w-2/6 max-md:hidden">
+          {/* <div className="flex_between_center gap-4"> */}
           <Link to="" className="button border-[#13afe4] text-gray-600">
             Get Started
           </Link>
@@ -68,8 +69,8 @@ const Header: React.FC<HeaderProps> = () => {
           >
             Login
           </Link>
+          {/* </div> */}
         </div>
-
         <section
           className="hidden cursor-pointer max-lg:block"
           onClick={() => toggleMobileOpen(!isMobileOpen)}

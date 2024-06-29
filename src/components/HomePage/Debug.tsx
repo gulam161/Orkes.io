@@ -31,7 +31,7 @@ const Debug: React.FC<DebugProps> = () => {
         </ul>
       </div>
       <div
-        className="bg-cover bg-center rounded-r-xl max-lg:h-[540px] max-lg:rounded-b-xl max-lg:rounded-t-none"
+        className="bg-cover bg-center rounded-r-xl max-lg:h-[540px] max-sm:h-[420px] max-lg:rounded-b-xl max-lg:rounded-t-none"
         style={{
           backgroundImage: `url(${MorningTool})`,
         }}

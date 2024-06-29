@@ -54,10 +54,10 @@ const Empower_Securely: React.FC<Empower_SecurelyProps> = () => {
           <div
             className={`flex py-4 gap-6 items-start ${
               index === 2 ? "border-none" : "border-b border-gray-300"
-            }`}
+            } max-sm:flex-col max-sm:gap-3`}
             key={alt}
           >
-            <img src={src} alt={alt} width={70} />
+            <img src={src} alt={alt} width={70} className="max-sm:w-1/4" />
             <div>
               <h1 className="text-xl font-medium mb-2">{title}</h1>
               <ul style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
