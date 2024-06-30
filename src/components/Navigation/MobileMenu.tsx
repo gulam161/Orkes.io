@@ -16,6 +16,7 @@ type MobileMenuProps = {
   Plateform: React.FC;
   UseCases: React.FC;
   Developers: React.FC;
+  children: React.ReactNode;
 };
 
 const MobileMenu: React.FC<MobileMenuProps> = ({
@@ -26,6 +27,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
   Plateform,
   UseCases,
   Developers,
+  children,
 }) => {
   // const [show, setShow] = useState<boolean | null>();
   const [activeLink, setActiveLink] = useState<number | String>();
@@ -50,10 +52,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
           onClick={() => handleClick(id)}
           className="cursor-pointer flex justify-between p-5 border-b font-light"
         >
-          <div></div>
-          {/* {text === "Platform" ? <Plateform /> : ""} */}
-
-          {text}
+          <h1>{text}</h1>
           {(text === "Platform" && <Plateform />) ||
           (text === "Use Cases" && <UseCases />) ||
           (text === "Developers" && <Developers />) ? (
@@ -67,6 +66,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
           )}
         </Link>
       ))}
+      <div className="max-xl:hidden max-md:block w-full">{children}</div>
     </nav>
   );
 };

@@ -25,6 +25,19 @@ const Header: React.FC<HeaderProps> = () => {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
 
   const handleMobileMenuClose = () => toggleMobileOpen(false);
+
+  const getStartedButton = (
+    <Link to="" className="button border-[#13afe4] text-gray-600">
+      Get Started
+    </Link>
+  );
+
+  const loginButton = (
+    <Link to="" className="button text-gray-100 border-[#13afe4] bg-[#13afe4]">
+      Login
+    </Link>
+  );
+
   return (
     <nav className="w-full h-24 flex items-center sticky top-0 z-50 bg-white shadow-md shadow-gray-300">
       <header className="w-4/5 max-xl:w-11/12 mx-auto flex_between_center">
@@ -59,17 +72,8 @@ const Header: React.FC<HeaderProps> = () => {
           </div>
         </div>
         <div className="w-[30%] flex_between_center gap-4 capitalize text-sm max-lg:w-2/6 max-md:hidden">
-          {/* <div className="flex_between_center gap-4"> */}
-          <Link to="" className="button border-[#13afe4] text-gray-600">
-            Get Started
-          </Link>
-          <Link
-            to=""
-            className="button text-gray-100  border-[#13afe4] bg-[#13afe4]"
-          >
-            Login
-          </Link>
-          {/* </div> */}
+          {getStartedButton}
+          {loginButton}
         </div>
         <section
           className="hidden cursor-pointer max-lg:block"
@@ -91,7 +95,10 @@ const Header: React.FC<HeaderProps> = () => {
           Plateform={Plateform}
           UseCases={UseCases}
           Developers={Developers}
-        />
+        >
+          {getStartedButton}
+          {loginButton}
+        </MobileMenu>
       )}
     </nav>
   );
