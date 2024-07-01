@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { IoIosArrowDown } from "react-icons/io";
+import { FaSlack } from "react-icons/fa";
 // import { BsChevronDown } from "react-icons/bs";
 interface Navdata {
   id: number;
@@ -16,7 +17,6 @@ type MobileMenuProps = {
   Plateform: React.FC;
   UseCases: React.FC;
   Developers: React.FC;
-  children: React.ReactNode;
 };
 
 const MobileMenu: React.FC<MobileMenuProps> = ({
@@ -27,7 +27,6 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
   Plateform,
   UseCases,
   Developers,
-  children,
 }) => {
   // const [show, setShow] = useState<boolean | null>();
   const [activeLink, setActiveLink] = useState<number | String>();
@@ -66,7 +65,17 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
           )}
         </Link>
       ))}
-      <div className="max-xl:hidden max-md:block w-full">{children}</div>
+      <div className="p-4 max-xl:hidden max-md:flex max-md:gap-4 text-sm max-sm:flex-col">
+        <Link to="" className="button border-[#13afe4] text-gray-600">
+          Try Free
+        </Link>
+        <Link
+          to=""
+          className="button text-gray-100  border-[#13afe4] bg-[#13afe4] flex items-center gap-1 justify-center"
+        >
+          <FaSlack size={20} /> Join Comunity
+        </Link>
+      </div>
     </nav>
   );
 };
