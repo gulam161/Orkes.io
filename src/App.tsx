@@ -8,6 +8,7 @@ import Microservices from "./components/Usecases/microservices/Microservices";
 import Event_Architecture from "./components/Usecases/eventarchiteture/Event_Architecture";
 import AI_Chaining from "./components/Usecases/ai-chaining/AI_Chaining";
 import Workflow from "./components/Usecases/workflow/Workflow";
+import Login from "./components/Auth/Login";
 
 type AppProps = {};
 
@@ -28,6 +29,7 @@ const App: React.FC<AppProps> = () => {
       />
       <Route path="/ai-and-llm-chaining" element={<AI_Chaining />} />
       <Route path="/human-workflow-orchestration" element={<Workflow />} />
+      <Route path="/login" element={<Login />} />
     </Routes>
   );
 };
