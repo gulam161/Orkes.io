@@ -64,7 +64,7 @@ const Header: React.FC<HeaderProps> = () => {
             Get Started
           </Link>
           <Link
-            to="/login"
+            to="/auth-login"
             className="button text-gray-100 border-[#13afe4] bg-[#13afe4]"
           >
             Login

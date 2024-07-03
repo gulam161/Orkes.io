@@ -3,9 +3,9 @@ import { FaGoogle } from "react-icons/fa";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { Link } from "react-router-dom";
 
-type LoginProps = {};
+type Sign_UpProps = {};
 
-const Login: React.FC<LoginProps> = () => {
+const Sign_Up: React.FC<Sign_UpProps> = () => {
   return (
     <section className="">
       <div className="w-full bg-stone-50 rounded-2xl border shadow-sm dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
@@ -33,7 +33,7 @@ const Login: React.FC<LoginProps> = () => {
           <p className="font-light dark:text-gray-400">
             Don’t have an account yet?{" "}
             <Link
-              to="/sign-up"
+              to="/Sign_Up"
               className="font-medium text-blue-400 text-primary-600 hover:text-blue-500 dark:text-primary-500"
             >
               Sign up
@@ -44,4 +44,4 @@ const Login: React.FC<LoginProps> = () => {
     </section>
   );
 };
-export default Login;
+export default Sign_Up;

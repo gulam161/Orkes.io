@@ -38,7 +38,7 @@ type ConductorPlatformProps = {};
 const ConductorPlatform: React.FC<ConductorPlatformProps> = () => {
   return (
     <section className="flex_between_center w-full h-44 relative overflow-hidden">
-      <div className=" w-auto flex items-center justify-around gap-8 marquee_left">
+      <div className="w-auto flex items-center justify-around gap-8 marquee_left">
         {logos.map((logo, index) => (
           <img
             key={index}
