@@ -20,7 +20,10 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
             microservices, AI agents, and more with workflow orchestration.
           </p>
           <div className="flex gap-4 capitalize mt-5 text-sm">
-            <Link to="" className="button border-[#ed5668] text-gray-600">
+            <Link
+              to="/sign-up"
+              className="button border-[#ed5668] text-gray-600"
+            >
               Start Free Trail
             </Link>
             <Link

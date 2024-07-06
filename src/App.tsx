@@ -9,7 +9,6 @@ import Event_Architecture from "./components/Usecases/eventarchiteture/Event_Arc
 import AI_Chaining from "./components/Usecases/ai-chaining/AI_Chaining";
 import Workflow from "./components/Usecases/workflow/Workflow";
 import Login from "./components/Auth/Login";
-import AuthLayout from "./components/Auth/layout";
 import Sign_Up from "./components/Auth/Sign-Up";
 
 type AppProps = {};

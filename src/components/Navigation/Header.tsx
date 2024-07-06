@@ -60,11 +60,12 @@ const Header: React.FC<HeaderProps> = () => {
           </div>
         </div>
         <div className="w-[30%] flex_between_center gap-4 capitalize text-sm max-lg:w-2/6 max-md:hidden">
-          <Link to="" className="button border-[#13afe4] text-gray-600">
+          <Link to="/sign-up" className="button border-[#13afe4] text-gray-600">
             Get Started
           </Link>
           <Link
             to="/auth-login"
+            target="_blank"
             className="button text-gray-100 border-[#13afe4] bg-[#13afe4]"
           >
             Login

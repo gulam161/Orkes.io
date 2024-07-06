@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { IoIosArrowDown } from "react-icons/io";
 import { FaSlack } from "react-icons/fa";
-// import { BsChevronDown } from "react-icons/bs";
+import Plateform from "../Plateform/layout";
+import UseCases from "../Usecases/layout";
+import Developers from "../developer/layout";
 interface Navdata {
   id: number;
   to: string;
