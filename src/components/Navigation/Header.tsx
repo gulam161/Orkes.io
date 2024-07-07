@@ -42,10 +42,10 @@ const Header: React.FC<HeaderProps> = () => {
             {navItems.map(({ id, text }) => (
               <div
                 key={id}
-                onMouseOver={() => setHoveredItem(text)}
-                onMouseOut={() => setHoveredItem(null)}
+                onMouseEnter={() => setHoveredItem(text)}
+                onMouseLeave={() => setHoveredItem(null)}
               >
-                <Link to="#" className="text-[15px] hover:underline">
+                <Link to="#" className="text-[15px] py-4 hover:underline">
                   {text}
                 </Link>
                 {hoveredItem === text && (
