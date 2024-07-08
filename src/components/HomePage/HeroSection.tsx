@@ -27,7 +27,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
               Start Free Trail
             </Link>
             <Link
-              to=""
+              to="talk-to-an-expert"
               className="button px-2 text-white border-[#ed5668] bg-[#ed5668]"
             >
               Contact Sales
