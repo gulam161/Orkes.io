@@ -91,7 +91,7 @@ const Grid_Section: React.FC<Grid_SectionProps> = () => {
                   className="text-[#189ed3] flex gap-3 items-center mt-4 over"
                 >
                   {link_text}
-                  <span className="flex items-center mt-1  over_1">
+                  <span className="flex items-center mt-1 over_1">
                     <span className="h-0.5 w-10 bg-[#13afe4]"></span>
                     <span className="border-t-[1.5px] border-r-[1.5px] border-[#189ed3] w-3 h-3 ml-[-13px] rotate-45"></span>
                   </span>
