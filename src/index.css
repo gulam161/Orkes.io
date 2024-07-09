@@ -14,7 +14,7 @@
   }
 
   .over:hover .over_1 {
-    margin-right: 2px;
+    margin-left: 3px;
     transition: all;
     animation-delay: 10ms;
   }
@@ -57,10 +57,6 @@
     transform: translateX(-100%);
   }
 }
-
-/* .grid_shaddow {
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-} */
 
 .background_image_color {
   background: linear-gradient(to right, #8057ff, #1bc7ff 50%, #ed5668);

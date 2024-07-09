@@ -28,7 +28,7 @@ const data = [
     label:
       "Hear from Foxtel & how they speed the creation and scaling of distributed workflows, applications and microservices.",
     link: "",
-    link_text: "Watch Webinar",
+    link_text: "Read Case Study",
     margin_y: "my-0",
   },
   {
@@ -41,7 +41,7 @@ const data = [
     label:
       "Hear from Foxtel & how they speed the creation and scaling of distributed workflows, applications and microservices.",
     link: "",
-    link_text: "Watch Webinar",
+    link_text: "Read Case Study",
     margin_y: "my-2",
   },
 ];
@@ -50,11 +50,11 @@ type Grid_SectionProps = {};
 
 const Grid_Section: React.FC<Grid_SectionProps> = () => {
   return (
-    <section className="bg-clip-content py-5 relative z-40  text-gray-600">
+    <section className="bg-clip-content py-5 relative  text-gray-600">
       <img
         src={bg_Grid}
         alt="Background grid image"
-        className="absolute mb-[10px] z-10 top-auto bottom-0 left-0 right-0"
+        className="absolute mb-[10px] top-auto bottom-0 left-0 -z-10"
       />
       <div className="grid grid-cols-3 p-20 gap-10 max-lg:grid-cols-1 max-sm:p-8">
         {data.map(
@@ -88,7 +88,7 @@ const Grid_Section: React.FC<Grid_SectionProps> = () => {
 
                 <Link
                   to={link}
-                  className="text-[#189ed3] flex gap-3 items-center mt-4 over"
+                  className="text-[#189ed3] flex gap-3 items-center mt-4 over hover:font-medium"
                 >
                   {link_text}
                   <span className="flex items-center mt-1 over_1">
