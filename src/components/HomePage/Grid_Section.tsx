@@ -54,7 +54,7 @@ const Grid_Section: React.FC<Grid_SectionProps> = () => {
       <img
         src={bg_Grid}
         alt="Background grid image"
-        className="absolute mb-[10px] top-auto bottom-0 left-0 -z-10"
+        className="absolute mb-[25px] top-auto bottom-0 left-0 -z-10"
       />
       <div className="grid grid-cols-3 p-20 gap-10 max-lg:grid-cols-1 max-sm:p-8">
         {data.map(
