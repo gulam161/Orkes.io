@@ -2,12 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { IoIosArrowDown } from "react-icons/io";
 import { FaSlack } from "react-icons/fa";
-import Plateform from "../Plateform/layout";
-import UseCases from "../Usecases/layout";
-import Developers from "../developer/layout";
 interface Navdata {
   id: number;
-  to: string;
   text: string;
 }
 
@@ -30,13 +26,29 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
   UseCases,
   Developers,
 }) => {
-  // const [show, setShow] = useState<boolean | null>();
+  const [show, setShow] = useState<boolean | null>(false);
   const [activeLink, setActiveLink] = useState<number | String>();
 
   const handleClick = (id: number) => {
     setActiveLink(activeLink === id ? String : id);
+    // setshow(activeLink === id && renderComponent(text));
+    setShow(!show);
     // handleMobileMenuClose();
   };
+
+  const renderComponent = (text: String) => {
+    switch (text) {
+      case "Platform":
+        return <Plateform />;
+      case "Use Cases":
+        return <UseCases />;
+      case "Developers":
+        return <Developers />;
+      default:
+        return null;
+    }
+  };
+
   return (
     <nav
       className={`h-auto w-full fixed top-24 flex flex-col justify-between bg-white shadow-md   ${
@@ -45,27 +57,24 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
           : ""
       }`}
     >
-      {navdata.map(({ id, text, to }) => (
-        <Link
-          key={id}
-          to={to}
-          // onClick={handleMobileMenuClose}
-          onClick={() => handleClick(id)}
-          className="cursor-pointer flex justify-between p-5 border-b font-light"
-        >
-          <h1>{text}</h1>
-          {(text === "Platform" && <Plateform />) ||
-          (text === "Use Cases" && <UseCases />) ||
-          (text === "Developers" && <Developers />) ? (
-            <IoIosArrowDown
-              className={`transition-transform ${
-                activeLink === id ? "transform rotate-180" : ""
-              }`}
-            />
-          ) : (
-            ""
-          )}
-        </Link>
+      {navdata.map(({ id, text }) => (
+        <>
+          <div
+            key={id}
+            onClick={() => handleClick(id)}
+            className="cursor-pointer flex justify-between p-5 border-b font-light"
+          >
+            <h1>{text}</h1>
+            {["Platform", "Use Cases", "Developers"].includes(text) && (
+              <IoIosArrowDown
+                className={`transition-transform ${
+                  activeLink === id ? "transform rotate-180" : ""
+                }`}
+              />
+            )}
+          </div>
+          {activeLink === id && renderComponent(text)}
+        </>
       ))}
       <div className="p-4 max-xl:hidden max-md:flex max-md:gap-4 text-sm max-sm:flex-col">
         <Link to="" className="button border-[#13afe4] text-gray-600">

@@ -11,11 +11,11 @@ import MobileMenu from "./MobileMenu";
 type HeaderProps = {};
 
 const navItems = [
-  { id: 1, to: "", text: "Platform" },
-  { id: 2, to: "", text: "Use Cases" },
-  { id: 3, to: "", text: "Developers" },
-  { id: 4, to: "", text: "Customers" },
-  { id: 5, to: "", text: "Pricing" },
+  { id: 1, text: "Platform" },
+  { id: 2, text: "Use Cases" },
+  { id: 3, text: "Developers" },
+  { id: 4, text: "Customers" },
+  { id: 5, text: "Pricing" },
 ];
 
 const Header: React.FC<HeaderProps> = () => {

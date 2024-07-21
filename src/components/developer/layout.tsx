@@ -47,10 +47,10 @@ const layoutItems = [
 
 const Layout = () => (
   <>
-    <div className="bg-[#8057ff] w-5 h-5 ml-6 absolute top-0 transform origin-center rotate-45"></div>
-    <div className="w-auto h-auto p-5 flex gap-8 bg-gray-50 text-gray-500 border-t-[3px] border-[#8057ff] rounded-b-xl shadow-md absolute">
+    <div className="bg-[#8057ff] w-5 h-5 ml-6 absolute top-0 transform origin-center rotate-45  max-lg:relative max-lg:mt-[-4px] max-lg:mb-[-16px]"></div>
+    <div className="w-auto h-auto p-6 flex max-sm:flex-col gap-8 bg-gray-50 text-gray-500 border-t-[3px] border-[#8057ff] rounded-b-xl shadow-md absolute max-lg:relative max-lg:w-full max-lg:rounded-b-none max-lg:shadow-sm">
       {layoutItems.map(({ category, items }) => (
-        <div key={category} className="w-36 pt-3">
+        <div key={category} className="w-36 pt-3 max-lg:w-full">
           <h1 className="uppercase font-medium text-sm text-black/70 mb-3">
             {category}
           </h1>
@@ -58,21 +58,21 @@ const Layout = () => (
             <Link
               to={to}
               key={id}
-              className={`flex items-start gap-2  ${
+              className={`flex items-start gap-2 hover:bg-gray-200/80 ${
                 index === 2 ? "border-none" : "border-b border-gray-300"
               } p-3`}
             >
               {Icon ? (
                 <Icon size={22} />
               ) : (
-                <img src={imgSrc} alt={`${text} Icon`} width={25} />
+                <img src={imgSrc} alt={`${text} Icon`} width={28} />
               )}
               <h2 className="font-light text-gray-700 mb-1">{text}</h2>
             </Link>
           ))}
         </div>
       ))}
-      <div className="pl-6 pt-3 border-l border-gray-300">
+      <div className="pl-6 pt-3 border-l border-gray-300 max-lg:border-l-0 max-sm:pt-0">
         <h1 className="mb-1">Free Playground</h1>
         <Link to="" className="button border-[#ed5668] px-8 mt-3 inline-block">
           Sign Up

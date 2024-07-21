@@ -29,7 +29,7 @@
 }
 
 .button {
-  @apply w-40 text-center py-2 rounded-full border-2 hover:grid_shaddow;
+  @apply w-40 text-sm text-center py-2 rounded-full border-2 hover:grid_shaddow;
 }
 .custom {
   background: linear-gradient(270deg, #d7dcdd, white);
