@@ -11,7 +11,6 @@ const Plateform: React.FC<PlateformProps> = () => {
       <Header />
       <div className="w-4/5 mx-auto flex_items_between">
         <HeroPage_2 />
-
         <Standard_Section />
       </div>
     </>
