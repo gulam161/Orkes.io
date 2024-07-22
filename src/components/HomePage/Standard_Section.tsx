@@ -11,13 +11,13 @@ const data = [
     color: "text-blue-400",
     label: "Companies using Conductor",
   },
-  { count: 11, color: "text-red-600", label: "Github Stars" },
+  { count: 13, color: "text-red-600", label: "Github Stars" },
 ];
 
 const Standard_Section: React.FC<Standard_SectionProps> = () => {
   const [counterOn, setCounterOn] = useState(false);
   return (
-    <section className="grid grid-cols-3 gap-8 py-10 px-36 max-xl:px-28 max-lg:grid-cols-1 max-lg:gap-20 max-sm:px-12">
+    <section className="grid grid-cols-3 gap-8 py-10 px-28 max-xl:px-28 max-lg:grid-cols-1 max-lg:gap-20 max-sm:px-12">
       {data.map((item, index) => (
         <div
           key={index}
@@ -28,7 +28,7 @@ const Standard_Section: React.FC<Standard_SectionProps> = () => {
             onExit={() => setCounterOn(false)}
           >
             <h1
-              className={`text-5xl font-medium ${item.color} pb-6 border-b-2 border-gray-100 `}
+              className={`text-6xl font-medium ${item.color} pb-6 border-b-2 border-gray-100 `}
             >
               {counterOn && (
                 <CountUp
