@@ -6,7 +6,7 @@ type HeroPage_2Props = {};
 
 const HeroPage_2: React.FC<HeroPage_2Props> = () => {
   return (
-    <div className="grid grid-cols-2 justify-between items-center py-9">
+    <div className="grid grid-cols-2 justify-between items-center py-9 max-lg:grid-cols-1 max-lg:gap-12 ">
       <div className="flex flex-col gap-y-4 tracking-wide">
         <h1 className="font-medium text-3xl pt-2 text-gray-700">
           The modern workflow engine for building, managing, and observing
@@ -29,7 +29,11 @@ const HeroPage_2: React.FC<HeroPage_2Props> = () => {
           </Link>
         </div>
       </div>
-      <img src={Platform_Page_Hero_v2} alt="Platform_Page_Hero_v2" />
+      <img
+        src={Platform_Page_Hero_v2}
+        alt="Platform_Page_Hero_v2"
+        className="max-lg:w-3/4 max-lg:m-auto max-sm:w-full"
+      />
     </div>
   );
 };
