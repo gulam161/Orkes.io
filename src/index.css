@@ -48,6 +48,9 @@
   /* Animate to the left */
   animation: scroll-left 40s linear infinite;
 }
+.arrow_button {
+  @apply absolute top-3 z-30 cursor-pointer text-gray-300 max-xl:top-6 max-lg:top-10 max-md:hidden;
+}
 @keyframes scroll-left {
   0% {
     transform: translateX(0);
