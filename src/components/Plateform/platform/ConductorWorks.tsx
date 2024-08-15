@@ -1,25 +1,5 @@
 import React, { useState } from "react";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
-import Workflow_Creation_UI from "../../../assets/Workflow Creation UI.svg";
-import Scheduler from "../../../assets/Scheduler.svg";
-import Human_Task from "../../../assets/Human_Task.svg";
-import Event_Tasks from "../../../assets/Event Tasks.svg";
-import Wait_Tasks from "../../../assets/Wait_Tasks.svg";
-import AI_and_LLM_Tasks from "../../../assets/AI and LLM Tasks.svg";
-import Webhooks from "../../../assets/Webhooks.svg";
-import One_Step_Invoke from "../../../assets/One-Step Invoke.svg";
-import Workflow_Timeline_View from "../../../assets/Workflow Timeline View.svg";
-import Task_Retry from "../../../assets/Task Retry.svg";
-import Versioning from "../../../assets/Versioning.svg";
-import Tags from "../../../assets/Tags.svg";
-import Advanced_Metrics_Dashboard from "../../../assets/Advanced Metrics Dashboard.svg";
-import Infinitely_Scaleable from "../../../assets/Infinitely Scaleable.svg";
-import High_Performance_Queing from "../../../assets/High Performance Queing.svg";
-import Role_Based_Access_Control from "../../../assets/Role Based Access Control.svg";
-import Secrets_Storage from "../../../assets/Secrets Storage.svg";
-import User_Groups from "../../../assets/User Groups.svg";
-import Audit_logs from "../../../assets/Audit logs.svg";
-import Change_Data_Capture from "../../../assets/Change Data Capture.svg";
 
 const buttonLabels = [
   "Define and Execute",
@@ -36,7 +16,7 @@ const data = [
     items: [
       {
         id: 1,
-        imgSrc: Workflow_Creation_UI,
+        imgSrc: "/Images/Workflow Creation UI.svg",
         alt: "Workflow Creation UI",
         heading: "Visual Workflow Creation UI",
         label:
@@ -44,7 +24,7 @@ const data = [
       },
       {
         id: 2,
-        imgSrc: Scheduler,
+        imgSrc: "/Images/Scheduler.svg",
         alt: "Scheduler",
         heading: "Scheduler",
         label:
@@ -52,7 +32,7 @@ const data = [
       },
       {
         id: 3,
-        imgSrc: Human_Task,
+        imgSrc: "/Images/Human_Task.svg",
         alt: "Human Task",
         heading: "Human Tasks",
         label:
@@ -60,7 +40,7 @@ const data = [
       },
       {
         id: 4,
-        imgSrc: Event_Tasks,
+        imgSrc: "/Images/Event Tasks.svg",
         alt: "Event Tasks",
         heading: "Event Tasks",
         label:
@@ -70,7 +50,7 @@ const data = [
     additionalItems: [
       {
         id: 1,
-        imgSrc: Wait_Tasks,
+        imgSrc: "/Images/Wait_Tasks.svg",
         alt: "Wait Tasks",
         heading: "Wait Tasks",
         label:
@@ -78,7 +58,7 @@ const data = [
       },
       {
         id: 2,
-        imgSrc: AI_and_LLM_Tasks,
+        imgSrc: "/Images/AI and LLM Tasks.svg",
         alt: "AI and LLM Tasks",
         heading: "AI and LLM Tasks",
         label:
@@ -86,7 +66,7 @@ const data = [
       },
       {
         id: 3,
-        imgSrc: Webhooks,
+        imgSrc: "/Images/Webhooks.svg",
         alt: "Webhooks",
         heading: "Webhooks",
         label:
@@ -101,7 +81,7 @@ const data = [
     items: [
       {
         id: 1,
-        imgSrc: One_Step_Invoke,
+        imgSrc: "/Images/One-Step Invoke.svg",
         alt: "One_Step_Invoke",
         heading: "One-Step Invoke",
         label:
@@ -109,7 +89,7 @@ const data = [
       },
       {
         id: 2,
-        imgSrc: Workflow_Timeline_View,
+        imgSrc: "/Images/Workflow Timeline View.svg",
         alt: "Workflow_Timeline_View",
         heading: "Workflow Timeline View",
         label:
@@ -117,7 +97,7 @@ const data = [
       },
       {
         id: 3,
-        imgSrc: Task_Retry,
+        imgSrc: "/Images/Task Retry.svg",
         alt: "Task_Retry",
         heading: "Task Retry",
         label:
@@ -125,7 +105,7 @@ const data = [
       },
       {
         id: 4,
-        imgSrc: Versioning,
+        imgSrc: "/Images/Versioning.svg",
         alt: "Versioning",
         heading: "Versioning",
         label:
@@ -140,7 +120,7 @@ const data = [
     items: [
       {
         id: 1,
-        imgSrc: Tags,
+        imgSrc: "/Images/Tags.svg",
         alt: "Tags",
         heading: "Tags",
         label:
@@ -148,7 +128,7 @@ const data = [
       },
       {
         id: 2,
-        imgSrc: Advanced_Metrics_Dashboard,
+        imgSrc: "/Images/Advanced Metrics Dashboard.svg",
         alt: "Advanced_Metrics_Dashboard",
         heading: "Advanced Metrics Dashboard",
         label:
@@ -156,7 +136,7 @@ const data = [
       },
       {
         id: 3,
-        imgSrc: Infinitely_Scaleable,
+        imgSrc: "/Images/Infinitely Scaleable.svg",
         alt: "Infinitely_Scaleable",
         heading: "Infinitely Scaleable",
         label:
@@ -164,7 +144,7 @@ const data = [
       },
       {
         id: 4,
-        imgSrc: High_Performance_Queing,
+        imgSrc: "/Images/High Performance Queing.svg",
         alt: "High_Performance_Queing",
         heading: "High Performance Queing",
         label:
@@ -179,7 +159,7 @@ const data = [
     items: [
       {
         id: 1,
-        imgSrc: Role_Based_Access_Control,
+        imgSrc: "/Images/Role Based Access Control.svg",
         alt: "Role_Based_Access_Control",
         heading: "Role Based Access Control",
         label:
@@ -187,7 +167,7 @@ const data = [
       },
       {
         id: 2,
-        imgSrc: Secrets_Storage,
+        imgSrc: "/Images/Secrets Storage.svg",
         alt: "Secrets_Storage",
         heading: "Secrets Storage",
         label:
@@ -195,7 +175,7 @@ const data = [
       },
       {
         id: 3,
-        imgSrc: User_Groups,
+        imgSrc: "/Images/User Groups.svg",
         alt: "User Groups",
         heading: "User Groups",
         label:
@@ -205,7 +185,7 @@ const data = [
     additionalItems: [
       {
         id: 1,
-        imgSrc: Audit_logs,
+        imgSrc: "/Images/Audit Logs.svg",
         alt: "Audit Logs",
         heading: "Audit Logs",
         label:
@@ -213,7 +193,7 @@ const data = [
       },
       {
         id: 2,
-        imgSrc: Change_Data_Capture,
+        imgSrc: "/Images/Change Data Capture.svg",
         alt: "Change Data Capture",
         heading: "Change Data Capture",
         label:
@@ -228,9 +208,7 @@ const ConductorWorks: React.FC = () => {
   const [hoveredArrow, setHoveredArrow] = useState<string | null>(null);
   const getSize = (arrow: string) => (hoveredArrow === arrow ? 30 : 26);
 
-  const handleClick = (label: string) => {
-    setActiveLink(label);
-  };
+  const handleClick = (label: string) => setActiveLink(label);
 
   const handleArrowClick = (direction: "left" | "right") => {
     const currentIndex = buttonLabels.indexOf(activeLink);
@@ -244,7 +222,7 @@ const ConductorWorks: React.FC = () => {
 
   return (
     <section className="bg-stone-100/90 text-center py-16">
-      <h1 className="text-3xl font-medium text-black/90 ">
+      <h1 className="text-3xl font-medium text-black/90">
         How Orkes Conductor Works
       </h1>
       <p className="text-xl font-light w-8/12 my-3 mx-auto">
@@ -252,7 +230,7 @@ const ConductorWorks: React.FC = () => {
         make it the ultimate workflow engine for all your distributed business
         processes.
       </p>
-      <div className="w-10/12 max-lg:w-11/12 max-md:w-[94%] bg-white mx-auto p-8 max-md:p-5 mt-10 rounded-xl border grid_shaddow">
+      <div className="w-10/12 max-lg:w-11/12 max-md:w-[94%] bg-white mx-auto mb-4 p-8 max-md:p-5 mt-10 rounded-xl border grid_shaddow">
         <div className="my-3 relative">
           <SlArrowLeft
             size={getSize("left")}

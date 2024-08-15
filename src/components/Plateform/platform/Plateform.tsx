@@ -4,6 +4,8 @@ import HeroPage_2 from "./HeroPage_2";
 import Standard_Section from "../../HomePage/Standard_Section";
 import Workflow_engine from "./Workflow_engine";
 import ConductorWorks from "./ConductorWorks";
+import Orkes_Integrations from "./Orkes_Integrations";
+import Timeline from "./Timeline";
 
 type PlateformProps = {};
 
@@ -17,6 +19,8 @@ const Plateform: React.FC<PlateformProps> = () => {
         <Workflow_engine />
       </div>
       <ConductorWorks />
+      <Orkes_Integrations />
+      <Timeline />
     </>
   );
 };

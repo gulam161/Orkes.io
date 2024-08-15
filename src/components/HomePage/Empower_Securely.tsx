@@ -1,14 +1,11 @@
 import React from "react";
 import Coding_Artwork from "../../assets/Coding-Artwork.png";
-import visual_modeling_Yellow from "../../../public/Image/visual_modeling_Yellow.svg";
-import Secure_Collaboration from "../../../public/Image/Secure Collaboration.svg";
-import Write_choosing from "../../../public/Image//Write_choosing.svg";
 
 type Empower_SecurelyProps = {};
 
 const data = [
   {
-    src: visual_modeling_Yellow,
+    src: "/Images/visual_modeling_Yellow.svg",
     alt: "visual_modeling_Yellow",
     title: "Code + visual modeling > Supercharged developers",
     items: [
@@ -17,7 +14,7 @@ const data = [
     ],
   },
   {
-    src: Write_choosing,
+    src: "/Images/Write_choosing.svg",
     alt: "Write_choosing",
     title:
       "Write workflows as code, build task workers, integrate other applications",
@@ -28,7 +25,7 @@ const data = [
     ],
   },
   {
-    src: Secure_Collaboration,
+    src: "/Images/Secure Collaboration.svg",
     alt: "Secure_Collaboration",
     title: "Secure collaboration across teams and functions",
     items: [
