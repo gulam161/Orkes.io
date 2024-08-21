@@ -3,12 +3,7 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      colors: {
-        "int-purple": "#342960",
-        "int-red": "#561827",
-        "int-brown": "#231307",
-        "int-gray": "#313435",
-      },
+      colors: {},
       backgroundColor: {
         "custom-gradient": "linear-gradient(270deg, #d7dcdd, white)",
       },

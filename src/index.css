@@ -64,3 +64,11 @@
 .background_image_color {
   background: linear-gradient(to right, #8057ff, #1bc7ff 50%, #ed5668);
 }
+
+/* .logotab-progress-bar {
+  background-color: #8057ff;
+  height: 3px;
+  margin-bottom: -1px;
+  position: absolute;
+  inset: auto 0% 0%;
+} */
