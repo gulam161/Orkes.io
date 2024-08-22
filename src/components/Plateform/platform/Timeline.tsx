@@ -65,127 +65,119 @@ const logos = [
 
 const Timeline: React.FC<TimelineProps> = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [filled, setFilled] = useState(0);
+
+  const handleLogoClick = (index: number) => {
+    setCurrentIndex(index);
+  };
+
+  useEffect(() => {
+    if (filled <= 100) {
+      const timer = setTimeout(() => setFilled((preVal) => preVal + 2), 50);
+      return () => clearTimeout(timer);
+    }
+  }, [filled]);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setCurrentIndex((preInd) => (preInd + 1) % data.length);
-    }, 2000);
-
+      setCurrentIndex((prev) => (prev + 1) % data.length);
+      setFilled(0);
+    }, 4000);
     return () => clearInterval(intervalId);
   }, []);
 
-  // const progress = document.getElementById("progress");
-  // let percent = 0;
-
-  // const progressBar = setInterval(() => {
-  //   percent++;
-  //   if (progress) {
-  //     progress.style.width = percent;
-  //   }
-  //   if (percent === 100) {
-  //     clearInterval(progressBar); // Clear interval when percent reaches 100
-  //   }
-  // }, 100);
-  // const {
-  //   label,
-  //   text,
-  //   logo,
-  //   backgroundImage,
-  //   backgroundColor,
-  //   textColor,
-  //   link,
-  //   linkText,
-  // } = data[currentIndex];
-
   return (
-    <section className="">
-      <div className="w-10/12 mx-auto max-lg:w-11/12 max-md:w-[94]">
-        {data.map(
-          (
-            {
-              id,
-              label,
-              text,
-              logo,
-              backgroundImage,
-              backgroundColor,
-              textColor,
-              link,
-              linkText,
-            },
-            i
-          ) =>
-            i === currentIndex && (
+    <section className="w-10/12 mx-auto max-lg:w-11/12 max-md:w-[94]">
+      {data.map(
+        (
+          {
+            id,
+            label,
+            text,
+            logo,
+            backgroundImage,
+            backgroundColor,
+            textColor,
+            link,
+            linkText,
+          },
+          i
+        ) =>
+          i === currentIndex && (
+            <div
+              key={id}
+              className="h-[420px] w-full max-md:h-auto relative overflow-hidden flex flex-row pt-5 pb-8 px-3 my-8 rounded-2xl bg-repeat bg-[auto,cover] bg-center grid_shaddow"
+              style={{ backgroundImage: `url(${backgroundImage})` }}
+            >
               <div
-                key={id}
-                className="h-[420px] w-full max-md:h-auto relative overflow-hidden flex flex-row pt-5 pb-8 px-3 my-8 rounded-2xl bg-repeat bg-[auto,cover] bg-center grid_shaddow"
-                style={{ backgroundImage: `url(${backgroundImage})` }}
-              >
-                <div
-                  className={`h-full w-full absolute top-0 left-0 `}
-                  style={{ backgroundColor: backgroundColor }}
-                ></div>
+                className="h-full w-full absolute top-0 left-0"
+                style={{ backgroundColor: backgroundColor }}
+              ></div>
 
-                <div className="flex max-lg:flex-col-reverse">
-                  <div className="w-1/2 relative px-5 max-lg:w-full">
-                    <p className="text-white text-justify leading-8 tracking-wide font-light my-2">
-                      {text}
-                    </p>
-                    <p className="mt-5" style={{ color: textColor }}>
-                      {label}
-                    </p>
-                    <Link
-                      to={link}
-                      className="text-sm text-center py-2 px-3 rounded-full border-2  mt-6 inline-block text-white border-[#ed5668] bg-[#ed5668] hover:ml-0.5 hover:grid_shaddow"
-                    >
-                      {linkText}
-                    </Link>
-                  </div>
-                  <div className="m-auto h-[120px]">
-                    <img
-                      src={logo}
-                      alt="logo"
-                      className={`${
-                        i === 0 || i === 1
-                          ? "max-lg:w-[200px] max-md:w-[180px]"
-                          : ""
-                      } filter mt-5`}
-                      width={`${i === 2 ? 280 : 240}`}
-                    />
-                  </div>
+              <div className="flex max-lg:flex-col-reverse">
+                <div className="w-1/2 relative px-5 max-lg:w-full">
+                  <p className="text-white text-justify leading-8 tracking-wide font-light my-2">
+                    {text}
+                  </p>
+                  <p className="mt-5" style={{ color: textColor }}>
+                    {label}
+                  </p>
+                  <Link
+                    to={link}
+                    className="text-sm text-center py-2 px-3 rounded-full border-2  mt-6 inline-block text-white border-[#ed5668] bg-[#ed5668] hover:ml-0.5 hover:grid_shaddow"
+                  >
+                    {linkText}
+                  </Link>
+                </div>
+                <div className="m-auto h-[120px]">
+                  <img
+                    src={logo}
+                    alt="logo"
+                    className={`${
+                      currentIndex === 0 || currentIndex === 1
+                        ? "max-lg:w-[200px] max-md:w-[180px]"
+                        : ""
+                    } filter mt-5`}
+                    width={currentIndex === 2 ? 280 : 240}
+                  />
                 </div>
               </div>
-            )
-        )}
-        <div className="grid grid-cols-4 gap-2 place-items-stretch mb-4 max-md:grid-cols-2">
-          {logos.map((logo, index) => (
-            <div
-              onClick={() => setCurrentIndex(index)}
-              className={`${
-                index === 0 ? "py-0" : "py-5"
-              } w-full h-full flex justify-center items-center place-self-center border-b-[1px]`}
-            >
-              <img
-                key={index}
-                src={logo.src}
-                alt={logo.alt}
-                width={logo.width}
-                className={`${
-                  index === currentIndex
-                    ? "filter-none"
-                    : "filter cursor-pointer"
-                } ${
-                  index === 0
-                    ? "max-lg:w-[100px] max-md:w-[120px] max-sm:w-[90px]"
-                    : index === 1
-                    ? "max-lg:w-[120px] max-md:w-[130px] max-sm:w-[90px]"
-                    : " max-sm:w-[120px]"
-                }`}
-              />
-              {/* <div className="logotab-progress-bar" id="progress"></div> */}
             </div>
-          ))}
-        </div>
+          )
+      )}
+      <div className="grid grid-cols-4 gap-2 place-items-stretch mb-4 max-md:grid-cols-2">
+        {logos.map((logo, index) => (
+          <div
+            key={index}
+            onClick={() => handleLogoClick(index)}
+            className={`relative w-full h-full flex flex-col justify-center items-center place-self-center border-b-[1px] ${
+              index === 0 ? "py-0" : "py-5"
+            }`}
+          >
+            <img
+              src={logo.src}
+              alt={logo.alt}
+              width={logo.width}
+              className={`${
+                index === currentIndex ? "filter-none" : "filter cursor-pointer"
+              } ${
+                index === 0
+                  ? "max-lg:w-[100px] max-md:w-[120px] max-sm:w-[90px]"
+                  : index === 1
+                  ? "max-lg:w-[120px] max-md:w-[130px] max-sm:w-[90px]"
+                  : "max-sm:w-[120px]"
+              }`}
+            />
+            {currentIndex === index && (
+              <div className="overflow-hidden transition-all duration-150 w-full absolute bottom-0 left-0">
+                <div
+                  className="h-[3px] bg-[#8057ff] transition-all duration-500"
+                  style={{ width: `${filled}%` }}
+                />
+              </div>
+            )}
+          </div>
+        ))}
       </div>
     </section>
   );
