@@ -6,6 +6,7 @@ import Workflow_engine from "./Workflow_engine";
 import ConductorWorks from "./ConductorWorks";
 import Orkes_Integrations from "./Orkes_Integrations";
 import Timeline from "./Timeline";
+import Priced_Scale from "./Priced_Scale";
 
 type PlateformProps = {};
 
@@ -21,6 +22,7 @@ const Plateform: React.FC<PlateformProps> = () => {
       <ConductorWorks />
       <Orkes_Integrations />
       <Timeline />
+      <Priced_Scale />
     </>
   );
 };

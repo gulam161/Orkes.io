@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        stroke-width: 0px;
+      }
+
+      .cls-5 {
+        filter: url(#drop-shadow-1);
+      }
+
+      .cls-3 {
+        fill: #835edd;
+      }
+
+      .cls-4 {
+        fill: #fff;
+      }
+    </style>
+    <filter id="drop-shadow-1">
+      <feOffset dx="0" dy="0"/>
+      <feGaussianBlur result="blur" stdDeviation="3"/>
+      <feFlood flood-color="#073547" flood-opacity=".2"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clippath">
+      <rect class="cls-2" x="34.622" y="35.761" width="30.756" height="28.478"/>
+    </clipPath>
+  </defs>
+  <g class="cls-5">
+    <circle class="cls-4" cx="50" cy="50" r="36.452"/>
+  </g>
+  <g class="cls-1">
+    <g>
+      <path class="cls-3" d="M36.607,58.405v-15.771h25.795v11.155h1.984v-15.142c0-1.591-1.329-2.887-2.957-2.887h-23.851c-1.627,0-2.957,1.296-2.957,2.887v19.758c0,1.591,1.329,2.887,2.957,2.887h3.988v-1.964h-3.988c-.536,0-.972-.412-.972-.923h0Z"/>
+      <path class="cls-3" d="M48.968,49.96c0,2.966,2.421,5.362,5.417,5.362s5.417-2.396,5.417-5.362-2.421-5.362-5.417-5.362-5.417,2.396-5.417,5.362Z"/>
+      <path class="cls-3" d="M60.041,54.91c-1.389,1.532-3.413,2.514-5.635,2.514s-4.266-.982-5.635-2.514c-3.195,1.885-5.338,5.362-5.338,9.309h21.966c0-3.967-2.143-7.424-5.338-9.309,0,0-.02,0-.02,0Z"/>
+    </g>
+  </g>
+</svg>

@@ -66,9 +66,12 @@ const logos = [
 const Timeline: React.FC<TimelineProps> = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [filled, setFilled] = useState(0);
+  const [isManualChange, setIsManualChange] = useState(false);
 
   const handleLogoClick = (index: number) => {
     setCurrentIndex(index);
+    setIsManualChange(true);
+    setFilled(0);
   };
 
   useEffect(() => {
@@ -79,12 +82,17 @@ const Timeline: React.FC<TimelineProps> = () => {
   }, [filled]);
 
   useEffect(() => {
+    if (isManualChange) {
+      setIsManualChange(false);
+      return;
+    }
+
     const intervalId = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % data.length);
       setFilled(0);
     }, 4000);
     return () => clearInterval(intervalId);
-  }, []);
+  }, [currentIndex, isManualChange]);
 
   return (
     <section className="w-10/12 mx-auto max-lg:w-11/12 max-md:w-[94]">
@@ -106,7 +114,7 @@ const Timeline: React.FC<TimelineProps> = () => {
           i === currentIndex && (
             <div
               key={id}
-              className="h-[420px] w-full max-md:h-auto relative overflow-hidden flex flex-row pt-5 pb-8 px-3 my-8 rounded-2xl bg-repeat bg-[auto,cover] bg-center grid_shaddow"
+              className="h-[420px] w-full max-md:h-auto relative overflow-hidden flex flex-row pt-5 pb-8 px-3 my-8 rounded-2xl bg-repeat bg-[auto,cover] bg-center scale_shadow"
               style={{ backgroundImage: `url(${backgroundImage})` }}
             >
               <div

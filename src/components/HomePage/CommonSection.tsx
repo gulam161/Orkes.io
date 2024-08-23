@@ -65,11 +65,13 @@ const CommonSection: React.FC<CommonSectionProps> = ({
           {buttons.map((label, idx) => (
             <button
               key={label}
-              className={`py-2 ${
-                active === idx
-                  ? "bg-purple-900 text-white"
-                  : "bg-white text-black"
-              } rounded-${idx === 0 ? "l" : "r"}-full`}
+              className={`py-2 bg-${
+                active === idx ? "purple-900 text-white" : "white text-black"
+              } rounded-${
+                idx === 0 ? "l" : "r"
+              }-full transform transition-all duration-500 ease-in-out ${
+                active ? "translate-x-1" : "translate-x-0"
+              }`}
               //  ${
               //       idx === 0 ? "rounded-l-full" : idx === buttons.length - 1 ? "rounded-r-full" : ""
               //     }
