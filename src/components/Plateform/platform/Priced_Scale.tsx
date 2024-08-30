@@ -91,9 +91,9 @@ const data = [
         basic: "Everything in Basic plus:",
         list: "AI Orchestration",
         AI_Orchestration: [
-          "- LLM and Vector DB Integrations",
-          "  AI Prompt Studio",
-          "– LLM System Tasks",
+          "LLM and Vector DB Integrations",
+          "AI Prompt Studio",
+          "LLM System Tasks",
         ],
       },
       {
@@ -102,13 +102,44 @@ const data = [
       {
         list: "Secure Workflows",
         Secure_Workflows: {
-          //   data_encryption:
-          //     "End to end encryption of data at rest and in transit",
-          //   access_controls: "Role Based Access Controls",
-          //   user_groups: true,
-          //   external_application_identities: true,
-          //   secrets_management: true,
+          data_encryption:
+            "End to end encryption of data at rest and in transit",
+          access_controls: "Role Based Access Controls user groups",
+          external_application_identities:
+            "External Application Identities Secrets",
         },
+      },
+      {
+        list: "Governance",
+        Governance: {
+          audit_logs: "Audit Logs",
+          change_data_capture: "Change Data Capture",
+        },
+      },
+      {
+        list: "Single Sign On",
+      },
+      {
+        list: "ID Provider User Groups Sync",
+      },
+      {
+        list: "Advanced Analytics",
+      },
+      {
+        list: "High Volume Clusters scale to billions of tasks",
+      },
+      {
+        list: "Tailored Cluster Deployment",
+        Tailored_Cluster_Deployment: [
+          "Choice of Cloud Provider (AWS, Azure, GCP)",
+          "Choice of cloud provider region Multi-region High Availability",
+          "Choice of fully Orkes hosted or hybrid customer cloud deployments",
+          "Private IP Connectivity",
+          "Fully dedicated infrastructure Up to 99.99% availability SLA",
+        ],
+      },
+      {
+        list: "Premium Support with faster SLAs and Slack/Teams support channels",
       },
     ],
   },
@@ -136,6 +167,7 @@ const Priced_Scale: React.FC<Priced_ScaleProps> = () => {
             buttontext,
             link,
             borderColor,
+            features,
           }) => {
             return (
               <div
@@ -179,7 +211,7 @@ const Priced_Scale: React.FC<Priced_ScaleProps> = () => {
 
                   <div className="h-24">
                     <h1 className="text-5xl font-extralight text-gray-800 mb-2">
-                      {toggle ? buttonLable : "$825"}
+                      {id === 2 && !toggle ? "$825" : buttonLable}
                       {id === 2 && (
                         <span className="text-[26px] font-light text-gray-400 pl-1">
                           {!toggle ? "/month" : "/annually"}
@@ -210,7 +242,72 @@ const Priced_Scale: React.FC<Priced_ScaleProps> = () => {
                 </div>
 
                 {/* Price and table-list */}
-                <div className=""></div>
+                <div className="">
+                  {features.map((elem, index) => (
+                    <>
+                      <h2 className="font-medium text-lg">{elem.basic}</h2>
+                      <ul className="list-disc pl-6 font-light text-gray-800 text-start leading-9 mt-2">
+                        <li key={index}>
+                          <li>{elem.list}</li>
+                          {elem.AI_Orchestration && (
+                            <ul className="list-none pl-4">
+                              {elem.AI_Orchestration.map((item, subIndex) => (
+                                <li key={subIndex}>
+                                  <div className="flex items-center gap-2">
+                                    <p>–</p>
+                                    <p>{item}</p>
+                                  </div>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                          {elem.Secure_Workflows && (
+                            <ul className="list-none pl-4">
+                              {Object.entries(elem.Secure_Workflows).map(
+                                ([key, value]) => (
+                                  <li key={key}>
+                                    <div className="flex items-start gap-2">
+                                      <p>–</p>
+                                      <p>{value}</p>
+                                    </div>
+                                  </li>
+                                )
+                              )}
+                            </ul>
+                          )}
+                          {elem.Governance && (
+                            <ul className="list-none pl-4">
+                              {Object.entries(elem.Governance).map(
+                                ([key, value]) => (
+                                  <li key={key}>
+                                    <div className="flex items-center gap-2">
+                                      <p>–</p>
+                                      <p>{value}</p>
+                                    </div>
+                                  </li>
+                                )
+                              )}
+                            </ul>
+                          )}
+                          {elem.Tailored_Cluster_Deployment && (
+                            <ul className="list-none pl-4">
+                              {elem.Tailored_Cluster_Deployment.map(
+                                (item, subIndex) => (
+                                  <li key={subIndex}>
+                                    <div className="flex items-start gap-2">
+                                      <p>–</p>
+                                      <p>{item}</p>
+                                    </div>
+                                  </li>
+                                )
+                              )}
+                            </ul>
+                          )}
+                        </li>
+                      </ul>
+                    </>
+                  ))}
+                </div>
               </div>
             );
           }
