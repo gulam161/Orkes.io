@@ -1,8 +1,8 @@
 import React from "react";
 import Home from "./components/Home";
 import { Routes, Route } from "react-router-dom";
-import Plateform from "./components/Plateform/platform/Plateform";
-import Cloud from "./components/Plateform/cloud/Cloud";
+import Plateform_page from "./components/Plateform/platform/Page";
+import CloudPage from "./components/Plateform/cloud/CloudPage";
 import Conductor_OSS from "./components/Plateform/conductor/Conductor_OSS";
 import Microservices from "./components/Usecases/microservices/Microservices";
 import Event_Architecture from "./components/Usecases/eventarchiteture/Event_Architecture";
@@ -18,8 +18,8 @@ const App: React.FC<AppProps> = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/plateform" element={<Plateform />} />
-      <Route path="/cloud" element={<Cloud />} />
+      <Route path="/plateform" element={<Plateform_page />} />
+      <Route path="/cloud" element={<CloudPage />} />
       <Route path="/conductor-oss-vs-orkes" element={<Conductor_OSS />} />
       <Route
         path="/microservices-and-api-orchestration"

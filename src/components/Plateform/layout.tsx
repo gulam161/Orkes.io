@@ -9,7 +9,7 @@ type LayoutProps = {};
 const layoutItems = [
   {
     id: 1,
-    to: "plateform",
+    to: "/plateform",
     text: "Orkes Platform",
     label:
       "Supercharge coding distributed systems across microservices, APIs, AI models, and event-driven architectures – any language, framework, and complexity.",
@@ -17,7 +17,7 @@ const layoutItems = [
   },
   {
     id: 2,
-    to: "cloud",
+    to: "/cloud",
     text: "Orkes Cloud",
     label:
       "Scale to the billions and eliminate the complexity of building, securing, and managing Conductor clusters.",
@@ -25,7 +25,7 @@ const layoutItems = [
   },
   {
     id: 3,
-    to: "conductor-oss-vs-orkes",
+    to: "/conductor-oss-vs-orkes",
     text: "Orkes vs. Conductor_OSS",
     label:
       "A complete comparison of the features and functionality of Orkes and Conductor OSS.",

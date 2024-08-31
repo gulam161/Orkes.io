@@ -95,7 +95,7 @@ const Timeline: React.FC<TimelineProps> = () => {
   }, [currentIndex, isManualChange]);
 
   return (
-    <section className="w-10/12 mx-auto max-lg:w-11/12 max-md:w-[94]">
+    <section className="mx-auto max-md:w-[94%]">
       {data.map(
         (
           {

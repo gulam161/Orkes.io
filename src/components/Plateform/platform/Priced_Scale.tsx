@@ -155,7 +155,7 @@ const Priced_Scale: React.FC<Priced_ScaleProps> = () => {
           Build without limitations with unlimited task and workflow executions
         </p>
       </div>
-      <div className="w-10/12 m-auto grid grid-cols-3 gap-10 max-lg:grid-cols-1 max-sm:p-8">
+      <div className="m-auto grid grid-cols-3 gap-10 max-lg:grid-cols-1">
         {data.map(
           ({
             id,
@@ -174,7 +174,7 @@ const Priced_Scale: React.FC<Priced_ScaleProps> = () => {
                 key={id}
                 className="flex flex-col gap-8 text-start border-2 border-gray-200 px-4 py-4 rounded-xl expert_shaddow max-lg:rounded-lg"
               >
-                <div className="h-52">
+                <div className="h-52 max-lg:h-auto">
                   <img src={img_Src} alt={alt} width={80} />
                   <h2 className="text-xl font-medium text-gray-700 my-1">
                     {heading}
@@ -230,7 +230,7 @@ const Priced_Scale: React.FC<Priced_ScaleProps> = () => {
                   </div>
                   <Link
                     to={link}
-                    className="border-2 scale_button"
+                    className="w-full border-2 py-1.5 scale_button"
                     style={{
                       borderColor: borderColor,
                       backgroundColor: id === 3 ? borderColor : "transparent",
@@ -242,70 +242,76 @@ const Priced_Scale: React.FC<Priced_ScaleProps> = () => {
                 </div>
 
                 {/* Price and table-list */}
-                <div className="">
+                <div>
                   {features.map((elem, index) => (
-                    <>
+                    <div key={index}>
                       <h2 className="font-medium text-lg">{elem.basic}</h2>
                       <ul className="list-disc pl-6 font-light text-gray-800 text-start leading-9 mt-2">
-                        <li key={index}>
-                          <li>{elem.list}</li>
-                          {elem.AI_Orchestration && (
-                            <ul className="list-none pl-4">
-                              {elem.AI_Orchestration.map((item, subIndex) => (
-                                <li key={subIndex}>
-                                  <div className="flex items-center gap-2">
-                                    <p>–</p>
-                                    <p>{item}</p>
-                                  </div>
+                        <li>{elem.list}</li>
+
+                        {elem.AI_Orchestration && (
+                          <ul className="list-none pl-4">
+                            {elem.AI_Orchestration.map((item, subIndex) => (
+                              <li
+                                key={subIndex}
+                                className="flex items-start gap-2"
+                              >
+                                <span>–</span>
+                                <p>{item}</p>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+
+                        {elem.Secure_Workflows && (
+                          <ul className="list-none pl-4">
+                            {Object.entries(elem.Secure_Workflows).map(
+                              ([key, value]) => (
+                                <li
+                                  key={key}
+                                  className="flex items-start gap-2"
+                                >
+                                  <span>–</span>
+                                  <p>{value}</p>
                                 </li>
-                              ))}
-                            </ul>
-                          )}
-                          {elem.Secure_Workflows && (
-                            <ul className="list-none pl-4">
-                              {Object.entries(elem.Secure_Workflows).map(
-                                ([key, value]) => (
-                                  <li key={key}>
-                                    <div className="flex items-start gap-2">
-                                      <p>–</p>
-                                      <p>{value}</p>
-                                    </div>
-                                  </li>
-                                )
-                              )}
-                            </ul>
-                          )}
-                          {elem.Governance && (
-                            <ul className="list-none pl-4">
-                              {Object.entries(elem.Governance).map(
-                                ([key, value]) => (
-                                  <li key={key}>
-                                    <div className="flex items-center gap-2">
-                                      <p>–</p>
-                                      <p>{value}</p>
-                                    </div>
-                                  </li>
-                                )
-                              )}
-                            </ul>
-                          )}
-                          {elem.Tailored_Cluster_Deployment && (
-                            <ul className="list-none pl-4">
-                              {elem.Tailored_Cluster_Deployment.map(
-                                (item, subIndex) => (
-                                  <li key={subIndex}>
-                                    <div className="flex items-start gap-2">
-                                      <p>–</p>
-                                      <p>{item}</p>
-                                    </div>
-                                  </li>
-                                )
-                              )}
-                            </ul>
-                          )}
-                        </li>
+                              )
+                            )}
+                          </ul>
+                        )}
+
+                        {elem.Governance && (
+                          <ul className="list-none pl-4">
+                            {Object.entries(elem.Governance).map(
+                              ([key, value]) => (
+                                <li
+                                  key={key}
+                                  className="flex items-start gap-2"
+                                >
+                                  <span>–</span>
+                                  <p>{value}</p>
+                                </li>
+                              )
+                            )}
+                          </ul>
+                        )}
+
+                        {elem.Tailored_Cluster_Deployment && (
+                          <ul className="list-none pl-4">
+                            {elem.Tailored_Cluster_Deployment.map(
+                              (item, subIndex) => (
+                                <li
+                                  key={subIndex}
+                                  className="flex items-start gap-2"
+                                >
+                                  <span>–</span>
+                                  <p>{item}</p>
+                                </li>
+                              )
+                            )}
+                          </ul>
+                        )}
                       </ul>
-                    </>
+                    </div>
                   ))}
                 </div>
               </div>

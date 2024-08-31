@@ -37,12 +37,13 @@
 }
 
 .scale_button {
-  @apply rounded-full w-full inline-block py-1.5;
+  @apply rounded-full inline-block;
 }
 .scale_button:hover {
   transform: translate(2px, -2px);
   box-shadow: -1px 1px 10px 1px #0006;
 }
+
 .custom {
   background: linear-gradient(270deg, #d7dcdd, white);
 }

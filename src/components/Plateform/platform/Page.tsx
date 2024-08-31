@@ -7,10 +7,12 @@ import ConductorWorks from "./ConductorWorks";
 import Orkes_Integrations from "./Orkes_Integrations";
 import Timeline from "./Timeline";
 import Priced_Scale from "./Priced_Scale";
+import Footer from "../../Footer";
+import OrkesStarterBanner from "./OrkesStarterBanner";
 
-type PlateformProps = {};
+type PageProps = {};
 
-const Plateform: React.FC<PlateformProps> = () => {
+const Page: React.FC<PageProps> = () => {
   return (
     <>
       <Header />
@@ -20,10 +22,14 @@ const Plateform: React.FC<PlateformProps> = () => {
         <Workflow_engine />
       </div>
       <ConductorWorks />
-      <Orkes_Integrations />
-      <Timeline />
-      <Priced_Scale />
+      <div className="w-4/5 mx-auto flex_items_between max-lg:w-11/12">
+        <Orkes_Integrations />
+        <Timeline />
+        <Priced_Scale />
+        <OrkesStarterBanner />
+        <Footer />
+      </div>
     </>
   );
 };
-export default Plateform;
+export default Page;
