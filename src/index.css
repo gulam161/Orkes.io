@@ -44,14 +44,6 @@
   box-shadow: -1px 1px 10px 1px #0006;
 }
 
-.custom {
-  background: linear-gradient(270deg, #d7dcdd, white);
-}
-
-.custom_2 {
-  background: linear-gradient(270deg, white, #d7dcdd);
-}
-
 .filter {
   filter: grayscale(100%);
 }
@@ -74,6 +66,18 @@
   }
 }
 
+.custom {
+  background: linear-gradient(270deg, #d7dcdd, white);
+}
+
+.custom_2 {
+  background: linear-gradient(270deg, white, #d7dcdd);
+}
+
 .background_image_color {
   background: linear-gradient(to right, #8057ff, #1bc7ff 50%, #ed5668);
+}
+
+.security {
+  background: linear-gradient(#e1f6fd, #f6fcfe);
 }
