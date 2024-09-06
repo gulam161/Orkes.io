@@ -8,7 +8,6 @@ import Orkes_Integrations from "./Orkes_Integrations";
 import Timeline from "./Timeline";
 import Priced_Scale from "./Priced_Scale";
 import Footer from "../../Footer";
-import OrkesStarterBanner from "./OrkesStarterBanner";
 
 type PageProps = {};
 
@@ -26,7 +25,6 @@ const Page: React.FC<PageProps> = () => {
         <Orkes_Integrations />
         <Timeline />
         <Priced_Scale />
-        <OrkesStarterBanner />
         <Footer />
       </div>
     </>

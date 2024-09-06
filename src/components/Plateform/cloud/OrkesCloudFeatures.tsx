@@ -1,6 +1,8 @@
 import React from "react";
-// import Security_BG from "../../../../public/Orkes-Cloud-Page-Assets_Security-BG_v2_B.png";
+import Cloud_Common from "./Cloud_Common";
 import Orkes_Cloud_Page_BG_Clouds from "../../../../public/Orkes-Cloud-Page-BG_Clouds.png";
+import OrkesStarterBanner from "../OrkesStarterBanner";
+import Footer from "../../Footer";
 
 const data = [
   {
@@ -79,6 +81,43 @@ const EnterpriseCapabilities = [
   },
 ];
 
+const ExpertSupportHub = [
+  {
+    id: 1,
+    imgSrc: "/Customer-Care_Thumbnail.jpg",
+    alt: "Customer-Care_Thumbnail",
+    heading: "Enterprise Customer Support",
+    link: "",
+    label:
+      "Get the help you need when you need it. Access to our team of experts to assist in getting up and running, answering questions your pressing questions, and more all within our SLAs.",
+  },
+  {
+    id: 2,
+    imgSrc: "/New-Slack_Login.jpg",
+    alt: "New-Slack_Login",
+    heading: "Conductor Slack Community",
+    link: "",
+    label: `<p class="font-light">
+        Connect and learn from the active community of Conductor developers, architects and more in our <a class="font-medium text-cyan-500 underline" href="">community slack channel</a> . Post your questions, share use cases and come together at the forefront of workflow orchestration.
+      </p>
+    `,
+  },
+  {
+    id: 3,
+    imgSrc: "/Docs_Screenshot.jpg",
+    alt: "Docs_Screenshot",
+    heading: "Dedicated Resources",
+    link: "",
+    label: `<p class="font-light">
+        Check out our <a class="font-medium text-cyan-500 underline" href="">Docs</a> for getting started, use case examples, and references to our features and APIs. 
+        For more on thought leadership, tutorials, and general product information, head on over to our 
+        <a class="font-medium text-cyan-500 underline" href="">Blogs</a> and 
+        <a class="font-medium text-cyan-500 underline" href="">YouTube channel</a>.
+      </p>
+    `,
+  },
+];
+
 const OrkesCloudFeatures: React.FC = () => {
   return (
     <>
@@ -133,28 +172,14 @@ const OrkesCloudFeatures: React.FC = () => {
       </section>
 
       {/*Orkes-Cloud hosting options*/}
-      <section
-        className="flex_between_center max-lg:flex-col py-5 bg-cover bg-center"
-        style={{ backgroundImage: `url(${Orkes_Cloud_Page_BG_Clouds})` }}
-      >
-        <img
-          src="/Orkes-Cloud-Page-Assets_Hosting_v2.png"
-          //   /Orkes-Cloud-Page-Assets_Global-Availability.png
-          alt="Orkes-Cloud-Hosting"
-          className="w-1/2 max-md:w-full"
-        />
-        <div className="text-gray-700 max-lg:text-center max-lg:px-20 max-md:px-8">
-          <h2 className="text-4xl font-medium mb-4 text-gray-800">
-            Prefered hosting options
-          </h2>
-          <p className="font-light tracking-wide ">
-            Choose between an Orkes Hosted environment or a Customer Hosted
-            environment with the option of having all of the compute and data
-            stay on your cloud account and fully aligned with your security and
-            compliance postures.
-          </p>
-        </div>
-      </section>
+      <Cloud_Common
+        bgImage={Orkes_Cloud_Page_BG_Clouds}
+        imgSrc="/Orkes-Cloud-Page-Assets_Hosting_v2.png"
+        imgAlt="Orkes-Cloud-Hosting"
+        imgWidth="520"
+        title="Preferred hosting options"
+        description="Choose between an Orkes Hosted environment or a Customer Hosted environment with the option of having all of the compute and data stay on your cloud account and fully aligned with your security and compliance postures."
+      />
 
       {/* All the capabilities need */}
 
@@ -185,24 +210,56 @@ const OrkesCloudFeatures: React.FC = () => {
       </section>
 
       {/*Availability across  */}
-      <section className="flex_between_center max-lg:flex-col py-5 bg-cover bg-center">
-        <img
-          src="/Orkes-Cloud-Page-Assets_Global-Availability.png"
-          alt="Orkes-Cloud-Global-Availability"
-          className="max-md:w-full"
-          width={640}
+      <div className="py-10 max-lg:py-0">
+        <Cloud_Common
+          bgImage=""
+          imgSrc="/Orkes-Cloud-Page-Assets_Global-Availability.png"
+          imgAlt="Orkes-Cloud-Global-Availability"
+          imgWidth="640"
+          title="Availability across the globe"
+          description="Orkes Cloud supports multiple regions and zones across the world with up to 99.99% SLA. Choose the right configuration for your needs."
         />
-        <div className="w-1/2 text-gray-700 max-lg:text-center max-lg:px-20 max-md:px-8">
-          <h2 className="text-4xl font-medium mb-4 text-gray-800">
-            Availability across the globe
-          </h2>
-          <p className="font-light tracking-wide ">
-            Orkes Cloud supports multiple regions and zones across the world
-            with up to 99.99% SLA. Choose the right configuration for your
-            needs.
-          </p>
+      </div>
+
+      {/* Enterprise support and a community */}
+      <section className="p-10 my-16 text-center text-gray-800 bg-stone-100/80 border border-gray-300 rounded-xl shadow-lg max-sm:px-8 ">
+        <h1 className="text-4xl font-medium px-28 mb-10 max-lg:px-8 max-md:px-4 max-md:text-3xl">
+          Enterprise support and a community of experts at your service
+        </h1>
+
+        <div className="grid grid-cols-3 gap-6 max-md:grid-cols-1">
+          {ExpertSupportHub.map(({ id, imgSrc, alt, heading, label }) => {
+            return (
+              <div key={id} className="rounded-xl shadow-md  bg-white">
+                <img
+                  src={imgSrc}
+                  alt={alt}
+                  className="w-full rounded-t-xl shadow-sm"
+                />
+                <div className="p-5 text-start">
+                  <h2 className="text-lg font-semibold my-2">{heading}</h2>
+                  <p
+                    className="font-light"
+                    dangerouslySetInnerHTML={{ __html: label }}
+                  />
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
+
+      {/*  */}
+
+      {/* <section className="static"> */}
+      <OrkesStarterBanner
+        bgImage="/Orkes-Cloud-Page-BG_Clouds.png"
+        heading="Get started with Orkes Cloud today"
+        divClass="text-gray-700"
+        headingClass="font-light text-3xl max-md:text-2xl mb-2"
+      />
+      {/* </section> */}
+      <Footer />
     </>
   );
 };
