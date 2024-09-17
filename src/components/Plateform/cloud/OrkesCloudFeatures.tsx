@@ -1,4 +1,5 @@
 import React from "react";
+import ContentCard from "../ContentCard";
 import Cloud_Common from "./Cloud_Common";
 import Orkes_Cloud_Page_BG_Clouds from "../../../../public/Orkes-Cloud-Page-BG_Clouds.png";
 import OrkesStarterBanner from "../OrkesStarterBanner";
@@ -182,8 +183,7 @@ const OrkesCloudFeatures: React.FC = () => {
       />
 
       {/* All the capabilities need */}
-
-      <section className="p-10 my-14 text-center text-gray-800 bg-stone-100/80 border border-gray-300 rounded-xl shadow-lg max-sm:px-6 ">
+      {/* <section className="p-10 my-14 text-center text-gray-800 bg-stone-100/80 border border-gray-300 rounded-xl shadow-lg max-sm:px-6 ">
         <div className="grid grid-cols-2 gap-10 max-md:grid-cols-1 max-sm:gap-8">
           {EnterpriseCapabilities.map(
             ({ id, isStatic, imgSrc, alt, heading, label }) => {
@@ -207,7 +207,8 @@ const OrkesCloudFeatures: React.FC = () => {
             }
           )}
         </div>
-      </section>
+      </section> */}
+      <ContentCard data={EnterpriseCapabilities} isStatic={false} columns={2} />
 
       {/*Availability across  */}
       <div className="py-10 max-lg:py-0">
@@ -249,16 +250,13 @@ const OrkesCloudFeatures: React.FC = () => {
         </div>
       </section>
 
-      {/*  */}
-
-      {/* <section className="static"> */}
+      {/* started with Orkes Cloud */}
       <OrkesStarterBanner
         bgImage="/Orkes-Cloud-Page-BG_Clouds.png"
         heading="Get started with Orkes Cloud today"
         divClass="text-gray-700"
         headingClass="font-light text-3xl max-md:text-2xl mb-2"
       />
-      {/* </section> */}
       <Footer />
     </>
   );
