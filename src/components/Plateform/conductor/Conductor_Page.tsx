@@ -130,43 +130,6 @@ const Conductor_Page: React.FC<Conductor_PageProps> = () => {
               </button>
             ))}
           </div>
-
-          <div className="p-10 border border-gray-300 rounded-xl">
-            <table className="w-full">
-              <tr className="flex justify-between items-center">
-                <th className="flex flex-col justify-end items-start gap-3 mb-2.5 border-b-2 border-gray-500 w-full h-full px-4">
-                  <img src="" alt="" width="" className="" />
-                  <p>Operational Capabilities</p>
-                </th>
-                <th className="flex flex-col justify-center items-center gap-3 mb-2.5 border-b-2 border-gray-500 w-full">
-                  <img
-                    src="/Orkes Logo Symbol.svg"
-                    alt="/Orkes Logo Symbol"
-                    width={45}
-                    className=""
-                  />
-                  <p>Conductor OSS</p>
-                </th>
-                <th className="flex flex-col justify-center items-center gap-3 mb-2.5 border-b-2 border-gray-500 w-full">
-                  <img
-                    src="/Conductor_favicon.svg"
-                    alt="Conductor_favicon"
-                    width={45}
-                    className=""
-                  />
-                  <p>Orkes Conductor</p>
-                </th>
-              </tr>
-              {/* <tr>
-              <td>Tasks throughput/second</td>
-              <td>$100</td>
-            </tr>
-            <tr>
-              <td>February</td>
-              <td>$80</td>
-            </tr> */}
-            </table>
-          </div>
         </section>
       </section>
     </>
