@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../../Navigation/Header";
 import Buttons from "../../Buttons";
 import ContentCard from "../ContentCard";
@@ -55,13 +55,28 @@ const EnterpriseCapabilities = [
   },
 ];
 
+const buttonLabels = [
+  "Operational",
+  "Developer Productivity",
+  "Scale",
+  "Security",
+  "AI Orchestration",
+  "Human Tasks",
+  "Core Orchestration",
+  "Event-driven Orchestration",
+  "System Tasks",
+];
+
 const Conductor_Page: React.FC<Conductor_PageProps> = () => {
+  const [activeLink, setActiveLink] = useState(buttonLabels[0]);
+
+  const handleClick = (label: string) => setActiveLink(label);
   return (
     <>
       <Header />
-      <section>
+      <section className="w-4/5 mx-auto flex_items_between max-lg:w-11/12">
         {/* Hero Section */}
-        <div className="w-4/6 p-10 m-auto text-center">
+        <div className="w-5/6 m-auto p-10 text-center max-lg:w-full max-md:p-8">
           <div className="flex justify-center items-center gap-5">
             <img
               src="/Orkes Logo Symbol.svg"
@@ -77,7 +92,7 @@ const Conductor_Page: React.FC<Conductor_PageProps> = () => {
               className=""
             />
           </div>
-          <h1 className="text-4xl font-medium text-black/90 my-5">
+          <h1 className="text-4xl font-medium text-black/90 my-5 max-sm:text-[2rem] max-sm:font-normal">
             Orkes Conductor vs. Conductor OSS
           </h1>
           <p className="text-xl font-light my-6 mx-auto text-gray-600 tracking-wide">
@@ -90,37 +105,69 @@ const Conductor_Page: React.FC<Conductor_PageProps> = () => {
         </div>
 
         {/* Enterprise level features and capabilities */}
-        {/* <section className="w-5/6 mx-auto p-10 my-14 text-center text-gray-800 bg-stone-100/80 border border-gray-300 rounded-xl shadow-lg max-sm:px-6 ">
-          <div className="grid grid-cols-3 gap-10 max-md:grid-cols-1 max-sm:gap-8">
-            {EnterpriseCapabilities.map(
-              ({ id, isStatic, imgSrc, alt, heading, label }) => {
-                return isStatic ? (
-                  <div key={id} className="flex flex-col gap-2 justify-center">
-                    <h1 className="text-[32px] font-light text-start max-md:text-3xl">
-                      {heading}
-                    </h1>
-                    <p className="text-xl font-light">{label}</p>
-                  </div>
-                ) : (
-                  <div
-                    key={id}
-                    className="p-5 text-start bg-white rounded-xl shadow-md"
-                  >
-                    <img src={imgSrc} alt={alt} width={70} />
-                    <h2 className="text-lg font-semibold my-2">{heading}</h2>
-                    <p className="font-light">{label}</p>
-                  </div>
-                );
-              }
-            )}
-          </div>
-        </section> */}
         <ContentCard
           data={EnterpriseCapabilities}
-          isStatic={false}
           columns={3}
-          width={true}
+          headingClassName={"font-light text-start"}
         />
+
+        {/*  */}
+        <section className="py-12 my-16">
+          {/* max-lg:grid max-lg:grid-cols-2 max-lg:gap-4 max-md:px-0*/}
+          <div className="relative flex items-center gap-x-10 gap-y-3 px-4 flex-wrap">
+            {buttonLabels.map((label) => (
+              <button
+                key={label}
+                onClick={() => handleClick(label)}
+                // max-xl:px-5 max-lg:w-10/12 max-lg:m-auto max-md:w-full
+                className={`text-base text-gray-700 font-light text-center py-2.5 outline-none rounded-full transition-all duration-500 ${
+                  activeLink === label
+                    ? "px-8 bg-[#cdccff] text-purple-950 font-medium"
+                    : ""
+                }`}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+
+          <div className="p-10 border border-gray-300 rounded-xl">
+            <table className="w-full">
+              <tr className="flex justify-between items-center">
+                <th className="flex flex-col justify-end items-start gap-3 mb-2.5 border-b-2 border-gray-500 w-full h-full px-4">
+                  <img src="" alt="" width="" className="" />
+                  <p>Operational Capabilities</p>
+                </th>
+                <th className="flex flex-col justify-center items-center gap-3 mb-2.5 border-b-2 border-gray-500 w-full">
+                  <img
+                    src="/Orkes Logo Symbol.svg"
+                    alt="/Orkes Logo Symbol"
+                    width={45}
+                    className=""
+                  />
+                  <p>Conductor OSS</p>
+                </th>
+                <th className="flex flex-col justify-center items-center gap-3 mb-2.5 border-b-2 border-gray-500 w-full">
+                  <img
+                    src="/Conductor_favicon.svg"
+                    alt="Conductor_favicon"
+                    width={45}
+                    className=""
+                  />
+                  <p>Orkes Conductor</p>
+                </th>
+              </tr>
+              {/* <tr>
+              <td>Tasks throughput/second</td>
+              <td>$100</td>
+            </tr>
+            <tr>
+              <td>February</td>
+              <td>$80</td>
+            </tr> */}
+            </table>
+          </div>
+        </section>
       </section>
     </>
   );

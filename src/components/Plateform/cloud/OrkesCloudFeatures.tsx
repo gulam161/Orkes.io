@@ -183,32 +183,12 @@ const OrkesCloudFeatures: React.FC = () => {
       />
 
       {/* All the capabilities need */}
-      {/* <section className="p-10 my-14 text-center text-gray-800 bg-stone-100/80 border border-gray-300 rounded-xl shadow-lg max-sm:px-6 ">
-        <div className="grid grid-cols-2 gap-10 max-md:grid-cols-1 max-sm:gap-8">
-          {EnterpriseCapabilities.map(
-            ({ id, isStatic, imgSrc, alt, heading, label }) => {
-              return isStatic ? (
-                <div key={id} className="flex flex-col gap-2 justify-center">
-                  <h1 className="text-[32px] font-medium max-md:text-3xl">
-                    {heading}
-                  </h1>
-                  <p className="text-xl font-light">{label}</p>
-                </div>
-              ) : (
-                <div
-                  key={id}
-                  className="p-5 text-start bg-white rounded-xl shadow-md"
-                >
-                  <img src={imgSrc} alt={alt} width={70} />
-                  <h2 className="text-lg font-semibold my-2">{heading}</h2>
-                  <p className="font-light">{label}</p>
-                </div>
-              );
-            }
-          )}
-        </div>
-      </section> */}
-      <ContentCard data={EnterpriseCapabilities} isStatic={false} columns={2} />
+      <ContentCard
+        data={EnterpriseCapabilities}
+        columns={2}
+        iswidth={false}
+        headingClassName={"font-medium"}
+      />
 
       {/*Availability across  */}
       <div className="py-10 max-lg:py-0">

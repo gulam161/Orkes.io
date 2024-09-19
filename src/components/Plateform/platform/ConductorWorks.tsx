@@ -246,7 +246,7 @@ const ConductorWorks: React.FC = () => {
               <button
                 key={label}
                 onClick={() => handleClick(label)}
-                className={`w-56 max-xl:w-40 max-xl:px-5 max-lg:w-10/12 max-lg:m-auto max-md:w-full text-base font-light text-center py-[10px] rounded-full border border-gray-300 transition-all duration-500 ${
+                className={`w-56 max-xl:w-40 max-xl:px-5 max-lg:w-10/12 max-lg:m-auto max-md:w-full text-base font-light text-center py-2.5 outline-none rounded-full border border-gray-300 transition-all duration-500 ${
                   activeLink === label
                     ? "bg-rose-500/90 text-white font-normal"
                     : "bg-white"
