@@ -186,7 +186,6 @@ const OrkesCloudFeatures: React.FC = () => {
       <ContentCard
         data={EnterpriseCapabilities}
         columns={2}
-        iswidth={false}
         headingClassName={"font-medium"}
       />
 

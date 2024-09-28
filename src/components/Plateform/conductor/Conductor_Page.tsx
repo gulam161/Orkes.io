@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import Header from "../../Navigation/Header";
 import Buttons from "../../Buttons";
 import ContentCard from "../ContentCard";
+import TableData from "./TableData";
 
 type Conductor_PageProps = {};
 
@@ -55,22 +56,7 @@ const EnterpriseCapabilities = [
   },
 ];
 
-const buttonLabels = [
-  "Operational",
-  "Developer Productivity",
-  "Scale",
-  "Security",
-  "AI Orchestration",
-  "Human Tasks",
-  "Core Orchestration",
-  "Event-driven Orchestration",
-  "System Tasks",
-];
-
 const Conductor_Page: React.FC<Conductor_PageProps> = () => {
-  const [activeLink, setActiveLink] = useState(buttonLabels[0]);
-
-  const handleClick = (label: string) => setActiveLink(label);
   return (
     <>
       <Header />
@@ -111,26 +97,8 @@ const Conductor_Page: React.FC<Conductor_PageProps> = () => {
           headingClassName={"font-light text-start"}
         />
 
-        {/*  */}
-        <section className="py-12 my-16">
-          {/* max-lg:grid max-lg:grid-cols-2 max-lg:gap-4 max-md:px-0*/}
-          <div className="relative flex items-center gap-x-10 gap-y-3 px-4 flex-wrap">
-            {buttonLabels.map((label) => (
-              <button
-                key={label}
-                onClick={() => handleClick(label)}
-                // max-xl:px-5 max-lg:w-10/12 max-lg:m-auto max-md:w-full
-                className={`text-base text-gray-700 font-light text-center py-2.5 outline-none rounded-full transition-all duration-500 ${
-                  activeLink === label
-                    ? "px-8 bg-[#cdccff] text-purple-950 font-medium"
-                    : ""
-                }`}
-              >
-                {label}
-              </button>
-            ))}
-          </div>
-        </section>
+        {/* table Data */}
+        <TableData />
       </section>
     </>
   );
