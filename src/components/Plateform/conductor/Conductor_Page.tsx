@@ -3,6 +3,7 @@ import Header from "../../Navigation/Header";
 import Buttons from "../../Buttons";
 import ContentCard from "../ContentCard";
 import TableData from "./TableData";
+import OrkesStarterBanner from "../OrkesStarterBanner";
 
 type Conductor_PageProps = {};
 
@@ -100,6 +101,13 @@ const Conductor_Page: React.FC<Conductor_PageProps> = () => {
         {/* table Data */}
         <TableData />
       </section>
+
+      {/* Performance Improvement */}
+      <OrkesStarterBanner
+        heading="30X Performance Improvement, 10X Lower Cost of Ownership Over Self-Hosted Conductor OSS"
+        divClass="text-gray-700 bg-zinc-100/70 rounded-none"
+        headingClass="font-light text-3xl max-md:text-2xl mb-2 w-2/3"
+      />
     </>
   );
 };

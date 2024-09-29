@@ -444,7 +444,7 @@ const TableData: React.FC<TableDataProps> = () => {
   const activeData = TableRowData[activeIndex];
 
   return (
-    <section className="py-12 my-16">
+    <section className="py-12 mt-16">
       {/* max-lg:grid max-lg:grid-cols-2 max-lg:gap-4 max-md:px-0*/}
       <div className="relative flex items-center gap-x-10 gap-y-3 px-4 flex-wrap">
         {buttonLabels.map((label, index) => (
