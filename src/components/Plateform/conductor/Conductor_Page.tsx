@@ -4,6 +4,9 @@ import Buttons from "../../Buttons";
 import ContentCard from "../ContentCard";
 import TableData from "./TableData";
 import OrkesStarterBanner from "../OrkesStarterBanner";
+import Foxtel from "../../../assets/Logo/foxtel-logo.svg";
+import Normalyze from "../../../assets/Logo/normalyze_Black.svg";
+import Footer from "../../Footer";
 
 type Conductor_PageProps = {};
 
@@ -57,6 +60,19 @@ const EnterpriseCapabilities = [
   },
 ];
 
+const CustomerFeedback = [
+  {
+    text: "“Orkes has been instrumental in increasing developer agility, creating cost efficiencies, and building highly reliable and secure applications.”",
+    img: Foxtel,
+    size: 125,
+  },
+  {
+    text: "“With Orkes Conductor hosted in Orkes Cloud, we don’t have to think about building and maintaining the orchestration engine ourselves. We can focus on creating an exceptional customer experience and optimizing our margins.”",
+    img: Normalyze,
+    size: 175,
+  },
+];
+
 const Conductor_Page: React.FC<Conductor_PageProps> = () => {
   return (
     <>
@@ -106,8 +122,39 @@ const Conductor_Page: React.FC<Conductor_PageProps> = () => {
       <OrkesStarterBanner
         heading="30X Performance Improvement, 10X Lower Cost of Ownership Over Self-Hosted Conductor OSS"
         divClass="text-gray-700 bg-zinc-100/70 rounded-none"
-        headingClass="font-light text-3xl max-md:text-2xl mb-2 w-2/3"
+        headingClass="font-light text-3xl max-md:text-2xl mb-2 w-2/3 max-lg:w-5/6"
       />
+
+      <section className="w-4/5  mx-auto max-lg:w-11/12">
+        <div className="pb-20 mb-10 flex flex-col gap-16">
+          <h1 className="text-4xl font-medium text-center max-md:px-10 max-sm:text-2xl max-sm:px-1">
+            See what Orkes customers that made the switch are saying
+          </h1>
+          <div className="flex justify-center items-center gap-12 px-10 max-sm:px-3 max-md:grid max-md:grid-cols-1 max-md:m-auto">
+            {CustomerFeedback.map(({ text, img, size }, idx) => (
+              <div
+                key={idx}
+                className="relative w-[400px] h-[400px] max-md:w-full max-md:h-auto p-5 border-gray-300 border rounded-2xl shadow-xl"
+              >
+                <div className="max-md:mb-16">
+                  <p className="font-light tracking-wide text-left text-gray-600 leading-8">
+                    {text}
+                  </p>
+                  <img src={img} alt="logo" width={size} className="mt-8" />
+                </div>
+                <img
+                  src="/Inverted Comma.svg"
+                  alt="Inverted Comma"
+                  width={110}
+                  className="absolute bottom-0 right-0 rounded-r-2xl"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <Footer />
+      </section>
     </>
   );
 };

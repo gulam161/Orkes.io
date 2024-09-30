@@ -12,7 +12,7 @@ const OrkesStarterBanner: React.FC<OrkesStarterBannerProps> = ({
   headingClass,
 }) => {
   return (
-    <section className="static pt-11 py-28">
+    <section className="static pt-11 pb-28">
       <div
         className={`relative flex justify-center items-center flex-col ${divClass} py-16 text-center bg-center bg-cover rounded-2xl overflow-hidden`}
         style={{ backgroundImage: `url(${bgImage})` }}
