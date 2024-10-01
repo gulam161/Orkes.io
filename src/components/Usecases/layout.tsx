@@ -10,7 +10,7 @@ type LayoutProps = {};
 const layoutItems = [
   {
     id: 1,
-    to: "microservices-and-api-orchestration",
+    to: "/microservices-and-api-orchestration",
     text: "Microservices and API Orchestration",
     label:
       "Enable faster development cycles, easier maintenance, and improved user experiences.",
@@ -18,23 +18,31 @@ const layoutItems = [
   },
   {
     id: 2,
-    to: "event-driven-architecture",
+    to: "/api-orchestration",
+    text: "Realtime API Orchestration",
+    label:
+      "Enable faster development cycles, easier maintenance, and improved user experiences.",
+    imgSrc: "/Images/Realtime API Orchestration.svg",
+  },
+  {
+    id: 3,
+    to: "/event-driven-architecture",
     text: "Event Driven Architecture",
     label:
       "Create durable workflows that promote modularity, flexibility, and responsiveness.",
     imgSrc: Events_Driven_Architecture,
   },
   {
-    id: 3,
-    to: "ai-and-llm-chaining",
+    id: 4,
+    to: "/ai-and-llm-chaining",
     text: "AI and LLM Chaining",
     label:
       "A complete comparison of the features and functionality of Orkes and Conductor OSS.",
     imgSrc: AI_Orchestration,
   },
   {
-    id: 4,
-    to: "human-workflow-orchestration",
+    id: 5,
+    to: "/human-workflow-orchestration",
     text: "Human Workflow Orchestration ",
     label: "Seamlessly insert humans in the loop of complex workflows.",
     imgSrc: Human_Workflow_Orchestration,
@@ -55,7 +63,7 @@ const Layout: React.FC<LayoutProps> = () => {
             to={to}
             key={id}
             className={`flex items-start gap-2 hover:bg-gray-200/80 ${
-              index === 3 ? "border-none" : "border-b border-gray-300"
+              index === 4 ? "border-none" : "border-b border-gray-300"
             } py-4`}
           >
             <img src={imgSrc} alt={`${imgSrc}-icon`} width={28} />
