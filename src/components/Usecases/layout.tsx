@@ -66,7 +66,12 @@ const Layout: React.FC<LayoutProps> = () => {
               index === 4 ? "border-none" : "border-b border-gray-300"
             } py-4`}
           >
-            <img src={imgSrc} alt={`${imgSrc}-icon`} width={28} />
+            <img
+              src={imgSrc}
+              alt={`${imgSrc}-icon`}
+              width={30}
+              className="filter"
+            />
             <div className="">
               <h2 className="font-light text-gray-700 mb-1">{text}</h2>
               <p className="text-sm">{label}</p>

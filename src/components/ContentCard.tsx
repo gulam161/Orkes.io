@@ -10,20 +10,23 @@ interface SectionData {
 }
 
 type ContentCardProps = {
+  heading: string;
   data: SectionData[];
   columns: number;
   headingClassName: string;
 };
 
 const ContentCard: React.FC<ContentCardProps> = ({
+  heading,
   data,
   columns,
   headingClassName,
 }) => {
   return (
     <section
-      className={`w-full p-10 my-16 text-center text-gray-800 bg-stone-100/80 border border-gray-300 rounded-xl shadow-lg max-sm:px-6`}
+      className={`w-full p-10 pt-4 my-16 text-center text-gray-800 bg-stone-100/80 border border-gray-300 rounded-xl shadow-lg max-sm:px-6`}
     >
+      <h1 className="text-4xl font-medium mb-6">{heading}</h1>
       <div
         className={`grid grid-cols-${columns} gap-10 max-lg:grid-cols-2 max-md:grid-cols-1 max-sm:gap-8`}
       >

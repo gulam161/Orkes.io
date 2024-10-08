@@ -1,5 +1,5 @@
 import React from "react";
-import ContentCard from "../ContentCard";
+import ContentCard from "../../ContentCard";
 import Cloud_Common from "./Cloud_Common";
 import Orkes_Cloud_Page_BG_Clouds from "../../../../public/Orkes-Cloud-Page-BG_Clouds.png";
 import OrkesStarterBanner from "../OrkesStarterBanner";
@@ -187,6 +187,7 @@ const OrkesCloudFeatures: React.FC = () => {
         data={EnterpriseCapabilities}
         columns={2}
         headingClassName={"font-medium"}
+        heading={""}
       />
 
       {/*Availability across  */}
@@ -210,7 +211,7 @@ const OrkesCloudFeatures: React.FC = () => {
         <div className="grid grid-cols-3 gap-6 max-md:grid-cols-1">
           {ExpertSupportHub.map(({ id, imgSrc, alt, heading, label }) => {
             return (
-              <div key={id} className="rounded-xl shadow-md  bg-white">
+              <div key={id} className="rounded-xl shadow-md bg-white">
                 <img
                   src={imgSrc}
                   alt={alt}

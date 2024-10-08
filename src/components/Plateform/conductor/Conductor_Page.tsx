@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../../Navigation/Header";
 import Buttons from "../../Buttons";
-import ContentCard from "../ContentCard";
+import ContentCard from "../../ContentCard";
 import TableData from "./TableData";
 import OrkesStarterBanner from "../OrkesStarterBanner";
 import Foxtel from "../../../assets/Logo/foxtel-logo.svg";
@@ -112,6 +112,7 @@ const Conductor_Page: React.FC<Conductor_PageProps> = () => {
           data={EnterpriseCapabilities}
           columns={3}
           headingClassName={"font-light text-start"}
+          heading=""
         />
 
         {/* table Data */}
