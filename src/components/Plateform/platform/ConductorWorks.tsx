@@ -185,7 +185,7 @@ const data = [
     additionalItems: [
       {
         id: 1,
-        imgSrc: "/Images/Audit Logs.svg",
+        imgSrc: "/Images/Audit logs.svg",
         alt: "Audit Logs",
         heading: "Audit Logs",
         label:

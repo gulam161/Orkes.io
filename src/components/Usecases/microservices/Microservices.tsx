@@ -1,8 +1,12 @@
 import React from "react";
-import ConductorPlatform from "../../HomePage/ConductorPlatform";
 import HeroSection from "../HeroSection";
 import FeatureHighlight from "../../FeatureHighlight";
 import ContentCard from "../../ContentCard";
+import Timeline from "../../Plateform/platform/Timeline";
+import Additional_Microservices_Page from "../Additional_Microservices_Page";
+import Footer from "../../Footer";
+import Header from "../../Navigation/Header";
+import Usecases_Orkes_Starter_Banner from "../Usecases_Orkes_Starter_Banner";
 
 type MicroservicesProps = {};
 
@@ -106,69 +110,85 @@ const APIOrchestrationOverview = [
   },
 ];
 
+const AdditionalResources = [
+  {
+    id: 1,
+    src: "/Building-Applications-10x-faster.jpg",
+    alt: "Building-Applications-10x-faster",
+    lable: "BLOG",
+    title: "Building Microservice-based Applications using Orkes Conductor",
+  },
+  {
+    id: 2,
+    src: "/Microservices-Pattern-Blog-Banner.jpg",
+    alt: "Microservices-Pattern-Blog-Banner",
+    lable: "BLOG",
+    title: "4 Microservice Patterns Crucial in Microservices Architecture",
+  },
+  {
+    id: 3,
+    src: "/Foxtel-Webinar.jpg",
+    alt: "Foxtel-Webinar",
+    lable: "VIDEO",
+    title: "How Foxtel Accelerates Microservices and Workflow Orchestration",
+  },
+];
+
 const Microservices: React.FC<MicroservicesProps> = () => {
   return (
-    <section>
-      <HeroSection
-        heading="Microservices Workflow Orchestration"
-        subheading="Build and scale distributed applications with high levels of observability, security, and durability"
-        description={`Easily model and scale your business logic and processes using a 
+    <>
+      <Header />
+      <section className="w-4/5 mx-auto flex_items_between max-lg:w-11/12">
+        <HeroSection
+          heading="Microservices Workflow Orchestration"
+          subheading="Build and scale distributed applications with high levels of observability, security, and durability"
+          description={`Easily model and scale your business logic and processes using a 
     <span class="font-medium text-cyan-500">durable workflow execution model.</span> 
     Use your new and existing services (in any language) and APIs as the runtime of your workflows.`}
-        imageSrc="/Use-Case-Page-Hero_image.png"
-        imageAlt="Use Case Page Hero"
-        headingClass="text-purple-700"
-      />
+          imageSrc="/Use-Case-Page-Hero_image.png"
+          imageAlt="Use Case Page Hero"
+          headingClass="text-purple-700"
+        />
 
-      {/*  */}
-      <div>
-        <h1 className="text-[28px] font-light text-center mt-12 text-gray-600">
-          Companies around the world build with Orkes
-        </h1>
-        <ConductorPlatform />
-      </div>
+        {/* MicroserviceFeatureOverview */}
+        <FeatureHighlight
+          title="Enterprise-grade features make building and scaling microservices driven applications easier and more secure than ever"
+          BannerSrc={"/Mircroservices_BG-image_2.png"}
+          BannerAlt="Mircroservices_BG-image_2"
+          bg_Color={true}
+          data={data}
+        />
 
-      {/* MicroserviceFeatureOverview */}
-      <FeatureHighlight
-        subTitle=""
-        title="Enterprise-grade features make building and scaling microservices driven applications easier and more secure than ever"
-        BannerSrc={"/Mircroservices_BG-image_2.png"}
-        BannerAlt="Mircroservices_BG-image_2"
-        data={data}
-      />
+        {/* Microservices and API orchestration */}
+        <Additional_Microservices_Page
+          heading="Microservices and API orchestration on Orkes"
+          data={OrkesMicroservicesOrchestrator}
+        />
 
-      {/* Microservices and API orchestration */}
-      <section className="p-10 my-32 text-center text-gray-800 border border-gray-300 rounded-xl shadow-lg max-sm:px-8 ">
-        <h1 className="text-4xl font-medium mb-10 max-md:px-4 max-md:text-3xl">
-          Microservices and API orchestration on Orkes
-        </h1>
+        {/* Microservices and API Orchestration */}
+        <ContentCard
+          data={APIOrchestrationOverview}
+          columns={2}
+          headingClassName={"font-medium"}
+          heading={"Why Orkes for Microservices and API Orchestration"}
+        />
 
-        <div className="px-6 grid grid-cols-3 gap-20 max-lg:grid-cols-1 max-sm:px-0">
-          {OrkesMicroservicesOrchestrator.map(({ id, src, alt, title }) => {
-            return (
-              <div key={id}>
-                <img
-                  src={src}
-                  alt={alt}
-                  className="w-full rounded-xl shadow-lg max-lg:w-80 max-lg:m-auto"
-                />
-                <h2 className="text-xl text-center font-medium my-5">
-                  {title}
-                </h2>
-              </div>
-            );
-          })}
+        <div className="mt-32">
+          <Timeline />
         </div>
-      </section>
 
-      {/* Microservices and API Orchestration */}
-      <ContentCard
-        data={APIOrchestrationOverview}
-        columns={2}
-        headingClassName={"font-medium"}
-        heading={"Why Orkes for Microservices and API Orchestration"}
-      />
-    </section>
+        {/* Start building with orkes */}
+        <Usecases_Orkes_Starter_Banner />
+
+        {/* Additional Resources */}
+        <Additional_Microservices_Page
+          heading="Additional Resources"
+          data={AdditionalResources}
+          linkComponent={true}
+        />
+        <Footer />
+      </section>
+    </>
   );
 };
 export default Microservices;

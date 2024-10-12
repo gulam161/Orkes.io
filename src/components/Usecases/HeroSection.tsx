@@ -1,5 +1,7 @@
 import React from "react";
 import Buttons from "../Buttons";
+import ConductorPlatform from "../HomePage/ConductorPlatform";
+import { Link } from "react-router-dom";
 
 type HeroSectionProps = {
   [Key: string]: string;
@@ -12,22 +14,47 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   imageSrc,
   imageAlt,
   headingClass,
+  videoLink,
 }) => {
   return (
-    <div className="grid grid-cols-2 gap-5 mt-8">
-      <div className="flex flex-col gap-1.5 text-gray-700">
-        <h5 className={`${headingClass} uppercase text-sm`}>{heading}</h5>
-        <h1 className="text-4xl font-medium">{subheading}</h1>
-        <p
-          className="text-xl font-light tracking-wide leading-8 mt-3"
-          dangerouslySetInnerHTML={{ __html: description }}
-        />
-        <div className="mt-4">
-          <Buttons text="See Docs" link="" />
+    <>
+      <div className="grid grid-cols-2 gap-5 mt-8 max-lg:grid-cols-1">
+        <div className="flex flex-col gap-1.5 text-gray-700">
+          <h5 className={`${headingClass} uppercase text-sm`}>{heading}</h5>
+          <h1 className="text-4xl font-medium">{subheading}</h1>
+          <p
+            className="text-xl font-light tracking-wide leading-8 mt-3"
+            dangerouslySetInnerHTML={{ __html: description }}
+          />
+          <div className="mt-4">
+            <Buttons text="See Docs" link="" />
+          </div>
         </div>
+        {/* <img src={imageSrc} alt={imageAlt} className="m-auto" /> */}
+        {videoLink ? (
+          <Link
+            to={videoLink}
+            className="relative flex justify-center items-center"
+          >
+            <img src={imageSrc} alt={imageAlt} className="m-auto" />
+            <img
+              src="/Images/Play_Button.svg"
+              width="70"
+              alt="Play Button"
+              className="absolute rounded-full transition-all duration-100 hover:shadow-xl hover:w-[16%]"
+            />
+          </Link>
+        ) : (
+          <img src={imageSrc} alt={imageAlt} className="m-auto" />
+        )}
       </div>
-      <img src={imageSrc} alt={imageAlt} />
-    </div>
+      <div>
+        <h1 className="text-[28px] font-light text-center mt-12 text-gray-600">
+          Companies around the world build with Orkes
+        </h1>
+        <ConductorPlatform />
+      </div>
+    </>
   );
 };
 export default HeroSection;

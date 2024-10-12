@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Banner from "../../assets/hero-banner.png";
-import Play_Button from "../../assets/Play_Button.svg";
 import Conductor_Logo from "../../assets/Logo/Conductor Logo.png";
 import ConductorPlatform from "./ConductorPlatform";
+import Buttons from "../Buttons";
 
 type HeroSectionProps = {};
 
@@ -19,20 +19,8 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
             Transform the way you develop, connect, and deploy applications,
             microservices, AI agents, and more with workflow orchestration.
           </p>
-          <div className="flex gap-4 capitalize mt-5 text-sm">
-            <Link
-              to="/sign-up"
-              className="button border-[#ed5668] text-gray-600"
-            >
-              Start Free Trail
-            </Link>
-            <Link
-              to="talk-to-an-expert"
-              className="button px-2 text-white border-[#ed5668] bg-[#ed5668]"
-            >
-              Contact Sales
-            </Link>
-          </div>
+
+          <Buttons />
         </div>
         <div>
           <Link
@@ -41,7 +29,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
           >
             <img src={Banner} alt="hero-banner" />
             <img
-              src={Play_Button}
+              src="/Images/Play_Button.svg"
               width="70"
               alt="Play_Button icon"
               className="absolute rounded-full transition-all duration-100 hover:shadow-xl hover:w-[16%]"

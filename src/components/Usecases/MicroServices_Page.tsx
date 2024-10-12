@@ -8,7 +8,7 @@ const MicroServices_Page: React.FC<MicroServices_PageProps> = () => {
   return (
     <>
       <Header />
-      <div className="w-4/5 mx-auto flex_items_between max-lg:w-11/12">
+      <div className="">
         <Microservices />
       </div>
     </>

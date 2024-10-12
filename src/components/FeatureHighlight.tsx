@@ -8,10 +8,11 @@ interface DataItem {
 }
 
 type FeatureHighlightProps = {
-  subTitle: string;
+  subTitle?: string;
   title: string;
   BannerSrc: string;
   BannerAlt: string;
+  bg_Color?: boolean;
   data: DataItem[];
 };
 
@@ -20,10 +21,15 @@ const FeatureHighlight: React.FC<FeatureHighlightProps> = ({
   title,
   BannerSrc,
   BannerAlt,
+  bg_Color,
   data,
 }) => {
   return (
-    <section className="grid grid-cols-2 border border-gray-200 bg-gray-50 text-gray-700 rounded-xl shadow-md my-8 max-lg:grid-cols-1">
+    <section
+      className={`${
+        bg_Color ? "bg-white" : "bg-zinc-50"
+      } grid grid-cols-2 border border-gray-200 text-gray-700 rounded-xl shadow-md my-8 max-lg:grid-cols-1`}
+    >
       <div className="p-8">
         <h4 className="text-red-400 text-sm mb-1">{subTitle}</h4>
         <h1 className="text-4xl font-medium mb-4">{title}</h1>
@@ -34,7 +40,9 @@ const FeatureHighlight: React.FC<FeatureHighlightProps> = ({
         {data.map(({ src, alt, title, items }, index) => (
           <div
             className={`flex py-4 gap-6 items-start ${
-              index === 2 ? "border-none" : "border-b border-gray-300"
+              index === data.length - 1
+                ? "border-none"
+                : "border-b border-gray-300"
             } max-sm:flex-col max-sm:gap-3`}
             key={index}
           >

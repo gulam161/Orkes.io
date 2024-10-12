@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 type ButtonsProps = {
-  text: string;
-  link: string;
+  text?: string;
+  link?: string;
 };
 
 const ButtonData = [
@@ -21,7 +21,7 @@ const ButtonData = [
 
 const Buttons: React.FC<ButtonsProps> = ({ text, link }) => {
   return (
-    <div className="flex gap-4 capitalize mt-5 text-sm">
+    <div className="flex gap-4 capitalize mt-5 text-sm max-xs:flex-col">
       {ButtonData.map(({ to, className, lable_text }, index) => (
         <Link
           key={index}

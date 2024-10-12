@@ -24,7 +24,7 @@ const ContentCard: React.FC<ContentCardProps> = ({
 }) => {
   return (
     <section
-      className={`w-full p-10 pt-4 my-16 text-center text-gray-800 bg-stone-100/80 border border-gray-300 rounded-xl shadow-lg max-sm:px-6`}
+      className={`w-full p-10 pt-5 my-16 text-center text-gray-800 bg-stone-100/80 border border-gray-300 rounded-xl shadow-lg max-sm:px-6`}
     >
       <h1 className="text-4xl font-medium mb-6">{heading}</h1>
       <div

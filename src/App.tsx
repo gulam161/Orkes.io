@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Plateform_page from "./components/Plateform/platform/Page";
 import CloudPage from "./components/Plateform/cloud/CloudPage";
 import Conductor_OSS_page from "./components/Plateform/conductor/Conductor_Page";
-import MicroServices_Page from "./components/Usecases/MicroServices_Page";
+import Microservices from "./components/Usecases/microservices/Microservices";
 import Api_Orchestration from "./components/Usecases/orchestration/Api_Orchestration";
 import Event_Architecture from "./components/Usecases/eventarchiteture/Event_Architecture";
 import AI_Chaining from "./components/Usecases/ai-chaining/AI_Chaining";
@@ -24,7 +24,7 @@ const App: React.FC<AppProps> = () => {
       <Route path="/conductor-oss-vs-orkes" element={<Conductor_OSS_page />} />
       <Route
         path="/microservices-and-api-orchestration"
-        element={<MicroServices_Page />}
+        element={<Microservices />}
       />
       <Route path="/api-orchestration" element={<Api_Orchestration />} />
       <Route
