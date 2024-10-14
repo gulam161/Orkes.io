@@ -4,7 +4,16 @@ import ConductorPlatform from "../HomePage/ConductorPlatform";
 import { Link } from "react-router-dom";
 
 type HeroSectionProps = {
-  [Key: string]: string;
+  // [key: string]: string;
+  heading: string;
+  subheading: string;
+  description: string;
+  imageSrc: string;
+  imageAlt: string;
+  videoLink?: string;
+  headingClass?: string;
+  AdditionalHeading?: string;
+  ConductorPlatform?: JSX.Element;
 };
 
 const HeroSection: React.FC<HeroSectionProps> = ({
@@ -15,11 +24,13 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   imageAlt,
   headingClass,
   videoLink,
+  AdditionalHeading,
+  ConductorPlatform,
 }) => {
   return (
     <>
       <div className="grid grid-cols-2 gap-5 mt-8 max-lg:grid-cols-1">
-        <div className="flex flex-col gap-1.5 text-gray-700">
+        <div className="flex flex-col justify-center gap-1.5 text-gray-700">
           <h5 className={`${headingClass} uppercase text-sm`}>{heading}</h5>
           <h1 className="text-4xl font-medium">{subheading}</h1>
           <p
@@ -30,7 +41,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             <Buttons text="See Docs" link="" />
           </div>
         </div>
-        {/* <img src={imageSrc} alt={imageAlt} className="m-auto" /> */}
+
         {videoLink ? (
           <Link
             to={videoLink}
@@ -50,9 +61,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       </div>
       <div>
         <h1 className="text-[28px] font-light text-center mt-12 text-gray-600">
-          Companies around the world build with Orkes
+          {AdditionalHeading}
         </h1>
-        <ConductorPlatform />
+        {/* <ConductorPlatform /> */}
+        {ConductorPlatform}
       </div>
     </>
   );

@@ -7,6 +7,7 @@ import Additional_Microservices_Page from "../Additional_Microservices_Page";
 import Footer from "../../Footer";
 import Header from "../../Navigation/Header";
 import Usecases_Orkes_Starter_Banner from "../Usecases_Orkes_Starter_Banner";
+import ConductorPlatform from "../../HomePage/ConductorPlatform";
 
 type MicroservicesProps = {};
 
@@ -148,6 +149,8 @@ const Microservices: React.FC<MicroservicesProps> = () => {
           imageSrc="/Use-Case-Page-Hero_image.png"
           imageAlt="Use Case Page Hero"
           headingClass="text-purple-700"
+          AdditionalHeading="Companies around the world build with Orkes"
+          ConductorPlatform={<ConductorPlatform />}
         />
 
         {/* MicroserviceFeatureOverview */}

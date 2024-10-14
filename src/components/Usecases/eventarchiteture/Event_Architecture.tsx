@@ -7,6 +7,7 @@ import ContentCard from "../../ContentCard";
 import Timeline from "../../Plateform/platform/Timeline";
 import Usecases_Orkes_Starter_Banner from "../Usecases_Orkes_Starter_Banner";
 import Footer from "../../Footer";
+import ConductorPlatform from "../../HomePage/ConductorPlatform";
 
 type Event_ArchitectureProps = {};
 
@@ -158,6 +159,8 @@ const Event_Architecture: React.FC<Event_ArchitectureProps> = () => {
           imageAlt="Event-Drive_UseCase_Hero_Image"
           headingClass="text-cyan-500"
           videoLink="https://youtu.be/C6bH0koO2NQ"
+          AdditionalHeading="Companies around the world build with Orkes"
+          ConductorPlatform={<ConductorPlatform />}
         />
 
         {/* event driven architecture with Orkes */}

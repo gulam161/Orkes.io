@@ -7,6 +7,7 @@ import Timeline from "../../Plateform/platform/Timeline";
 import Usecases_Orkes_Starter_Banner from "../Usecases_Orkes_Starter_Banner";
 import Footer from "../../Footer";
 import ContentCard from "../../ContentCard";
+import ConductorPlatform from "../../HomePage/ConductorPlatform";
 
 type Api_OrchestrationProps = {};
 
@@ -146,6 +147,8 @@ const Api_Orchestration: React.FC<Api_OrchestrationProps> = () => {
           imageSrc="/Real-time-API_Use_Case_Hero_Image.png"
           imageAlt="Real time API Use Case Hero Image"
           headingClass="text-cyan-500"
+          AdditionalHeading="Companies around the world build with Orkes"
+          ConductorPlatform={<ConductorPlatform />}
         />
 
         {/* APIs real time with extreme */}
