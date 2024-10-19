@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-interface DataItem {
+export interface DataItem {
   id: number;
   src: string;
   alt: string;

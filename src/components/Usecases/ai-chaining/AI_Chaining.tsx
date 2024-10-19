@@ -2,7 +2,10 @@ import React from "react";
 import Header from "../../Navigation/Header";
 import HeroSection from "../HeroSection";
 import FeatureHighlight from "../../FeatureHighlight";
-import Additional_Microservices_Page from "../Additional_Microservices_Page";
+import MissionCriticalAppBuilder from "../../Plateform/MissionCriticalAppBuilder";
+import ContentCard from "../../ContentCard";
+import Timeline from "../../Plateform/platform/Timeline";
+import Usecases_Orkes_Starter_Banner from "../Usecases_Orkes_Starter_Banner";
 
 type AI_ChainingProps = {};
 
@@ -21,7 +24,7 @@ const logos = [
 const data = [
   {
     src: "/Images/LLM-12.svg",
-    alt: "LLM-12-01",
+    alt: "LLM-12",
     title: "Infuse Gen-AI into your business logic",
     items: [
       "Harness the power of Large Language Models easily into your app, with a developer first approach.",
@@ -35,7 +38,6 @@ const data = [
       "Integrate vector databases, AI models and more in the same workflow to build powerful RAG business flows.",
     ],
   },
-
   {
     src: "/Images/Prompt Engineering.svg",
     alt: "Prompt Engineering",
@@ -46,24 +48,83 @@ const data = [
   },
 ];
 
-const OrkesMicroservicesOrchestrator = [
+const OrkesMicroservicesOrchestration = [
   {
     id: 1,
-    src: "/Financial-transaction-reconciliation.jpg",
-    alt: "Financial-transaction-reconciliation",
-    title: "Financial transaction reconciliation",
+    imgSrc: "/Images/Document Intelligence.svg",
+    alt: "Document Intelligence",
+    heading: "Document Intelligence",
+    label:
+      "Develop document workflows to automate mundane tasks, enhance data extraction, and derive richer insights from both structured and unstructured document data.",
   },
   {
     id: 2,
-    src: "/Video-transcoding-pipelines.jpg",
-    alt: "Video-transcoding-pipelines",
-    title: "Video transcoding pipelines",
+    imgSrc: "/Images/AI Generated Synopsis.svg",
+    alt: "AI Generated Synopsis",
+    heading: "AI Generated Synopsis",
+    label:
+      "Accelerate production times with a workflow to AI generate content synopsis across different genres and languages.",
+  },
+
+  {
+    id: 3,
+    imgSrc: "/Images/Marketing Automation.svg",
+    alt: "Marketing Automation",
+    heading: "Marketing Automation",
+    label:
+      "Create a simple workflow to identify your top percentile of customers and send them custom AI generated promotional emails and coupons.",
+  },
+];
+
+const API_AI_Integration = [
+  {
+    id: 1,
+    imgSrc: "/Images/Write_choosing.svg",
+    alt: "Write_choosing",
+    heading: "Write your code in any language",
+    label:
+      "Task workers can be written in multiple programming languages including mixing and matching languages in the same workflow.",
+  },
+  {
+    id: 2,
+    imgSrc: "/Images/Accelerate go-to-market.svg",
+    alt: "Accelerate go-to-market",
+    heading: "Accelerate go-to-market from month to days",
+    label:
+      "With the powerful workflow creation UI, re-usability of workflows and worker tasks, and version-history control, ideation to production has never been easier.",
   },
   {
     id: 3,
-    src: "/Cloud-infrastructure-automation.jpg",
-    alt: "Cloud-infrastructure-automation",
-    title: "Cloud infrastructure automation",
+    imgSrc:
+      "/Images/Deploy on your preference of cloud provider and location.svg",
+    alt: "Deploy on your preference of cloud provider and location",
+    heading: "Deploy on your preferred cloud provider and on-prem",
+    label:
+      "Run on AWS, Azure, or GCP hosted by Orkes, on your cloud, or on-prem.",
+  },
+  {
+    id: 4,
+    imgSrc: "/Images/Infinitely scale to teams.svg",
+    alt: "Infinitely scale to teams",
+    heading: "Infinitely scale to accommodate other teams and business growth",
+    label:
+      "Orkes Conductor is battle tested and equipped to handle whatever workload thrown at it from thousands to millions of workflows.",
+  },
+  {
+    id: 5,
+    imgSrc: "/Images/Secure collaboration across teams.svg",
+    alt: "Secure collaboration across teams and functions",
+    heading: "Secure collaboration across teams and functions",
+    label:
+      "Tailor access controls of AI models, prompt templates, vector DBs and more to specific teams, ensuring organizational data privacy with Role Based Access Control (RBAC).",
+  },
+  {
+    id: 6,
+    imgSrc: "/Images/Ensure secrets stay...secret.svg",
+    alt: "Ensure secrets stay...secret",
+    heading: "Preserve enterprise grade security and compliance",
+    label:
+      "Ensure the security, auditablity and safety, of AI interactions with built-in logging and auditing features",
   },
 ];
 
@@ -82,6 +143,7 @@ const AI_Chaining: React.FC<AI_ChainingProps> = () => {
           // AdditionalHeading=""
           // ConductorPlatform={}
         />
+
         <section className="flex_between_center w-full h-36 relative overflow-hidden pb-8">
           <div className="w-full flex items-center justify-evenly">
             {logos.map((logo, index) => (
@@ -105,10 +167,30 @@ const AI_Chaining: React.FC<AI_ChainingProps> = () => {
         />
 
         {/* Microservices and API orchestration */}
-        <Additional_Microservices_Page
-          heading="Microservices and API orchestration on Orkes"
-          data={OrkesMicroservicesOrchestrator}
+        <div className="my-32">
+          <MissionCriticalAppBuilder
+            title="Microservices and API orchestration on Orkes"
+            data={OrkesMicroservicesOrchestration}
+            isCentered={false}
+          />
+        </div>
+
+        {/* Microservices and API Orchestration */}
+        <ContentCard
+          data={API_AI_Integration}
+          columns={2}
+          headingClassName={"font-medium"}
+          heading={
+            "Build applications that span across microservices, APIs, AI models and human tasks"
+          }
         />
+
+        <div className="mt-32">
+          <Timeline />
+        </div>
+
+        {/* Start building with orkes */}
+        <Usecases_Orkes_Starter_Banner />
       </section>
     </>
   );

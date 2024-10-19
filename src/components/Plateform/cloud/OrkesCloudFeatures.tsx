@@ -4,6 +4,7 @@ import Cloud_Common from "./Cloud_Common";
 import Orkes_Cloud_Page_BG_Clouds from "../../../../public/Orkes-Cloud-Page-BG_Clouds.png";
 import OrkesStarterBanner from "../OrkesStarterBanner";
 import Footer from "../../Footer";
+import MissionCriticalAppBuilder from "../MissionCriticalAppBuilder";
 
 const data = [
   {
@@ -122,27 +123,11 @@ const ExpertSupportHub = [
 const OrkesCloudFeatures: React.FC = () => {
   return (
     <>
-      <section className="p-10 my-5 text-center text-gray-800 bg-stone-100/80 border border-gray-300 rounded-xl shadow-lg max-sm:px-8 ">
-        <h1 className="text-4xl font-medium px-28 mb-10 max-lg:px-8 max-md:px-4 max-md:text-3xl">
-          Focus on building mission critical applications and we’ll handle the
-          rest
-        </h1>
-
-        <div className="grid grid-cols-3 gap-6 max-md:grid-cols-1">
-          {data.map(({ id, imgSrc, alt, heading, label }) => {
-            return (
-              <div
-                key={id}
-                className="p-6 text-start bg-white rounded-xl shadow-md "
-              >
-                <img src={imgSrc} alt={alt} width={70} />
-                <h2 className="text-lg font-semibold my-2">{heading}</h2>
-                <p className="font-light">{label}</p>
-              </div>
-            );
-          })}
-        </div>
-      </section>
+      <MissionCriticalAppBuilder
+        title="Focus on building mission critical applications and we’ll handle the rest"
+        data={data}
+        isCentered={true}
+      />
 
       {/* security posture Section */}
       <section className="pt-28 pb-16">
