@@ -6,6 +6,8 @@ import MissionCriticalAppBuilder from "../../Plateform/MissionCriticalAppBuilder
 import ContentCard from "../../ContentCard";
 import Timeline from "../../Plateform/platform/Timeline";
 import Usecases_Orkes_Starter_Banner from "../Usecases_Orkes_Starter_Banner";
+import Additional_Microservices_Page from "../Additional_Microservices_Page";
+import Footer from "../../Footer";
 
 type AI_ChainingProps = {};
 
@@ -128,6 +130,31 @@ const API_AI_Integration = [
   },
 ];
 
+const AdditionalResources = [
+  {
+    id: 1,
+    src: "/AI-Blog.jpg",
+    alt: "AI-Blog",
+    lable: "BLOG",
+    title:
+      "Harness the Power of Gen AI in Your Applications - Introducing AI Orchestration and Human Tasks in Orkes Conductor",
+  },
+  {
+    id: 2,
+    src: "/RAG-Webinar.jpg",
+    alt: "RAG-Webinar",
+    lable: "VIDEO",
+    title: "Build and Scale RAG Applications using Orkes Gen AI Orchestration",
+  },
+  {
+    id: 3,
+    src: "/Developer-Guides.jpg",
+    alt: "Developer-Guides",
+    lable: "DOCS",
+    title: "AI Docs",
+  },
+];
+
 const AI_Chaining: React.FC<AI_ChainingProps> = () => {
   return (
     <>
@@ -191,6 +218,14 @@ const AI_Chaining: React.FC<AI_ChainingProps> = () => {
 
         {/* Start building with orkes */}
         <Usecases_Orkes_Starter_Banner />
+
+        {/* Additional Resources */}
+        <Additional_Microservices_Page
+          heading="Additional Resources"
+          data={AdditionalResources}
+          linkComponent={true}
+        />
+        <Footer />
       </section>
     </>
   );
