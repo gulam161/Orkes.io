@@ -148,7 +148,7 @@ const AdditionalResources = [
   },
   {
     id: 3,
-    src: "/Developer-Guides.jpg",
+    src: "/Developer-Guides.png",
     alt: "Developer-Guides",
     lable: "DOCS",
     title: "AI Docs",
