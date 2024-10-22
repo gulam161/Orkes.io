@@ -31,7 +31,11 @@ const Additional_Microservices_Page: React.FC<
         {heading}
       </h1>
 
-      <div className="px-6 grid grid-cols-3 gap-20 max-lg:grid-cols-1 max-sm:px-0">
+      <div
+        className={`${
+          data.length === 3 ? "grid grid-cols-3" : "flex justify-evenly"
+        } px-6 gap-20 max-lg:grid-cols-1 max-sm:px-0`}
+      >
         {data.map(({ id, src, alt, title, lable, link }) => {
           const content = (
             <>
@@ -52,7 +56,10 @@ const Additional_Microservices_Page: React.FC<
           return (
             <div
               key={id}
-              className={linkComponent ? "text-start max-lg:text-center" : ""}
+              className={`${
+                !(linkComponent || data.length === 3) ? "w-96 " : ""
+              } text-start max-lg:text-center`}
+              style={data.length === 2 ? { flexBasis: "40%" } : {}}
             >
               {linkComponent ? (
                 <Link

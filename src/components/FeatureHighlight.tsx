@@ -39,10 +39,10 @@ const FeatureHighlight: React.FC<FeatureHighlightProps> = ({
       <div className="p-8">
         {data.map(({ src, alt, title, items }, index) => (
           <div
-            className={`flex py-4 gap-6 items-start ${
+            className={`flex gap-6 items-start ${
               index === data.length - 1
-                ? "border-none"
-                : "border-b border-gray-300"
+                ? "border-none pt-6"
+                : "py-6 border-b border-gray-300"
             } max-sm:flex-col max-sm:gap-3`}
             key={index}
           >

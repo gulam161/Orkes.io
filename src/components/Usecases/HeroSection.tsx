@@ -38,7 +38,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             dangerouslySetInnerHTML={{ __html: description }}
           />
           <div className="mt-4">
-            <Buttons text="See Docs" link="" />
+            <Buttons text="See Docs" to="" />
           </div>
         </div>
 

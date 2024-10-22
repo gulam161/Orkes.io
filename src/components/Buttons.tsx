@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 type ButtonsProps = {
   text?: string;
   link?: string;
+  to: string;
 };
 
 const ButtonData = [

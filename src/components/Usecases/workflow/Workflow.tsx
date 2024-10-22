@@ -8,65 +8,90 @@ import Timeline from "../../Plateform/platform/Timeline";
 import Additional_Microservices_Page from "../Additional_Microservices_Page";
 import Footer from "../../Footer";
 import Usecases_Orkes_Starter_Banner from "../Usecases_Orkes_Starter_Banner";
+import MissionCriticalAppBuilder from "../../Plateform/MissionCriticalAppBuilder";
+import { Link } from "react-router-dom";
 
 type WorkflowProps = {};
 
 const data = [
   {
-    src: "/Images/Visualize your workflows.svg",
-    alt: "visual_modeling_Yellow",
-    title: "Visualize your workflows",
+    src: "/Images/Specialized Human Task.svg",
+    alt: "Specialized Human Task",
+    title: "Specialized Human Task Type",
     items: [
-      "Visually map out complex workflows with drag and drop definitions or write your own code.  Span your business logic across microservices in different languages, frameworks and clouds.",
+      "Easily model human actions and assignments in the same workflow that drives your backend services.",
     ],
   },
   {
-    src: "/Images/Setup custom metrics and alerts.svg",
-    alt: "Setup custom metrics and alerts",
-    title: "Setup custom metrics and alerts",
+    src: "/Images/Human Task Triggers.svg",
+    alt: "Human Task Triggers",
+    title: "Human Task Triggers",
     items: [
-      "Track important metrics like number of workflows running, duration and completion rate, and setup custom alerts to be notified when failures have occured.",
+      "Trigger workflows based on state changes in an active human task. For example, automatically email the next assignee when an assignment is failed.",
     ],
   },
   {
-    src: "/Images/Debug in minutes not days.svg",
-    alt: "Debug in minutes not days",
-    title: "Debug in minutes not days",
+    src: "/Images/Form creation.svg",
+    alt: "Form creation",
+    title: "Form creation",
     items: [
-      "Effortlessly identify points of failure within millions of workflows so you can test, iterate, and deploy a fix within minutes.",
+      "Design and create native forms within the UI for associated human actions and capture the data back in your workflow. Or integrate your own external forms.",
+    ],
+  },
+  {
+    src: "/Images/Flexible Assignment Policies.svg",
+    alt: "Flexible Assignment Policies",
+    title: "Flexible Assignment Policies",
+    items: [
+      "Bring your business processes into life by assigning humans and their groups for tasks and build SLA driven assignment chains.",
+    ],
+  },
+  {
+    src: "/Images/Observe and audit.svg",
+    alt: "Observe and audit",
+    title: "Observe and audit",
+    items: [
+      "Fine tune your processes and achieve compliance with the ability to observe and audit all human actions within your workflows.",
     ],
   },
 ];
 
-const OrkesMicroservicesOrchestrator = [
+const OrkesMicroservicesOrchestration = [
   {
     id: 1,
-    src: "/Financial-transaction-reconciliation.jpg",
-    alt: "Financial-transaction-reconciliation",
-    title: "Financial transaction reconciliation",
+    imgSrc: "/Images/Approval workflows.svg",
+    alt: "Approval workflows",
+    heading: "Approval workflows",
+    label:
+      "Create simple or complex workflows that require human input for the approval of business processes like document verification or mortgage approvals.",
   },
   {
     id: 2,
-    src: "/Video-transcoding-pipelines.jpg",
-    alt: "Video-transcoding-pipelines",
-    title: "Video transcoding pipelines",
+    imgSrc: "/Images/AI assisted copilots.svg",
+    alt: "AI assisted copilots",
+    heading: "AI assisted copilots",
+    label:
+      "Build copilots that harness the power of LLMs generate insights over large volumes of data to assist humans in complex decision making.",
   },
+
   {
     id: 3,
-    src: "/Cloud-infrastructure-automation.jpg",
-    alt: "Cloud-infrastructure-automation",
-    title: "Cloud infrastructure automation",
+    imgSrc: "/Images/Workforce process automation.svg",
+    alt: "Workforce process automation",
+    heading: "Workforce process automation",
+    label:
+      "Construct dynamic workflows to automate processes with human actions like employee onboarding  and customer support.",
   },
 ];
 
-const APIOrchestrationOverview = [
+const API_AI_Integration = [
   {
     id: 1,
     imgSrc: "/Images/Write_choosing.svg",
     alt: "Write_choosing",
     heading: "Write your code in any language",
     label:
-      "Workers can be implemented as microservices in multiple programming languages as well as in a combination of languages. Enable cross team sharing of workflow definition implementation or services without the need to rewrite or duplicate code.",
+      "Task workers can be written in multiple programming languages including mixing and matching languages in the same workflow.",
   },
   {
     id: 2,
@@ -74,7 +99,7 @@ const APIOrchestrationOverview = [
     alt: "Accelerate go-to-market",
     heading: "Accelerate go-to-market from month to days",
     label:
-      "With simplified workflows, seamless retry functionality, and version-history control, deploying to production has never been easier.",
+      "With the powerful workflow creation UI, re-usability of workflows and worker tasks, and version-history control, ideation to production has never been easier.",
   },
   {
     id: 3,
@@ -99,39 +124,33 @@ const APIOrchestrationOverview = [
     alt: "Secure collaboration across teams and functions",
     heading: "Secure collaboration across teams and functions",
     label:
-      "Package and reuse common functionalities across teams with Rules Based Access Control (RBAC)",
+      "Tailor access controls of AI models, prompt templates, vector DBs and more to specific teams, ensuring organizational data privacy with Role Based Access Control (RBAC).",
   },
   {
     id: 6,
     imgSrc: "/Images/Ensure secrets stay...secret.svg",
     alt: "Ensure secrets stay...secret",
-    heading: "Ensure secrets stay...secret",
+    heading: "Preserve enterprise grade security and compliance",
     label:
-      "Securely store and use sensitive information in workflows without exposing it in the UI or compromising authentication tokens.",
+      "Ensure the security, auditablity and safety, of AI interactions with built-in logging and auditing features",
   },
 ];
 
 const AdditionalResources = [
   {
     id: 1,
-    src: "/Building-Applications-10x-faster.jpg",
-    alt: "Building-Applications-10x-faster",
+    src: "/AI-Blog.jpg",
+    alt: "AI-Blog",
     lable: "BLOG",
-    title: "Building Microservice-based Applications using Orkes Conductor",
+    title:
+      "Harness the Power of Gen AI in Your Applications - Introducing AI Orchestration and Human Tasks in Orkes Conductor",
   },
   {
     id: 2,
-    src: "/Microservices-Pattern-Blog-Banner.jpg",
-    alt: "Microservices-Pattern-Blog-Banner",
-    lable: "BLOG",
-    title: "4 Microservice Patterns Crucial in Microservices Architecture",
-  },
-  {
-    id: 3,
-    src: "/Foxtel-Webinar.jpg",
-    alt: "Foxtel-Webinar",
+    src: "/Human-task-Documentation.png",
+    alt: "Human-task-Documentation",
     lable: "VIDEO",
-    title: "How Foxtel Accelerates Microservices and Workflow Orchestration",
+    title: "Orchestrating Human Tasks with Conductor",
   },
 ];
 
@@ -153,25 +172,30 @@ const Workflow: React.FC<WorkflowProps> = () => {
 
         {/* MicroserviceFeatureOverview */}
         <FeatureHighlight
-          title="Enterprise-grade features make building and scaling microservices driven applications easier and more secure than ever"
-          BannerSrc={"/Mircroservices_BG-image_2.png"}
-          BannerAlt="Mircroservices_BG-image_2"
+          title="Bring human actions into your workflows with built in capabilities"
+          BannerSrc={"/Human-Task_UseCase_BG-Image.png"}
+          BannerAlt="Human-Task_UseCase_BG-Image"
           bg_Color={true}
           data={data}
         />
 
         {/* Microservices and API orchestration */}
-        <Additional_Microservices_Page
-          heading="Microservices and API orchestration on Orkes"
-          data={OrkesMicroservicesOrchestrator}
-        />
+        <div className="my-32">
+          <MissionCriticalAppBuilder
+            title="Microservices and API orchestration on Orkes"
+            data={OrkesMicroservicesOrchestration}
+            isCentered={false}
+          />
+        </div>
 
         {/* Microservices and API Orchestration */}
         <ContentCard
-          data={APIOrchestrationOverview}
+          data={API_AI_Integration}
           columns={2}
           headingClassName={"font-medium"}
-          heading={"Why Orkes for Microservices and API Orchestration"}
+          heading={
+            "Build applications that span across microservices, APIs, AI models and human tasks"
+          }
         />
 
         <div className="mt-32">
