@@ -1,6 +1,5 @@
 import React from "react";
 import Buttons from "../Buttons";
-import ConductorPlatform from "../HomePage/ConductorPlatform";
 import { Link } from "react-router-dom";
 
 type HeroSectionProps = {
@@ -15,6 +14,18 @@ type HeroSectionProps = {
   AdditionalHeading?: string;
   ConductorPlatform?: JSX.Element;
 };
+const ButtonData = [
+  {
+    to: "/sign-up",
+    className: "border-[#ed5668]",
+    lable_text: "Start Free Trial",
+  },
+  {
+    to: "",
+    className: "px-2 text-white border-[#ed5668] bg-[#ed5668]",
+    lable_text: "See Docs",
+  },
+];
 
 const HeroSection: React.FC<HeroSectionProps> = ({
   heading,
@@ -38,7 +49,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             dangerouslySetInnerHTML={{ __html: description }}
           />
           <div className="mt-4">
-            <Buttons text="See Docs" to="" />
+            {/* <Buttons text="See Docs" link="" /> */}
+            <Buttons ButtonData={ButtonData} />
           </div>
         </div>
 

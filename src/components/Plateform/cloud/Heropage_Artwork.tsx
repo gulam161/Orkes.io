@@ -1,6 +1,19 @@
 import React from "react";
 import Buttons from "../../Buttons";
 
+const ButtonData = [
+  {
+    to: "/sign-up",
+    className: "border-[#ed5668]",
+    lable_text: "Start Free Trial",
+  },
+  {
+    to: "/talk-to-an-expert",
+    className: "px-2 text-white border-[#ed5668] bg-[#ed5668]",
+    lable_text: "Contact Sales",
+  },
+];
+
 const Heropage_Artwork: React.FC = () => {
   return (
     <section className="text-center py-8">
@@ -10,7 +23,7 @@ const Heropage_Artwork: React.FC = () => {
         cloud provider.
       </p>
       <div className="flex justify-center">
-        <Buttons />
+        <Buttons ButtonData={ButtonData} />
       </div>
       <img
         src="/Orkes-Cloud-Page-Assets_Hero-Artwork.png"

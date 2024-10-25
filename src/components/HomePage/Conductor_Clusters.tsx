@@ -2,8 +2,22 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Orkes_Cloud_Artwork from "../../assets/Orkes-Cloud_Artwork.png";
 import Playground_Illustration from "../../assets/Playground-Illustration.png";
+import Buttons from "../Buttons";
 
 type Conductor_ClustersProps = {};
+
+const ButtonData = [
+  {
+    to: "/sign-up",
+    className: "border-[#ed5668]",
+    lable_text: "Start Free Trial",
+  },
+  {
+    to: "/auth-login",
+    className: "px-2 text-white border-[#ed5668] bg-[#ed5668]",
+    lable_text: "Login",
+  },
+];
 
 const Conductor_Clusters: React.FC<Conductor_ClustersProps> = () => {
   return (
@@ -33,7 +47,7 @@ const Conductor_Clusters: React.FC<Conductor_ClustersProps> = () => {
           Orkes Cloud provides fully managed & enterprise-ready Conductor
           clusters
         </p>
-        <div className="flex gap-4 capitalize text-sm">
+        {/* <div className="flex gap-4 capitalize text-sm">
           <Link to="" className="button border-[#ed5668]">
             Start Free Trail
           </Link>
@@ -43,7 +57,8 @@ const Conductor_Clusters: React.FC<Conductor_ClustersProps> = () => {
           >
             Login
           </Link>
-        </div>
+        </div> */}
+        <Buttons ButtonData={ButtonData} />
       </div>
     </section>
   );

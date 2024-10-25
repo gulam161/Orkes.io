@@ -4,6 +4,19 @@ import Buttons from "../../Buttons";
 
 type HeroPage_2Props = {};
 
+const ButtonData = [
+  {
+    to: "/sign-up",
+    className: "border-[#ed5668]",
+    lable_text: "Start Free Trial",
+  },
+  {
+    to: "/talk-to-an-expert",
+    className: "px-2 text-white border-[#ed5668] bg-[#ed5668]",
+    lable_text: "Contact Sales",
+  },
+];
+
 const HeroPage_2: React.FC<HeroPage_2Props> = () => {
   return (
     <div className="grid grid-cols-2 justify-between items-center py-9 max-lg:grid-cols-1 max-lg:gap-12 ">
@@ -17,7 +30,7 @@ const HeroPage_2: React.FC<HeroPage_2Props> = () => {
           scale distributed applications with high levels of observability,
           security, and durability.
         </p>
-        <Buttons />
+        <Buttons ButtonData={ButtonData} />
       </div>
       <img
         src={Platform_Page_Hero_v2}

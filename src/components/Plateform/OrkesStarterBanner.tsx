@@ -5,6 +5,19 @@ type OrkesStarterBannerProps = {
   [key: string]: string;
 };
 
+const ButtonData = [
+  {
+    to: "/sign-up",
+    className: "border-[#ed5668]",
+    lable_text: "Start Free Trial",
+  },
+  {
+    to: "/talk-to-an-expert",
+    className: "px-2 text-white border-[#ed5668] bg-[#ed5668]",
+    lable_text: "Contact Sales",
+  },
+];
+
 const OrkesStarterBanner: React.FC<OrkesStarterBannerProps> = ({
   bgImage,
   heading,
@@ -18,7 +31,7 @@ const OrkesStarterBanner: React.FC<OrkesStarterBannerProps> = ({
         style={{ backgroundImage: `url(${bgImage})` }}
       >
         <h1 className={`leading-10 ${headingClass}`}>{heading}</h1>
-        <Buttons />
+        <Buttons ButtonData={ButtonData} />
       </div>
     </section>
   );

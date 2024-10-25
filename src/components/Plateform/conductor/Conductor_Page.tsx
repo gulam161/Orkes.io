@@ -73,6 +73,19 @@ const CustomerFeedback = [
   },
 ];
 
+const ButtonData = [
+  {
+    to: "/sign-up",
+    className: "border-[#ed5668]",
+    lable_text: "Start Free Trial",
+  },
+  {
+    to: "/talk-to-an-expert",
+    className: "px-2 text-white border-[#ed5668] bg-[#ed5668]",
+    lable_text: "Contact Sales",
+  },
+];
+
 const Conductor_Page: React.FC<Conductor_PageProps> = () => {
   return (
     <>
@@ -103,7 +116,7 @@ const Conductor_Page: React.FC<Conductor_PageProps> = () => {
             look into the respective features and capabilities.
           </p>
           <div className="flex justify-center">
-            <Buttons />
+            <Buttons ButtonData={ButtonData} />
           </div>
         </div>
 

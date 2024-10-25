@@ -30,7 +30,7 @@ const Header: React.FC<HeaderProps> = () => {
     <nav className="w-full h-24 flex items-center sticky top-0 z-50 bg-white shadow-md shadow-gray-300">
       <header className="w-4/5 max-xl:w-11/12 mx-auto flex_between_center">
         <div className=" w-[60%] flex items-center gap-7 font-light">
-          <Link to="/">
+          <Link to="/" className="outline-none">
             <img
               src={logo}
               alt="logo"

@@ -7,6 +7,19 @@ import Buttons from "../Buttons";
 
 type HeroSectionProps = {};
 
+const ButtonData = [
+  {
+    to: "/sign-up",
+    className: "border-[#ed5668]",
+    lable_text: "Start Free Trial",
+  },
+  {
+    to: "/talk-to-an-expert",
+    className: "px-2 text-white border-[#ed5668] bg-[#ed5668]",
+    lable_text: "Contact Sales",
+  },
+];
+
 const HeroSection: React.FC<HeroSectionProps> = () => {
   return (
     <>
@@ -20,7 +33,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
             microservices, AI agents, and more with workflow orchestration.
           </p>
 
-          <Buttons />
+          <Buttons ButtonData={ButtonData} />
         </div>
         <div>
           <Link

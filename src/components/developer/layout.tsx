@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import Docs from "../../assets/Docs.svg";
 import Blog from "../../assets/Blog.svg";
@@ -31,7 +30,7 @@ const layoutItems = [
       },
       {
         id: 5,
-        to: "https://orkes.io/events/",
+        to: "/events",
         text: "Events",
         Icon: BsCalendar4Event,
       },

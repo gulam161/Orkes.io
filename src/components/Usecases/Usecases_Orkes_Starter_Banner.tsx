@@ -4,6 +4,19 @@ import bgImage from "../../../public/Start-CTA-Image.jpg";
 
 type Usecases_Orkes_Starter_BannerProps = {};
 
+const ButtonData = [
+  {
+    to: "/sign-up",
+    className: "border-[#ed5668]",
+    lable_text: "Start Free Trial",
+  },
+  {
+    to: "",
+    className: "px-2 text-white border-[#ed5668] bg-[#ed5668]",
+    lable_text: "See Docs",
+  },
+];
+
 const Usecases_Orkes_Starter_Banner: React.FC<
   Usecases_Orkes_Starter_BannerProps
 > = () => {
@@ -14,7 +27,8 @@ const Usecases_Orkes_Starter_Banner: React.FC<
           Start building with Orkes today
         </h1>
         <div className="mt-8">
-          <Buttons text="See Docs" link="" />
+          {/* <Buttons text="See Docs" link="" /> */}
+          <Buttons ButtonData={ButtonData} />
         </div>
       </div>
       <div
