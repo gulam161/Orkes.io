@@ -58,6 +58,7 @@ const Past_EventData = [
     description:
       "At the K8SUG UK meetup in London, Dan M., a member of the Conductor community, discussed how First Databank UK successfully migrated from legacy monolithic systems to a microservices architecture, utilizing orchestration with Conductor OSS.",
     buttonText: "Connect with us",
+    buttonLink: "/talk-to-an-expert",
   },
   {
     id: 2,
@@ -69,6 +70,7 @@ const Past_EventData = [
     description:
       "We were at GOTO Chicago 2024, where industry experts delved into a broad spectrum of developer topics, including programming, productivity tools, security, AI development, front-end technologies, team dynamics, and DevOps.",
     buttonText: "Connect with us",
+    buttonLink: "/talk-to-an-expert",
   },
   {
     id: 3,
@@ -80,6 +82,7 @@ const Past_EventData = [
     description:
       "At APIDays Australia, we dived deep into the world of APIs, envisioning the future of API development by harnessing the transformative power of AI. We addressed the amazing crowd with a session on orchestrating RAG to build accurate LLMs and a workshop on building AI semantic search with RAG Orchestration.",
     buttonText: "Connect with us",
+    buttonLink: "/talk-to-an-expert",
   },
   {
     id: 4,
@@ -91,6 +94,7 @@ const Past_EventData = [
     description:
       "At the AICamp meetup in New York, we addressed the crowd on the significant challenges posed by scaling workflows in an autonomous system. Ram, Head of AI at Orkes, explored the strategies for optimizing agent-based architecture, providing insights into designing and deploying them.",
     buttonText: "Connect with us",
+    buttonLink: "/talk-to-an-expert",
   },
   {
     id: 5,
@@ -102,6 +106,7 @@ const Past_EventData = [
     description:
       "Managing complex workflows in autonomous systems became increasingly challenging as they scaled. During our in-person meetup with AICamp, we delved into strategies for optimizing agent-based architectures, where multiple agents interacted and adapted in dynamic environments.",
     buttonText: "Connect with us",
+    buttonLink: "/talk-to-an-expert",
   },
   {
     id: 6,
@@ -113,6 +118,103 @@ const Past_EventData = [
     description:
       "In collaboration with GolangNYC, we hosted an in-person developer meetup in New York. Attendees learned how to create Go apps incorporating essential features such as durable execution and rate limiting. The event also covered other critical concepts contributing to the success of distributed applications with orchestration at their core.",
     buttonText: "Connect with us",
+    buttonLink: "/talk-to-an-expert",
+  },
+  {
+    id: 7,
+    imgSrc: "msft-reactor-oct24.webp",
+    imgAlt: "msft-reactor-oct24_Event",
+    labelText: "Microsoft Reactor",
+    labelDate: "Oct 10, 2024",
+    heading: "Add Human Tasks to Microservices Orchestrations",
+    description:
+      "In the October edition of the Microsoft Reactor series, we hosted an engaging session on seamlessly integrating human interactions into microservice orchestrations. Learn how to enhance your workflows with a human touch and improve overall workflow efficiency.",
+    buttonText: "Watch now",
+    buttonLink: "https://youtu.be/qRrM58f8Prc?feature=shared",
+  },
+  {
+    id: 8,
+    imgSrc: "pydatanyc-oct24.webp",
+    imgAlt: "pydatanyc-oct24_Event",
+    labelText: "PYData Meetup",
+    labelDate: "Oct 9, 2024",
+    heading: "GenAI Orchestrations using Python",
+    description:
+      "In collaboration with PYData NYC, we hosted an in-person developer meetup in New York on “Visual AI & GenAI Orchestration”. The session delved into orchestrating models and vector databases to automate insightful answers to LLM queries and seamlessly integrate GenAI capabilities into existing applications in Python.",
+    buttonText: "Connect with us",
+    buttonLink: "/talk-to-an-expert",
+  },
+  {
+    id: 9,
+    imgSrc: "community-call-sep-24.webp",
+    imgAlt: "community-call-sep-24_Event",
+    labelText: "Community Call - Sep’24",
+    labelDate: "Sep 25, 2024",
+    heading: "Conductor Community Call",
+    description:
+      "We launched with the first edition of the Conductor community call in September 2024. The call was a success, with several community members engaged in thought-provoking discussions. Dan Miller, Tech Lead at First Databank UK, shared how they effectively leveraged Conductor OSS to manage their financial requirements.",
+    buttonText: "Watch now",
+    buttonLink: "https://youtu.be/qRrM58f8Prc?feature=shared",
+  },
+  {
+    id: 10,
+    imgSrc: "msft-reactor-sep-24.webp",
+    imgAlt: "msft-reactor-sep-24_Event",
+    labelText: "Microsoft Reactor",
+    labelDate: "Sep 12, 2024",
+    heading: "Building Reliable Distributed Systems Using Python",
+    description:
+      "During the September Microsoft Reactor session, Orkes led a talk on building scalable and distributed systems using Python. The session provided insights on how businesses can improve system reliability and performance by integrating Conductor into their Python-based infrastructures.",
+    buttonText: "Watch now",
+    buttonLink: "https://developer.microsoft.com/en-us/reactor/events/22837/",
+  },
+  {
+    id: 11,
+    imgSrc: "cio-london-summit.webp",
+    imgAlt: "cio-london-summit_Event",
+    labelText: "CIO London Summit",
+    labelDate: "Sep 12, 2024",
+    heading: "CIO London Summit",
+    description:
+      "Orkes participated in the annual CIO London Summit, where we showcased how the Conductor platform transforms enterprise workflows with AI and automation. Attendees delved into the latest advancements in Cloud, Digital Transformation, and Data & Analytics, focusing on how automation is reshaping the future of business efficiency.",
+    buttonText: "Connect with us",
+    buttonLink: "/talk-to-an-expert",
+  },
+  {
+    id: 12,
+    imgSrc: "gartner-apac-2024.webp",
+    imgAlt: "gartner-apac-2024_Event",
+    labelText: "Gartner APAC 2024 - Australia",
+    labelDate: "Sep 9 - 11, 2024",
+    heading: "Gartner 2024 APAC IT Symposium/Xpo",
+    description:
+      "The Gartner 2024 APAC IT Symposium/Xpo in Australia gathered global experts to explore various IT solutions and strategies in the Asia-Pacific region, showcasing advancements and networking opportunities across the tech landscape.",
+    buttonText: "Connect with us",
+    buttonLink: "/talk-to-an-expert",
+  },
+  {
+    id: 12,
+    imgSrc: "gartner-london-sep-24.webp",
+    imgAlt: "gartner-london-sep-24_Event",
+    labelText: "Gartner Summit 2024 - UK",
+    labelDate: "Sep 9 - 10, 2024",
+    heading: "Gartner Application Innovation & Business Solutions Summit 2024",
+    description:
+      "The Gartner Application Innovation & Business Solutions Summit in London brought together experts and vendors to discuss critical topics such as generative AI, intelligent applications, low-code solutions, platform engineering, and talent management in software development. It gave attendees practical advice and strategic insights into the latest industry trends.",
+    buttonText: "Connect with us",
+    buttonLink: "/talk-to-an-expert",
+  },
+  {
+    id: 10,
+    imgSrc: "sep-masterclass.webp",
+    imgAlt: "sep-masterclass_Event",
+    labelText: "Orkes Masterclass",
+    labelDate: "Sep 10, 2024",
+    heading: "Build Stateful Backend for Frontend (BFF)",
+    description:
+      "This masterclass focused on building a stateful Backend for Frontend (BFF) architecture using JavaScript and TypeScript. The session explored how to integrate Conductor to build stateful BFF applications, helping developers enhance their processes and scale applications more effectively.",
+    buttonText: "Watch now",
+    buttonLink: "https://youtu.be/_V6-36hA5-E?si=z_L6j-HAaRFQshTg",
   },
 ];
 
@@ -167,6 +269,7 @@ const EventPage: React.FC<EventPageProps> = () => {
                   heading,
                   description,
                   buttonText,
+                  buttonLink,
                 }) => (
                   <div key={id} className="font-light mb-28">
                     <img
@@ -186,7 +289,7 @@ const EventPage: React.FC<EventPageProps> = () => {
                         {description}
                       </p>
                       <Link
-                        to={"/talk-to-an-expert"}
+                        to={buttonLink}
                         className="inline-block capitalize text-white font-medium font-serif tracking-wide rounded-md bg-blue-900 px-4 py-2 mt-5"
                       >
                         {buttonText}
