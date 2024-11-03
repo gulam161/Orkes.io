@@ -5,13 +5,13 @@ import CountUp from "react-countup";
 type Standard_SectionProps = {};
 
 const data = [
-  { count: 7, color: "text-blue-700", label: "Orkes Developers" },
+  { count: 10, color: "text-blue-700", label: "Orkes Developers" },
   {
     count: 12,
     color: "text-blue-400",
     label: "Companies using Conductor",
   },
-  { count: 13, color: "text-red-600", label: "Github Stars" },
+  { count: 17, color: "text-red-600", label: "Github Stars" },
 ];
 
 const Standard_Section: React.FC<Standard_SectionProps> = () => {

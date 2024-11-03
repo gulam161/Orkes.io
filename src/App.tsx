@@ -13,6 +13,7 @@ import Login from "./components/Auth/Login";
 import Sign_Up from "./components/Auth/Sign-Up";
 import Talk_To_An_Expert from "./components/Talk-To-An-Expert";
 import EventPage from "./components/developer/EventPage";
+import Customer from "./components/Customers/Customer";
 
 type AppProps = {};
 
@@ -35,6 +36,7 @@ const App: React.FC<AppProps> = () => {
       <Route path="/ai-and-llm-chaining" element={<AI_Chaining />} />
       <Route path="/human-workflow-orchestration" element={<Workflow />} />
       <Route path="/events" element={<EventPage />} />
+      <Route path="/customers" element={<Customer />} />
       <Route path="/auth-login" element={<Login />} />
       <Route path="/sign-up" element={<Sign_Up />} />
       <Route path="/talk-to-an-expert" element={<Talk_To_An_Expert />} />

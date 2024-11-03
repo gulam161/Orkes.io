@@ -7,7 +7,8 @@ type EventPageProps = {};
 const Upcoming_EventData = [
   {
     id: 1,
-    imgSrc: "k8sug-sg.webp",
+    imgLink:
+      "https://orkes.io/static/863615d459e480d00dafc91263ffc2dc/81547/k8sug-sg.webp",
     imgAlt: "k8sug-sg_Event",
     description:
       "Join us at K8SUG Singapore for an in-person meetup to dive into how orchestration transcends infrastructure. Discover how orchestration can streamline end-to-end business processes by transforming them into distributed workflows, ultimately boosting developer productivity. Learn practical ways to enable observability and operational insight throughout these processes. Limited online slots are available.",
@@ -15,7 +16,8 @@ const Upcoming_EventData = [
   },
   {
     id: 2,
-    imgSrc: "crackthecode.webp",
+    imgLink:
+      "https://orkes.io/static/f2242762db682afca85e962d83172f89/81547/crackthecode.webp",
     imgAlt: "crackthecode_Event",
     description:
       "Orkes is thrilled to partner with CrackTheCode for a hackathon at the University of California, Irvine. Students, seize this opportunity to demonstrate your talents, acquire new skills, and collaborate on innovative projects with Conductor!",
@@ -23,7 +25,8 @@ const Upcoming_EventData = [
   },
   {
     id: 3,
-    imgSrc: "msft-nov-24.webp",
+    imgLink:
+      "https://orkes.io/static/d4d61db84c3676c7a130a0d53807f29f/81547/msft-nov-24.webp",
     imgAlt: "msft-nov-24_Event",
     description:
       "Join us at Microsoft Reactor to discover how orchestration strengthens RAG frameworks by handling data indexing and embedding creation. Learn prompt engineering techniques to get precise, complete answers from models, and start building your GenAI-powered applications with Conductor.",
@@ -31,7 +34,8 @@ const Upcoming_EventData = [
   },
   {
     id: 4,
-    imgSrc: "qcon-nov-24.webp",
+    imgLink:
+      "https://orkes.io/static/d4d61db84c3676c7a130a0d53807f29f/81547/msft-nov-24.webp",
     imgAlt: "qcon-nov-24_Event",
     description:
       "AI capabilities revolutionize process automation by seamlessly ingesting documents from external sources. Join us at QCon San Francisco in November 2024 to explore limitless use cases, from client onboarding to extracting critical data and categorizing documents. Discover how to orchestrate document processing with GenAI capabilities with Orkes Conductor.",
@@ -39,7 +43,8 @@ const Upcoming_EventData = [
   },
   {
     id: 5,
-    imgSrc: "msft-dec-24.webp",
+    imgLink:
+      "https://orkes.io/static/d4d61db84c3676c7a130a0d53807f29f/81547/msft-nov-24.webp",
     imgAlt: "msft-dec-24_Event",
     description:
       "Discover how to build front-end applications with stateful back-for-front (BFF) layers that efficiently consume and adapt multiple backend services. This approach minimizes the complexity of maintaining additional stateless services. Register now to learn how to implement it with Conductor.",
@@ -50,7 +55,8 @@ const Upcoming_EventData = [
 const Past_EventData = [
   {
     id: 1,
-    imgSrc: "k8sug-london-oct-24.webp",
+    imgLink:
+      "https://orkes.io/static/ce0265abc83185f7b58595d9e1b59fdd/81547/k8sug-london-oct-24.webp",
     imgAlt: "k8sug-london-oct-24_Event",
     labelText: "K8SUG London Meetup",
     labelDate: "Oct 23, 2024",
@@ -62,7 +68,8 @@ const Past_EventData = [
   },
   {
     id: 2,
-    imgSrc: "goto-chicago-oct-24.webp",
+    imgLink:
+      "https://orkes.io/static/92d4c94bdda990208e2fd0eee8bf80df/e9d78/goto-chicago-oct-24.webp",
     imgAlt: "goto-chicago-oct-24_Event",
     labelText: "GOTO Chicago",
     labelDate: "Oct 21-23, 2024",
@@ -74,7 +81,8 @@ const Past_EventData = [
   },
   {
     id: 3,
-    imgSrc: "apidays-australia-oct-24.webp",
+    imgLink:
+      "https://orkes.io/static/59e3da74c1a6fa5c465459c2a96fe850/81547/apidays-australia-oct-24.webp",
     imgAlt: "apidays-australia-oct-24_Event",
     labelText: "APIDays Australia",
     labelDate: "Oct 16-17, 2024",
@@ -86,7 +94,8 @@ const Past_EventData = [
   },
   {
     id: 4,
-    imgSrc: "aicamp-ny-oct-24.webp",
+    imgLink:
+      "https://orkes.io/static/678b95aa1d68f48fbf225b1d171f9e7e/e9d78/aicamp-ny-oct-24.webp",
     imgAlt: "aicamp-ny-oct-24_Event",
     labelText: "AICamp NY",
     labelDate: "Oct 17, 2024",
@@ -98,7 +107,8 @@ const Past_EventData = [
   },
   {
     id: 5,
-    imgSrc: "aicamp-sf-oct-24.webp",
+    imgLink:
+      "https://orkes.io/static/dbf62f832e252b0f7d55423151d6cb72/81547/aicamp-sf-oct-24.webp",
     imgAlt: "aicamp-sf-oct-24_Event",
     labelText: "AICamp SFO",
     labelDate: "Oct 16, 2024",
@@ -110,7 +120,8 @@ const Past_EventData = [
   },
   {
     id: 6,
-    imgSrc: "golangnyc-oct-24.webp",
+    imgLink:
+      "https://orkes.io/static/42118c442ebe4bbd53b93afb5b43e9e9/81547/golangnyc-oct-24.webp",
     imgAlt: "golangnyc-oct-24_Event",
     labelText: "GolangNY Meetup",
     labelDate: "Oct 16, 2024",
@@ -122,7 +133,8 @@ const Past_EventData = [
   },
   {
     id: 7,
-    imgSrc: "msft-reactor-oct24.webp",
+    imgLink:
+      "https://orkes.io/static/7f2523bccae611fa47946a9ac765a14a/2bf2f/msft-reactor-oct24.webp",
     imgAlt: "msft-reactor-oct24_Event",
     labelText: "Microsoft Reactor",
     labelDate: "Oct 10, 2024",
@@ -134,7 +146,8 @@ const Past_EventData = [
   },
   {
     id: 8,
-    imgSrc: "pydatanyc-oct24.webp",
+    imgLink:
+      "https://orkes.io/static/fa36c562e75c81e046623ea0be46f4e2/81547/pydatanyc-oct24.webp",
     imgAlt: "pydatanyc-oct24_Event",
     labelText: "PYData Meetup",
     labelDate: "Oct 9, 2024",
@@ -146,7 +159,8 @@ const Past_EventData = [
   },
   {
     id: 9,
-    imgSrc: "community-call-sep-24.webp",
+    imgLink:
+      "https://orkes.io/static/254692bc4beb225c3d32c5e36b08e8c4/81547/community-call-sep-24.webp",
     imgAlt: "community-call-sep-24_Event",
     labelText: "Community Call - Sep’24",
     labelDate: "Sep 25, 2024",
@@ -158,7 +172,8 @@ const Past_EventData = [
   },
   {
     id: 10,
-    imgSrc: "msft-reactor-sep-24.webp",
+    imgLink:
+      "https://orkes.io/static/97b2e4a3f770fd2736487d1babec1414/2bf2f/msft-reactor-sep-24.webp",
     imgAlt: "msft-reactor-sep-24_Event",
     labelText: "Microsoft Reactor",
     labelDate: "Sep 12, 2024",
@@ -170,7 +185,8 @@ const Past_EventData = [
   },
   {
     id: 11,
-    imgSrc: "cio-london-summit.webp",
+    imgLink:
+      "https://orkes.io/static/01873263e74b52c3246c979ad141002e/e9d78/cio-london-summit.webp",
     imgAlt: "cio-london-summit_Event",
     labelText: "CIO London Summit",
     labelDate: "Sep 12, 2024",
@@ -182,7 +198,8 @@ const Past_EventData = [
   },
   {
     id: 12,
-    imgSrc: "gartner-apac-2024.webp",
+    imgLink:
+      "https://orkes.io/static/ff9285a65df76558f5d9ea820d2766c6/81547/gartner-apac-2024.webp",
     imgAlt: "gartner-apac-2024_Event",
     labelText: "Gartner APAC 2024 - Australia",
     labelDate: "Sep 9 - 11, 2024",
@@ -193,9 +210,36 @@ const Past_EventData = [
     buttonLink: "/talk-to-an-expert",
   },
   {
+    id: 13,
+    imgLink:
+      "https://orkes.io/static/76fe39666b3a14383ade1606eeb31cb7/81547/gartner-london-sep-24.webp",
+    imgAlt: "gartner-london-sep-24_Event",
+    labelText: "Gartner Summit 2024 - UK",
+    labelDate: "Sep 9 - 10, 2024",
+    heading: "Gartner Application Innovation & Business Solutions Summit 2024",
+    description:
+      "The Gartner Application Innovation & Business Solutions Summit in London brought together experts and vendors to discuss critical topics such as generative AI, intelligent applications, low-code solutions, platform engineering, and talent management in software development. It gave attendees practical advice and strategic insights into the latest industry trends.",
+    buttonText: "Connect with us",
+    buttonLink: "/talk-to-an-expert",
+  },
+  {
+    id: 14,
+    imgLink:
+      "https://orkes.io/static/fa6002eeac6679a3047f1b53e6068c66/e9d78/sep-masterclass.webp",
+    imgAlt: "sep-masterclass_Event",
+    labelText: "Orkes Masterclass",
+    labelDate: "Sep 10, 2024",
+    heading: "Build Stateful Backend for Frontend (BFF)",
+    description:
+      "This masterclass focused on building a stateful Backend for Frontend (BFF) architecture using JavaScript and TypeScript. The session explored how to integrate Conductor to build stateful BFF applications, helping developers enhance their processes and scale applications more effectively.",
+    buttonText: "Watch now",
+    buttonLink: "https://youtu.be/_V6-36hA5-E?si=z_L6j-HAaRFQshTg",
+  },
+  {
     id: 15,
-    imgSrc: "",
-    imgAlt: "",
+    imgLink:
+      "https://orkes.io/static/c4995cb1b2ac55190f1985919c6bdf10/81547/sydney-dev-meetup-august-2024.webp",
+    imgAlt: "sydney-dev-meetup-august-2024",
     labelText: "Sydney Meetup - Aug’24",
     labelDate: "Aug 27, 2024",
     heading: "Taking Gen-AI Applications from POC to Production",
@@ -206,8 +250,9 @@ const Past_EventData = [
   },
   {
     id: 16,
-    imgSrc: "",
-    imgAlt: "",
+    imgLink:
+      "https://orkes.io/static/1263a8f3f61f9169151490005ef8d2c4/81547/build-the-flow.webp",
+    imgAlt: "build-the-flow",
     labelText: "Orkes Summer Hackathon",
     labelDate: "July - Aug 2024",
     heading: "Build the Flow Hackathon",
@@ -218,8 +263,9 @@ const Past_EventData = [
   },
   {
     id: 17,
-    imgSrc: "",
-    imgAlt: "",
+    imgLink:
+      "https://orkes.io/static/ecddbcac7ee3b46f4689faeddb024f28/81547/msft-reactor-aug-24.webp",
+    imgAlt: "msft-reactor-aug-24",
     labelText: "Microsoft Reactor",
     labelDate: "Aug 8, 2024",
     heading: "Integrate External Systems Within Existing Applications",
@@ -230,8 +276,9 @@ const Past_EventData = [
   },
   {
     id: 18,
-    imgSrc: "",
-    imgAlt: "",
+    imgLink:
+      "https://orkes.io/static/df5d3ec312992bf81f5867a6223d110c/81547/webinar-july-24.webp",
+    imgAlt: "webinar-july-24",
     labelText: "Webinar",
     labelDate: "July 30, 2024",
     heading: "Taking Gen-AI Applications from POC to Production",
@@ -242,8 +289,9 @@ const Past_EventData = [
   },
   {
     id: 19,
-    imgSrc: "",
-    imgAlt: "",
+    imgLink:
+      "https://orkes.io/static/978bc1bfc1992b7e9b751fc9157f9080/81547/sg-july-24.webp",
+    imgAlt: "Singapore Meetup-24",
     labelText: "Singapore Meetup - July'24",
     labelDate: "July 19, 2024",
     heading: "Orchestrating RAG",
@@ -254,8 +302,9 @@ const Past_EventData = [
   },
   {
     id: 20,
-    imgSrc: "",
-    imgAlt: "",
+    imgLink:
+      "https://orkes.io/static/2f58bb9f2c7306147bbdb1c5ee3ff443/81547/msft-reactor-july-24.webp",
+    imgAlt: "msft-reactor-july-24",
     labelText: "Microsoft Reactor",
     labelDate: "July 11, 2024",
     heading: "Document Processing Using GenAI Orchestrations",
@@ -266,32 +315,35 @@ const Past_EventData = [
   },
   {
     id: 21,
-    imgSrc: "",
-    imgAlt: "",
+    imgLink:
+      "https://orkes.io/static/f3f0e079ee537b9ab7508ee0f1d79d3b/33bdc/Msft-Reactor-June-24.webp",
+    imgAlt: "Msft-Reactor-June-24",
     labelText: "Microsoft Reactor",
     labelDate: "June 26, 2024",
     heading: "Building Complex Distributed Applications in Minutes",
     description:
       "The June edition of the Microsoft Reactor focused on developing distributed applications with microservices. We also covered how to use Orkes Conductor to build these applications rapidly. Attendees gained insights into best practices and practical techniques for efficient microservice development.",
     buttonText: "Connect with us",
-    buttonLink: "https://orkes.io/talk-to-an-expert",
+    buttonLink: "/talk-to-an-expert",
   },
   {
     id: 22,
-    imgSrc: "",
-    imgAlt: "",
+    imgLink:
+      "https://orkes.io/static/6c3a0a2a860c4fec5fd1230343c24797/81547/collision-june-24.webp",
+    imgAlt: "collision-june-24",
     labelText: "Collision",
     labelDate: "June 17-20, 2024",
     heading: "Orchestrating Scalable Complex Applications",
     description:
       "This June, we had the fantastic opportunity to attend Collision, the Olympics of tech, where we delivered a masterclass on integrating orchestration capabilities into applications. We connected with numerous industry leaders and innovators, exchanging ideas and building valuable relationships at this premier tech conference.",
     buttonText: "Connect with us",
-    buttonLink: "https://orkes.io/talk-to-an-expert",
+    buttonLink: "/talk-to-an-expert",
   },
   {
     id: 23,
-    imgSrc: "",
-    imgAlt: "",
+    imgLink:
+      "https://orkes.io/static/5704237c41fbaf5c29f2496728529116/81547/microsoft-virtual-june.webp",
+    imgAlt: "microsoft-virtual-june",
     labelText: "Microsoft Reactor",
     labelDate: "June 13, 2024",
     heading: "Mastering Durable Executions",
@@ -301,21 +353,10 @@ const Past_EventData = [
     buttonLink: "https://developer.microsoft.com/en-us/reactor/events/22834/",
   },
   {
-    id: 24,
-    imgSrc: "",
-    imgAlt: "",
-    labelText: "Webinar",
-    labelDate: "June 05, 2024",
-    heading: "Mastering Durable Executions",
-    description:
-      "The June edition of the masterclass series with Microsoft Reactor covered why and how to master durable executions of microservices using Orkes Conductor. The session provided in-depth insights into leveraging Orkes Conductor for building robust and resilient microservice architectures.",
-    buttonText: "Watch now",
-    buttonLink: "https://developer.microsoft.com/en-us/reactor/events/22834/",
-  },
-  {
     id: 25,
-    imgSrc: "",
-    imgAlt: "",
+    imgLink:
+      "https://orkes.io/static/ac514547b83a47f69c782f92098bb70b/81547/oss-vs-enterprise.webp",
+    imgAlt: "oss-vs-enterprise",
     labelText: "Webinar",
     labelDate: "June 05, 2024",
     heading: "Conductor OSS VS. Enterprise Orkes Conductor",
@@ -326,80 +367,87 @@ const Past_EventData = [
   },
   {
     id: 26,
-    imgSrc: "",
-    imgAlt: "",
+    imgLink:
+      "https://orkes.io/static/6986a42465fb17621785100c009c1541/81547/msft-reactor-may-24.webp",
+    imgAlt: "msft-reactor-may-24",
     labelText: "Microsoft Reactor",
     labelDate: "May 22, 2024",
     heading: "Build Complex Distributed Applications in Minutes",
     description:
       "The May edition of the Microsoft Reactor focused on developing distributed applications with microservices. We also covered how to use Orkes Conductor to build these applications rapidly. Attendees gained insights into best practices and practical techniques for efficient microservice development.",
     buttonText: "Connect with us",
-    buttonLink: "https://orkes.io/talk-to-an-expert",
+    buttonLink: "/talk-to-an-expert",
   },
   {
     id: 27,
-    imgSrc: "",
-    imgAlt: "",
+    imgLink:
+      "https://orkes.io/static/f6c41c7a232138a4467188d1ad63de98/81547/msbuild-may-2024.webp",
+    imgAlt: "msbuild-may-2024",
     labelText: "Microsoft Build 2024",
     labelDate: "May 21-23, 2024",
     heading: "Microsoft Build 2024",
     description:
       "We were at the Microsoft Build 2024 this May. It was a fantastic opportunity to delve into orchestration and broaden our understanding of copilot, generative AI, application security, cloud platforms, low-code development, and more.",
     buttonText: "Connect with us",
-    buttonLink: "https://orkes.io/talk-to-an-expert",
+    buttonLink: "/talk-to-an-expert",
   },
   {
     id: 28,
-    imgSrc: "",
-    imgAlt: "",
+    imgLink:
+      "https://orkes.io/static/5a10127bbb9a857300a846dd1ff4b8fe/81547/gartner-may-2024.webp",
+    imgAlt: "gartner-may-2024",
     labelText: "Gartner Summit 2024 - US",
     labelDate: "May 14-16, 2024",
     heading: "Gartner Application Innovation & Business Solutions Summit 2024",
     description:
       "This May 2024, we attended the Gartner Application Innovation & Business Solutions Summit. We networked with top experts and explored generative AI, intelligent apps, low-code development, platform engineering, and more. It was an exciting event to explore the latest advancements in application and software engineering.",
     buttonText: "Connect with us",
-    buttonLink: "https://orkes.io/talk-to-an-expert",
+    buttonLink: "/talk-to-an-expert",
   },
   {
     id: 29,
-    imgSrc: "",
-    imgAlt: "",
+    imgLink:
+      "https://orkes.io/static/b904a953540d2461244d2ddcd5502128/81547/api-days-nyc.webp",
+    imgAlt: "APIDays NY-24",
     labelText: "APIDays NY",
     labelDate: "May 1, 2024",
     heading: "APIDays New York",
     description:
       "We were at the 5th edition of APIDays New York, where we explored the importance of orchestrating microservices and AI for enterprise-level workflows. Additionally, the Orkes workshop explored rapidly building complex applications through orchestration.",
     buttonText: "Connect with us",
-    buttonLink: "https://orkes.io/talk-to-an-expert",
+    buttonLink: "/talk-to-an-expert",
   },
   {
     id: 30,
-    imgSrc: "",
-    imgAlt: "",
+    imgLink:
+      "https://orkes.io/static/56ebcfa2e828007981d60c468f19977c/e9d78/apr-24-orkes-finos-reactor.webp",
+    imgAlt: "apr-24-orkes-finos-reactor",
     labelText: "Microsoft Reactor x FINOS",
     labelDate: "Apr 24, 2024",
     heading: "Microsoft Reactor x FINOS",
     description:
       "In April 2024, we participated in the collaborative Microsoft Reactor event, organized by Orkes and supported by FINOS. The event focused on examining the potential of orchestration platforms in facilitating the smooth integration of AI into mission-critical financial workflows.",
     buttonText: "Connect with us",
-    buttonLink: "https://orkes.io/talk-to-an-expert",
+    buttonLink: "/talk-to-an-expert",
   },
   {
     id: 31,
-    imgSrc: "",
-    imgAlt: "",
+    imgLink:
+      "https://orkes.io/static/03e43eee955702f58181a05640da3045/81547/jakarta-apr-24.webp",
+    imgAlt: "J-Meetup-24",
     labelText: "Jakarta Meetup",
     labelDate: "Apr 24, 2024",
     heading: "Developer Meetup - Jakarta",
     description:
       "In April 2024, we hosted a developer meetup in Indonesia centered around efficient microservices management. The event provided attendees with valuable insights and opportunities to connect with peers, exchange ideas, and learn about the latest approaches in the field.",
     buttonText: "Connect with us",
-    buttonLink: "https://orkes.io/talk-to-an-expert",
+    buttonLink: "/talk-to-an-expert",
   },
   {
     id: 32,
-    imgSrc: "",
-    imgAlt: "",
+    imgLink:
+      "https://orkes.io/static/5fce6d262fc461ab244e49081b343607/81547/bangalore-apr-24.webp",
+    imgAlt: "Bangalore-M-24",
     labelText: "Bangalore Meetup",
     labelDate: "Apr 19, 2024",
     heading: "Developer Meetup - Bengaluru",
@@ -410,8 +458,9 @@ const Past_EventData = [
   },
   {
     id: 33,
-    imgSrc: "",
-    imgAlt: "",
+    imgLink:
+      "https://orkes.io/static/3ac061eb93722c1b5cf3040293ed4557/81547/api-days-sg.webp",
+    imgAlt: "APIDays-24",
     labelText: "APIDays Singapore",
     labelDate: "Apr 17-18, 2024",
     heading: "APIDays Singapore",
@@ -422,8 +471,9 @@ const Past_EventData = [
   },
   {
     id: 34,
-    imgSrc: "",
-    imgAlt: "",
+    imgLink:
+      "https://orkes.io/static/34868d12ca9a1f6b9596f62891db3628/81547/sg-march-24.webp",
+    imgAlt: "sm-24",
     labelText: "Singapore Meetup - Mar’24",
     labelDate: "Mar 18, 2024",
     heading: "Developer Meetup - Singapore",
@@ -434,8 +484,9 @@ const Past_EventData = [
   },
   {
     id: 35,
-    imgSrc: "",
-    imgAlt: "",
+    imgLink:
+      "https://orkes.io/static/e2455c4237ab88b4b2593a1c12892a4a/81547/virtual-mar-24.webp",
+    imgAlt: "Conductor M-24",
     labelText: "Conductor Meetup",
     labelDate: "Mar 12, 2024",
     heading: "Conductor Virtual Meetup - Mar’24",
@@ -446,20 +497,22 @@ const Past_EventData = [
   },
   {
     id: 36,
-    imgSrc: "",
-    imgAlt: "",
+    imgLink:
+      "https://orkes.io/static/3652eb53a060d12ed056ac51a9d61766/81547/seattle-feb-24.webp",
+    imgAlt: "Seattle - M-24",
     labelText: "Seattle Meetup",
     labelDate: "Mar 5, 2024",
     heading: "AWS & Orkes Developer Meetup Seattle",
     description:
       "The Seattle meetup, powered by AWS, brought developers together to dive deep into durable executions and the latest AWS Bedrock integration with Conductor, fostering a dynamic environment for networking and knowledge exchange among the attendees.",
     buttonText: "Connect with us",
-    buttonLink: "https://orkes.io/talk-to-an-expert",
+    buttonLink: "/talk-to-an-expert",
   },
   {
     id: 37,
-    imgSrc: "",
-    imgAlt: "",
+    imgLink:
+      "https://orkes.io/static/2a3eec92cc243f4921db4f1452135afc/81547/atlanta-meetup-feb-24.webp",
+    imgAlt: "Atlanta M -24",
     labelText: "Atlanta Meetup",
     labelDate: "Feb 29, 2024",
     heading: "AWS & Orkes Developer Meetup Atlanta",
@@ -470,7 +523,7 @@ const Past_EventData = [
   },
   {
     id: 38,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "React Delhi",
     labelDate: "Feb 24, 2024",
@@ -478,11 +531,11 @@ const Past_EventData = [
     description:
       "At React Delhi, we dived into the technical intricacies of Backend For Frontend (BFF) and its critical role within React Applications. We focused on delivering how BFF functions as a mediator, optimizing data flow, and enhancing the agility of front-end development.",
     buttonText: "Connect with us",
-    buttonLink: "https://orkes.io/talk-to-an-expert",
+    buttonLink: "/talk-to-an-expert",
   },
   {
     id: 39,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "Vue.js Nation Conference 2024",
     labelDate: "Feb 15, 2024",
@@ -490,11 +543,11 @@ const Past_EventData = [
     description:
       "At the Vue.js Nation Conference, we hosted a workshop attended by 800 participants, where we explored the intricacies of building a stateful Backend For Frontend (BFF) using Conductor. Our in-depth session was designed to equip attendees with valuable insights into optimizing the development of front-end applications through Conductor.",
     buttonText: "Connect with us",
-    buttonLink: "https://orkes.io/talk-to-an-expert",
+    buttonLink: "/talk-to-an-expert",
   },
   {
     id: 40,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "Conductor Meetup",
     labelDate: "Feb 13, 2024",
@@ -506,7 +559,7 @@ const Past_EventData = [
   },
   {
     id: 41,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "Webinar",
     labelDate: "Feb 8, 2024",
@@ -519,7 +572,7 @@ const Past_EventData = [
   },
   {
     id: 42,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "Dojo.live",
     labelDate: "Feb 6, 2024",
@@ -532,7 +585,7 @@ const Past_EventData = [
   },
   {
     id: 43,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "Boston Meetup",
     labelDate: "Jan 30, 2024",
@@ -545,7 +598,7 @@ const Past_EventData = [
   },
   {
     id: 44,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "Vue.js Nation",
     labelDate: "Jan 24-25, 2024",
@@ -557,7 +610,7 @@ const Past_EventData = [
   },
   {
     id: 45,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "FOSS United, Bengaluru",
     labelDate: "Jan 13, 2024",
@@ -570,7 +623,7 @@ const Past_EventData = [
   },
   {
     id: 46,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "Conductor Meetup",
     labelDate: "Jan 9, 2024",
@@ -583,7 +636,7 @@ const Past_EventData = [
   },
   {
     id: 47,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "Conductor Meetup",
     labelDate: "Dec 13, 2023",
@@ -596,7 +649,7 @@ const Past_EventData = [
   },
   {
     id: 48,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "Paris Meetup Dec’23",
     labelDate: "Dec 8, 2023",
@@ -609,7 +662,7 @@ const Past_EventData = [
   },
   {
     id: 49,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "APIDays Paris",
     labelDate: "Dec 7, 2023",
@@ -621,7 +674,7 @@ const Past_EventData = [
   },
   {
     id: 50,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "Singapore Meetup Nov'23",
     labelDate: "Nov 8, 2023",
@@ -634,7 +687,7 @@ const Past_EventData = [
   },
   {
     id: 51,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "GDG Durgapur",
     labelDate: "Nov 5, 2023",
@@ -647,7 +700,7 @@ const Past_EventData = [
   },
   {
     id: 52,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "Sydney Meetup",
     labelDate: "Nov 2, 2023",
@@ -660,7 +713,7 @@ const Past_EventData = [
   },
   {
     id: 53,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "OSFF New York",
     labelDate: "Nov 1, 2023",
@@ -674,7 +727,7 @@ const Past_EventData = [
 
   {
     id: 54,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "Cloud Native Day Pune",
     labelDate: "Oct 28, 2023",
@@ -687,7 +740,7 @@ const Past_EventData = [
   },
   {
     id: 55,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "Weaviate Meetup New York",
     labelDate: "Oct 27, 2023",
@@ -700,7 +753,7 @@ const Past_EventData = [
   },
   {
     id: 56,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "Gitex Global 2023 | Expand North Star",
     labelDate: "Oct 15 - 18, 2023",
@@ -713,7 +766,7 @@ const Past_EventData = [
   },
   {
     id: 57,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "GDG DevFest Ranchi",
     labelDate: "Oct 8, 2023",
@@ -727,7 +780,7 @@ const Past_EventData = [
   },
   {
     id: 58,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "QCon San Francisco",
     labelDate: "Oct 6, 2023",
@@ -741,7 +794,7 @@ const Past_EventData = [
   },
   {
     id: 59,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "Orkes x OpinHacks",
     labelDate: "Sep 29, 2023",
@@ -754,7 +807,7 @@ const Past_EventData = [
   },
   {
     id: 60,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "Conductor Meetup",
     labelDate: "Sep 26, 2023",
@@ -767,7 +820,7 @@ const Past_EventData = [
   },
   {
     id: 61,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "London Meetup",
     labelDate: "Sep 13, 2023",
@@ -780,7 +833,7 @@ const Past_EventData = [
   },
   {
     id: 62,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "Paris Meetup",
     labelDate: "Aug 23, 2023",
@@ -793,7 +846,7 @@ const Past_EventData = [
   },
   {
     id: 63,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "Singapore Meetup",
     labelDate: "Aug 4, 2023",
@@ -806,7 +859,7 @@ const Past_EventData = [
   },
   {
     id: 64,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "NY JavaSIG",
     labelDate: "July 26, 2023",
@@ -818,7 +871,7 @@ const Past_EventData = [
   },
   {
     id: 65,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "New York Meetup",
     labelDate: "July 19, 2023",
@@ -831,7 +884,7 @@ const Past_EventData = [
   },
   {
     id: 66,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "APIDays Interface",
     labelDate: "June 28, 2023",
@@ -843,7 +896,7 @@ const Past_EventData = [
   },
   {
     id: 67,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "Webinar",
     labelDate: "June 27, 2023",
@@ -856,7 +909,7 @@ const Past_EventData = [
   },
   {
     id: 68,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "Mumbai Meetup",
     labelDate: "June 24, 2023",
@@ -869,7 +922,7 @@ const Past_EventData = [
   },
   {
     id: 69,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "Developer Week Latin America",
     labelDate: "June 21, 2023",
@@ -882,7 +935,7 @@ const Past_EventData = [
   },
   {
     id: 70,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "QCon New York",
     labelDate: "June 13-15, 2023",
@@ -895,7 +948,7 @@ const Past_EventData = [
   },
   {
     id: 71,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "Microsoft Build",
     labelDate: "May 23-25, 2023",
@@ -908,7 +961,7 @@ const Past_EventData = [
   },
   {
     id: 72,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "Gartner Summit 2023 - US",
     labelDate: "May 22-24, 2023",
@@ -921,7 +974,7 @@ const Past_EventData = [
   },
   {
     id: 73,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "Conductor Meetup",
     labelDate: "May 9, 2023",
@@ -933,7 +986,7 @@ const Past_EventData = [
   },
   {
     id: 74,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "Bangalore Meetup",
     labelDate: "April 30, 2023",
@@ -945,7 +998,7 @@ const Past_EventData = [
   },
   {
     id: 75,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "Microsoft Reactor",
     labelDate: "Apr 18, 2023",
@@ -957,7 +1010,7 @@ const Past_EventData = [
   },
   {
     id: 76,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "GDSC WOW Pune",
     labelDate: "Apr 16, 2023",
@@ -970,7 +1023,7 @@ const Past_EventData = [
   },
   {
     id: 77,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "Microsoft Reactor",
     labelDate: "Apr 11, 2023",
@@ -982,7 +1035,7 @@ const Past_EventData = [
   },
   {
     id: 79,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "Microsoft Reactor",
     labelDate: "Apr 4, 2023",
@@ -994,7 +1047,7 @@ const Past_EventData = [
   },
   {
     id: 80,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "Pune FOSS",
     labelDate: "Apr 1, 2023",
@@ -1008,7 +1061,7 @@ const Past_EventData = [
   },
   {
     id: 81,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "GDSC WOW Visakhapatnam",
     labelDate: "Mar 24, 2023",
@@ -1022,7 +1075,7 @@ const Past_EventData = [
   },
   {
     id: 82,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "API Secure",
     labelDate: "Mar 15, 2023",
@@ -1035,7 +1088,7 @@ const Past_EventData = [
   },
   {
     id: 83,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "Developer Week",
     labelDate: "Feb 16, 2023",
@@ -1048,7 +1101,7 @@ const Past_EventData = [
   },
   {
     id: 84,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "Conductor Developer Meetup | Netflix x Orkes",
     labelDate: "Jan 24, 2023",
@@ -1060,7 +1113,7 @@ const Past_EventData = [
   },
   {
     id: 85,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "Google Cloud Startup Community",
     labelDate: "Dec 7, 2022",
@@ -1073,7 +1126,7 @@ const Past_EventData = [
   },
   {
     id: 86,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "DevFest 2022",
     labelDate: "Nov - Dec 2022",
@@ -1086,7 +1139,7 @@ const Past_EventData = [
   },
   {
     id: 87,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "Developer Week 2022",
     labelDate: "Nov 16, 2022",
@@ -1099,7 +1152,7 @@ const Past_EventData = [
   },
   {
     id: 88,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "API World 2022",
     labelDate: "Nov 3, 2022",
@@ -1112,7 +1165,7 @@ const Past_EventData = [
   },
   {
     id: 89,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "Kubecon 2022",
     labelDate: "Oct 24, 2022",
@@ -1125,7 +1178,7 @@ const Past_EventData = [
   },
   {
     id: 90,
-    imgSrc: "",
+    imgLink: "",
     imgAlt: "",
     labelText: "IBC",
     labelDate: "Sep 9-12, 2022",
@@ -1149,13 +1202,13 @@ const EventPage: React.FC<EventPageProps> = () => {
               Upcoming Events
             </h1>
             {Upcoming_EventData.map(
-              ({ id, imgSrc, imgAlt, description, buttonText }) => (
+              ({ id, imgLink, imgAlt, description, buttonText }) => (
                 <div
                   key={id}
                   className="flex justify-center items-center gap-8 py-3.5"
                 >
                   <img
-                    src={imgSrc}
+                    src={imgLink}
                     alt={imgAlt}
                     className="w-[57%] shadow-sm"
                   />
@@ -1182,7 +1235,7 @@ const EventPage: React.FC<EventPageProps> = () => {
               {Past_EventData.map(
                 ({
                   id,
-                  imgSrc,
+                  imgLink,
                   imgAlt,
                   labelText,
                   labelDate,
@@ -1193,7 +1246,7 @@ const EventPage: React.FC<EventPageProps> = () => {
                 }) => (
                   <div key={id} className="font-light mb-28">
                     <img
-                      src={imgSrc}
+                      src={imgLink}
                       alt={imgAlt}
                       className="h-48 w-96 shadow-sm"
                     />

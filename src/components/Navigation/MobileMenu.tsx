@@ -5,6 +5,7 @@ import { FaSlack } from "react-icons/fa";
 interface Navdata {
   id: number;
   text: string;
+  to: string;
 }
 
 type MobileMenuProps = {
@@ -57,9 +58,10 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
           : ""
       }`}
     >
-      {navdata.map(({ id, text }) => (
+      {navdata.map(({ id, text, to }) => (
         <>
-          <div
+          <Link
+            to={to}
             key={id}
             onClick={() => handleClick(id)}
             className="cursor-pointer flex justify-between p-5 border-b font-light"
@@ -72,7 +74,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
                 }`}
               />
             )}
-          </div>
+          </Link>
           {activeLink === id && renderComponent(text)}
         </>
       ))}

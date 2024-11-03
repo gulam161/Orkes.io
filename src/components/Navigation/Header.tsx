@@ -11,11 +11,11 @@ import MobileMenu from "./MobileMenu";
 type HeaderProps = {};
 
 const navItems = [
-  { id: 1, text: "Platform" },
-  { id: 2, text: "Use Cases" },
-  { id: 3, text: "Developers" },
-  { id: 4, text: "Customers" },
-  { id: 5, text: "Pricing" },
+  { id: 1, text: "Platform", to: "" },
+  { id: 2, text: "Use Cases", to: "" },
+  { id: 3, text: "Developers", to: "" },
+  { id: 4, text: "Customers", to: "/customers" },
+  { id: 5, text: "Pricing", to: "" },
 ];
 
 const Header: React.FC<HeaderProps> = () => {
@@ -35,17 +35,17 @@ const Header: React.FC<HeaderProps> = () => {
               src={logo}
               alt="logo"
               width={130}
-              className="relative cursor-pointer z-50 "
+              className="relative cursor-pointer z-50"
             />
           </Link>
           <div className="w-2/3 flex_between_center max-lg:hidden">
-            {navItems.map(({ id, text }) => (
+            {navItems.map(({ id, text, to }) => (
               <div
                 key={id}
                 onMouseEnter={() => setHoveredItem(text)}
                 onMouseLeave={() => setHoveredItem(null)}
               >
-                <Link to="#" className="text-[15px] py-4 hover:underline">
+                <Link to={to} className="text-[15px] py-4 hover:underline">
                   {text}
                 </Link>
                 {hoveredItem === text && (

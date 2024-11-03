@@ -5,6 +5,20 @@ import Orkes_Cloud_Page_BG_Clouds from "../../../../public/Orkes-Cloud-Page-BG_C
 import OrkesStarterBanner from "../OrkesStarterBanner";
 import Footer from "../../Footer";
 import MissionCriticalAppBuilder from "../MissionCriticalAppBuilder";
+import Customer_IntroSection from "../../Customer_IntroSection";
+
+const ButtonData = [
+  {
+    to: "/sign-up",
+    className: "border-[#ed5668]",
+    lable_text: "Start Free Trial",
+  },
+  {
+    to: "/talk-to-an-expert",
+    className: "px-2 text-white border-[#ed5668] bg-[#ed5668]",
+    lable_text: "Contact Sales",
+  },
+];
 
 const data = [
   {
@@ -123,6 +137,14 @@ const ExpertSupportHub = [
 const OrkesCloudFeatures: React.FC = () => {
   return (
     <>
+      <Customer_IntroSection
+        title="Orkes Cloud"
+        subtitle="Deploy fully managed, dedicated Conductor instances on your preferred cloud provider."
+        buttonData={ButtonData}
+        imageSrc="/Orkes-Cloud-Page-Assets_Hero-Artwork.png"
+        imageAlt="Orkes Cloud Hero Artwork"
+      />
+
       <MissionCriticalAppBuilder
         title="Focus on building mission critical applications and we’ll handle the rest"
         data={data}
