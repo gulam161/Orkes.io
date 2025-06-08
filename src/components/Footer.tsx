@@ -43,39 +43,40 @@ const aboutSections = [
 const socialMediaIcons = [
   {
     Icon: FaXTwitter,
-    link: "https://x.com/orkesio",
+    link: "/",
   },
   {
     Icon: FaLinkedinIn,
-    link: "https://www.linkedin.com/company/orkes-inc/",
+    link: "/",
   },
   {
     Icon: FaYoutube,
-    link: "https://www.youtube.com/channel/UCI7sk4DD6F6r9CWg9gHRlVg",
+    link: "/",
   },
   {
     Icon: FaSlack,
-    link: "https://orkes-conductor.slack.com/join/shared_invite/zt-2hmxn0i3n-_W~a9rWMbvMoYmlJo3Y15g#/shared-invite/email",
+    link: "/",
   },
   {
     Icon: TbBrandGithubFilled,
-    link: "https://github.com/conductor-oss/conductor",
+    link: "/",
   },
   {
     Icon: FaFacebookF,
-    link: "https://www.facebook.com/orkes.io",
+    link: "/",
   },
   {
     Icon: FaInstagram,
-    link: "https://www.instagram.com/orkes.io/",
+    link: "/",
   },
   {
     Icon: FaTiktok,
-    link: "https://www.tiktok.com/@orkes.io",
+    link: "/",
   },
 ];
 
 const Footer: React.FC = () => {
+  const year = new Date().getFullYear();
   return (
     <section className="text-gray-600">
       <div className="flex gap-8 max-lg:grid max-lg:grid-cols-4 max-md:grid-cols-3">
@@ -113,7 +114,7 @@ const Footer: React.FC = () => {
           ))}
         </div>
         <div className="font-light text-sm">
-          © 2024 Orkes. All Rights Reserved.
+          © {year} Orkes. All Rights Reserved.
         </div>
       </div>
     </section>

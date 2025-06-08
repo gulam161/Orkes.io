@@ -6,17 +6,17 @@ import { Link } from "react-router-dom";
 
 const Comunities = [
   {
-    link: "https://orkes-conductor.slack.com/join/shared_invite/zt-2hmxn0i3n-_W~a9rWMbvMoYmlJo3Y15g#/shared-invite/email",
+    link: "/",
     icon: Slack_Icon,
     text: "Join the Conductor Slack community",
   },
   {
-    link: "https://github.com/conductor-oss/conductor",
+    link: "/",
     icon: Git_Icon,
     text: "Check out the Conductor repository on Github",
   },
   {
-    link: "https://orkes.io/events/",
+    link: "/",
     icon: Calender_Icon,
     text: "Join us at one of our Events",
   },

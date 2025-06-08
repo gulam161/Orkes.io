@@ -5,7 +5,7 @@ import Orkes_Cloud_Page_BG_Clouds from "../../../../public/Orkes-Cloud-Page-BG_C
 import OrkesStarterBanner from "../OrkesStarterBanner";
 import Footer from "../../Footer";
 import MissionCriticalAppBuilder from "../MissionCriticalAppBuilder";
-import Customer_IntroSection from "../../Customer_IntroSection";
+import Customer_IntroSection from "../../IntroSection";
 
 const ButtonData = [
   {

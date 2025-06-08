@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import ScrollTrigger from "react-scroll-trigger";
+import React, { useEffect, useRef, useState } from "react";
+import { useInView } from "motion/react";
 import CountUp from "react-countup";
 
 type Standard_SectionProps = {};
@@ -16,6 +16,16 @@ const data = [
 
 const Standard_Section: React.FC<Standard_SectionProps> = () => {
   const [counterOn, setCounterOn] = useState(false);
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+
+  useEffect(() => {
+    if (isInView) {
+      setCounterOn(true);
+    } else {
+      setCounterOn(false);
+    }
+  }, [isInView]);
   return (
     <section className="grid grid-cols-3 gap-8 py-10 px-28 max-xl:px-28 max-lg:grid-cols-1 max-lg:gap-20 max-sm:px-12">
       {data.map((item, index) => (
@@ -23,10 +33,7 @@ const Standard_Section: React.FC<Standard_SectionProps> = () => {
           key={index}
           className="text-center max-lg:w-2/3 max-lg:m-auto max-md:w-full"
         >
-          <ScrollTrigger
-            onEnter={() => setCounterOn(true)}
-            onExit={() => setCounterOn(false)}
-          >
+          <div ref={ref}>
             <h1
               className={`text-6xl font-medium ${item.color} pb-6 border-b-2 border-gray-100 `}
             >
@@ -44,7 +51,7 @@ const Standard_Section: React.FC<Standard_SectionProps> = () => {
               )}
             </h1>
             <p className="tracking-wide font-light pt-4">{item.label}</p>
-          </ScrollTrigger>
+          </div>
         </div>
       ))}
     </section>

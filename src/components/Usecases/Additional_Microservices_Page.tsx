@@ -34,7 +34,7 @@ const Additional_Microservices_Page: React.FC<
       <div
         className={`${
           data.length === 3 ? "grid grid-cols-3" : "flex justify-evenly"
-        } px-6 gap-20 max-lg:grid-cols-1 max-sm:px-0`}
+        } px-6 gap-20 max-lg:grid max-lg:grid-cols-1 max-sm:px-0`}
       >
         {data.map(({ id, src, alt, title, lable, link }) => {
           const content = (

@@ -9,11 +9,11 @@ const layoutItems = [
   {
     category: "Learn",
     items: [
-      { id: 1, to: "https://orkes.io/content", text: "Docs", imgSrc: Docs },
-      { id: 2, to: "https://orkes.io/blog/", text: "Blogs", imgSrc: Blog },
+      { id: 1, to: "", text: "Docs", imgSrc: Docs },
+      { id: 2, to: "", text: "Blogs", imgSrc: Blog },
       {
         id: 3,
-        to: "https://www.youtube.com/@orkesio",
+        to: "",
         text: "Videos",
         Icon: GoVideo,
       },
@@ -24,7 +24,7 @@ const layoutItems = [
     items: [
       {
         id: 4,
-        to: "https://orkes-conductor.slack.com/join/shared_invite/zt-2hmxn0i3n-_W~a9rWMbvMoYmlJo3Y15g#/shared-invite/email",
+        to: "",
         text: "Slack",
         Icon: FaSlack,
       },
@@ -36,7 +36,7 @@ const layoutItems = [
       },
       {
         id: 6,
-        to: "https://github.com/conductor-oss/conductor",
+        to: "",
         text: "GitHub",
         Icon: FaGithub,
       },

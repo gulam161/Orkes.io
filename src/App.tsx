@@ -1,5 +1,5 @@
 import React from "react";
-import Home from "./components/Home";
+import Home from "./components/HomePage/Home";
 import { Routes, Route } from "react-router-dom";
 import Plateform_page from "./components/Plateform/platform/Page";
 import CloudPage from "./components/Plateform/cloud/CloudPage";
@@ -14,6 +14,7 @@ import Sign_Up from "./components/Auth/Sign-Up";
 import Talk_To_An_Expert from "./components/Talk-To-An-Expert";
 import EventPage from "./components/developer/EventPage";
 import Customer from "./components/Customers/Customer";
+import Pricing from "./components/pricing/Pricing";
 
 type AppProps = {};
 
@@ -37,6 +38,7 @@ const App: React.FC<AppProps> = () => {
       <Route path="/human-workflow-orchestration" element={<Workflow />} />
       <Route path="/events" element={<EventPage />} />
       <Route path="/customers" element={<Customer />} />
+      <Route path="/pricing" element={<Pricing />} />
       <Route path="/auth-login" element={<Login />} />
       <Route path="/sign-up" element={<Sign_Up />} />
       <Route path="/talk-to-an-expert" element={<Talk_To_An_Expert />} />

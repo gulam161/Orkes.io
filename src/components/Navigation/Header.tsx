@@ -15,7 +15,7 @@ const navItems = [
   { id: 2, text: "Use Cases", to: "" },
   { id: 3, text: "Developers", to: "" },
   { id: 4, text: "Customers", to: "/customers" },
-  { id: 5, text: "Pricing", to: "" },
+  { id: 5, text: "Pricing", to: "/pricing" },
 ];
 
 const Header: React.FC<HeaderProps> = () => {

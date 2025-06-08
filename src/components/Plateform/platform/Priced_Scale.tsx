@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import OrkesStarterBanner from "../OrkesStarterBanner";
+import IntroSection from "../../IntroSection";
 
 type Priced_ScaleProps = {};
 
@@ -150,15 +151,14 @@ const Priced_Scale: React.FC<Priced_ScaleProps> = () => {
   return (
     <>
       <section className="flex justify-start flex-col gap-7 text-center py-16">
-        <div className=" text-center mt-10">
-          <h1 className="text-4xl font-medium text-black/90">
-            Priced to Scale
-          </h1>
-          <p className="text-xl font-light w-8/12 my-3 mx-auto text-gray-600">
-            Build without limitations with unlimited task and workflow
-            executions
-          </p>
-        </div>
+        {/* <div className=" text-center mt-10">
+          
+        </div> */}
+        <IntroSection
+          title="Priced to Scale"
+          subtitle="Build without limitations with unlimited task and workflow executions"
+          sectionClass="pb-0 pt-4"
+        />
         <div className="m-auto grid grid-cols-3 gap-10 max-lg:grid-cols-1">
           {data.map(
             ({
@@ -176,7 +176,7 @@ const Priced_Scale: React.FC<Priced_ScaleProps> = () => {
               return (
                 <div
                   key={id}
-                  className="flex flex-col gap-8 text-start border-2 border-gray-200 px-4 py-4 rounded-xl expert_shaddow max-lg:rounded-lg"
+                  className="flex flex-col gap-8 text-start border-1 border-gray-400 px-4 py-4 rounded-xl expert_shaddow max-lg:rounded-lg"
                 >
                   <div className="h-52 max-lg:h-auto">
                     <img src={img_Src} alt={alt} width={80} />
@@ -325,16 +325,6 @@ const Priced_Scale: React.FC<Priced_ScaleProps> = () => {
             }
           )}
         </div>
-      </section>
-
-      {/* Start building with orkes */}
-      <section className="static py-3">
-        <OrkesStarterBanner
-          bgImage="/Build-with-orkes-CTA.jpg"
-          heading="Start building with orkes today"
-          divClass="border border-gray-100 text-white"
-          headingClass="text-4xl max-md:text-3xl font-medium mb-1"
-        />
       </section>
     </>
   );
